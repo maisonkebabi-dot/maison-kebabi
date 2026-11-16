@@ -76,7 +76,7 @@
     }
 
     section, footer, #waitlist {
-      scroll-margin-top: 86px;
+      scroll-margin-top: 84px;
     }
 
     /* ==========================================
@@ -852,15 +852,15 @@
 
     .zoom-pill {
       position: absolute;
-      bottom: 14px;
+      bottom: 12px;
       left: 50%;
       transform: translateX(-50%);
       background: rgba(92, 33, 26, 0.92);
       color: var(--gold-shiraz);
       border: 1px solid var(--gold-shiraz);
-      padding: 5px 14px;
+      padding: 4px 12px;
       border-radius: 50px;
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 600;
       white-space: nowrap;
     }
@@ -1053,51 +1053,79 @@
     }
 
     /* ==========================================
-       ROYAL CHELOW KEBABS SLIDER (DUAL-IMAGE PLATTER SHOWCASE)
+       ROYAL CHELOW KEBABS SLIDER — COMPACT ONE-SCREEN VIEWPORT LAYOUT
        ========================================== */
     .chelow-section {
-      padding: 6rem 1.5rem;
+      padding: 2.35rem 1.5rem 2.75rem;
       border-bottom: 1.5px solid var(--gold-shiraz);
       background: linear-gradient(180deg, rgba(249, 245, 237, 0.65) 0%, rgba(255, 255, 255, 0.45) 100%);
     }
 
+    .chelow-top-bar {
+      max-width: 1280px;
+      margin: 0 auto 1.15rem;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+      border-bottom: 1px solid var(--gold-border);
+      padding-bottom: 0.95rem;
+    }
+
+    .chelow-title-group {
+      text-align: left;
+    }
+
+    .chelow-title-group .kicker-pill {
+      margin-bottom: 0.4rem;
+      padding: 4px 12px;
+      font-size: 0.7rem;
+    }
+
+    .chelow-title-group h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3vw, 2.5rem);
+      color: var(--crimson-royal);
+      line-height: 1.05;
+      margin: 0;
+    }
+
     .chelow-tabs {
-      max-width: 1220px;
-      margin: 0 auto 2.25rem;
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 10px;
+      justify-content: flex-end;
+      gap: 7px;
     }
 
     .chelow-tab-btn {
       background: var(--white-pure);
       border: 1.5px solid var(--gold-shiraz);
       color: var(--crimson-royal);
-      padding: 10px 20px;
+      padding: 6px 14px;
       border-radius: 50px;
       font-family: var(--font-serif);
-      font-size: 1.12rem;
+      font-size: 1.02rem;
       font-weight: 700;
       cursor: pointer;
-      transition: all 0.25s ease;
-      box-shadow: 0 4px 14px rgba(92, 33, 26, 0.06);
+      transition: all 0.22s ease;
+      box-shadow: 0 3px 10px rgba(92, 33, 26, 0.05);
     }
 
     .chelow-tab-btn:hover {
       background: var(--gold-tint);
-      transform: translateY(-2px);
+      transform: translateY(-1px);
     }
 
     .chelow-tab-btn.active {
       background: var(--crimson-royal);
       color: var(--gold-shiraz);
       border-color: var(--gold-shiraz);
-      box-shadow: 0 8px 20px rgba(92, 33, 26, 0.22);
+      box-shadow: 0 6px 16px rgba(92, 33, 26, 0.22);
     }
 
     .chelow-showcase-wrapper {
-      max-width: 1220px;
+      max-width: 1280px;
       margin: 0 auto;
       position: relative;
     }
@@ -1112,8 +1140,8 @@
       grid-area: 1 / 1;
       opacity: 0;
       visibility: hidden;
-      transform: translateY(10px);
-      transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s ease;
     }
 
     .chelow-slide.active {
@@ -1124,88 +1152,87 @@
     }
 
     .chelow-platter-card {
-      padding: 2.75rem;
-      border-top: 4px solid var(--gold-shiraz);
+      padding: 1.4rem 1.75rem;
+      border-top: 3.5px solid var(--gold-shiraz);
     }
 
     .chelow-platter-card:hover {
       transform: none;
     }
 
+    /* Single-Row Compact Slide Header (Title + Description Side-by-Side) */
     .chelow-card-header {
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 2.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 1.15rem;
+      padding-bottom: 0.85rem;
+      border-bottom: 1px dashed rgba(197, 155, 56, 0.45);
+      text-align: left;
+    }
+
+    .chelow-card-title-block {
+      flex-shrink: 0;
     }
 
     .chelow-card-header .chelow-cut-label {
-      font-size: 0.78rem;
+      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 1.8px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       color: var(--gold-shiraz);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .chelow-card-header h3 {
       font-family: var(--font-serif);
-      font-size: clamp(2rem, 3.4vw, 2.75rem);
+      font-size: clamp(1.55rem, 2.4vw, 2.05rem);
       color: var(--crimson-royal);
-      line-height: 1.12;
-      margin-bottom: 0.65rem;
+      line-height: 1.08;
+      margin: 0;
     }
 
     .chelow-card-header p {
-      font-size: 0.98rem;
+      font-size: 0.89rem;
       color: var(--crimson-body);
+      line-height: 1.5;
+      max-width: 680px;
+      margin: 0;
     }
 
+    /* Side-by-Side Dual Platter Cards */
     .chelow-dual-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 2.25rem;
-      align-items: start;
+      gap: 1.35rem;
+      align-items: stretch;
     }
 
     .chelow-variant-box {
       background: var(--ivory-silk);
       border: 1.5px solid var(--gold-shiraz);
-      border-radius: 14px;
-      padding: 1.25rem;
-      text-align: center;
+      border-radius: 12px;
+      padding: 0.9rem;
+      display: grid;
+      grid-template-columns: clamp(165px, 18vw, 235px) 1fr;
+      gap: 1.15rem;
+      align-items: center;
+      text-align: left;
       position: relative;
-      box-shadow: 0 10px 26px rgba(92, 33, 26, 0.08);
-    }
-
-    .chelow-variant-badge {
-      display: inline-block;
-      background: var(--crimson-royal);
-      color: var(--gold-shiraz);
-      border: 1px solid var(--gold-shiraz);
-      font-size: 0.74rem;
-      font-weight: 700;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      padding: 5px 14px;
-      border-radius: 50px;
-      margin-bottom: 1rem;
-    }
-
-    .chelow-variant-badge.royal-garnish {
-      background: var(--gold-shiraz);
-      color: var(--crimson-royal);
+      box-shadow: 0 8px 20px rgba(92, 33, 26, 0.06);
     }
 
     .chelow-img-frame {
       width: 100%;
       aspect-ratio: 1 / 1;
-      border-radius: 12px;
+      border-radius: 10px;
       border: 2px solid var(--gold-shiraz);
       overflow: hidden;
       position: relative;
       cursor: zoom-in;
       background: var(--crimson-deep);
-      box-shadow: 0 12px 28px rgba(92, 33, 26, 0.16);
+      box-shadow: 0 8px 20px rgba(92, 33, 26, 0.16);
     }
 
     .chelow-img-frame img {
@@ -1217,43 +1244,73 @@
     }
 
     .chelow-img-frame:hover img {
-      transform: scale(1.05);
+      transform: scale(1.06);
     }
 
-    .chelow-variant-caption {
-      margin-top: 1rem;
+    .chelow-img-frame .zoom-pill {
+      bottom: 8px;
+      padding: 3px 10px;
+      font-size: 0.68rem;
+    }
+
+    .chelow-variant-details {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.45rem;
+    }
+
+    .chelow-variant-badge {
+      display: inline-block;
+      align-self: flex-start;
+      background: var(--crimson-royal);
+      color: var(--gold-shiraz);
+      border: 1px solid var(--gold-shiraz);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 11px;
+      border-radius: 50px;
+    }
+
+    .chelow-variant-badge.royal-garnish {
+      background: var(--gold-shiraz);
+      color: var(--crimson-royal);
     }
 
     .chelow-variant-caption h4 {
       font-family: var(--font-serif);
-      font-size: 1.38rem;
+      font-size: 1.32rem;
       color: var(--crimson-royal);
-      margin-bottom: 3px;
+      line-height: 1.15;
+      margin-bottom: 4px;
     }
 
     .chelow-variant-caption p {
-      font-size: 0.86rem;
-      color: var(--crimson-muted);
+      font-size: 0.83rem;
+      color: var(--crimson-body);
+      line-height: 1.5;
     }
 
     .chelow-controls {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 1.5rem;
-      padding: 0 0.5rem;
+      margin-top: 0.95rem;
+      padding: 0 0.25rem;
     }
 
     .chelow-counter {
-      font-size: 0.86rem;
+      font-size: 0.82rem;
       color: var(--crimson-royal);
       font-weight: 700;
-      letter-spacing: 0.8px;
+      letter-spacing: 0.7px;
     }
 
     .chelow-arrow-btn {
-      width: 46px;
-      height: 46px;
+      width: 40px;
+      height: 40px;
       border-radius: 50%;
       background: var(--crimson-royal);
       border: 1.5px solid var(--gold-shiraz);
@@ -1271,8 +1328,8 @@
     }
 
     .chelow-arrow-btn svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       fill: currentColor;
     }
 
@@ -1840,6 +1897,26 @@
     /* ==========================================
        RESPONSIVE BREAKPOINTS
        ========================================== */
+    @media (max-width: 1120px) {
+      .chelow-top-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .chelow-title-group {
+        text-align: center;
+      }
+
+      .chelow-tabs {
+        justify-content: center;
+      }
+
+      .chelow-variant-box {
+        grid-template-columns: 155px 1fr;
+      }
+    }
+
     @media (max-width: 1060px) {
       .desktop-nav,
       .header-cta-desktop {
@@ -1907,7 +1984,17 @@
       }
 
       .chelow-platter-card {
-        padding: 2rem 1.35rem;
+        padding: 1.5rem 1.25rem;
+      }
+
+      .chelow-card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.45rem;
+      }
+
+      .chelow-variant-box {
+        grid-template-columns: 140px 1fr;
       }
 
       .dizi-card {
@@ -1946,6 +2033,17 @@
 
       .audio-meta {
         display: none;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .chelow-variant-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .chelow-variant-badge {
+        align-self: center;
       }
     }
   </style>
@@ -2376,26 +2474,24 @@
   </section>
 
   <!-- ==========================================
-       ROYAL CHELOW KEBABS SLIDER (6 DUAL-IMAGE PLATTERS)
+       ROYAL CHELOW KEBABS SLIDER (SINGLE-VIEWPORT COMPACT INTERFACE)
        ========================================== -->
   <section class="chelow-section" id="chelow-kebabs">
-    <div class="section-header-center">
-      <div class="kicker-pill">Individual Royal Platter Service</div>
-      <h2>Royal Chelow Kebabs</h2>
-      <div class="persian-divider" aria-hidden="true">
-        <svg viewBox="0 0 24 24"><polygon points="12,1 15,9 23,12 15,15 12,23 9,15 1,12 9,9"/></svg>
+    <div class="chelow-top-bar">
+      <div class="chelow-title-group">
+        <div class="kicker-pill">Individual Royal Platter Service</div>
+        <h2>Royal Chelow Kebabs</h2>
       </div>
-      <p>Each single-person royal platter pairs open-flame skewers with steamed saffron-crowned basmati chelow, blistered tomatoes, fresh Shirazi salad, and wild sumac—presented in two rice styles.</p>
-    </div>
 
-    <!-- 6 Platter Tabs -->
-    <div class="chelow-tabs" id="chelowDots" role="tablist" aria-label="Choose a Royal Chelow Kebab Platter">
-      <button type="button" class="chelow-tab-btn active" data-index="0">Chelow Kebab Koobideh</button>
-      <button type="button" class="chelow-tab-btn" data-index="1">Chelow Kebab Jujeh</button>
-      <button type="button" class="chelow-tab-btn" data-index="2">Chelow Kebab Barg</button>
-      <button type="button" class="chelow-tab-btn" data-index="3">Chelow Kebab Bakhtiari</button>
-      <button type="button" class="chelow-tab-btn" data-index="4">Chelow Kebab Chenjeh</button>
-      <button type="button" class="chelow-tab-btn" data-index="5">Chelow Kebab Shishlik</button>
+      <!-- 6 Platter Tabs Inline with Section Title -->
+      <div class="chelow-tabs" id="chelowDots" role="tablist" aria-label="Choose a Royal Chelow Kebab Platter">
+        <button type="button" class="chelow-tab-btn active" data-index="0">Koobideh</button>
+        <button type="button" class="chelow-tab-btn" data-index="1">Jujeh</button>
+        <button type="button" class="chelow-tab-btn" data-index="2">Barg</button>
+        <button type="button" class="chelow-tab-btn" data-index="3">Bakhtiari</button>
+        <button type="button" class="chelow-tab-btn" data-index="4">Chenjeh</button>
+        <button type="button" class="chelow-tab-btn" data-index="5">Shishlik</button>
+      </div>
     </div>
 
     <div class="chelow-showcase-wrapper" id="chelowSliderContainer">
@@ -2404,34 +2500,38 @@
         <!-- Slide 1: Chelow Kebab Koobideh -->
         <div class="chelow-slide active" data-chelow-slide="0">
           <div class="persian-card chelow-platter-card">
-            <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
-            <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
             <div class="chelow-card-header">
-              <div class="chelow-cut-label">Royal Platter 01 of 06</div>
-              <h3>Chelow Kebab Koobideh</h3>
+              <div class="chelow-card-title-block">
+                <div class="chelow-cut-label">Royal Platter 01 of 06</div>
+                <h3>Chelow Kebab Koobideh</h3>
+              </div>
               <p>Two hand-pressed prime minced lamb and beef skewers served off the blade with butter-topped saffron chelow, fire-charred tomatoes, charred green chili, and crisp Shirazi salad.</p>
             </div>
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge">Classic Saffron Chelow</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Koobideh with Plain Saffron Rice">
                   <img src="assets/Chelow-Koobideh-Plain.png" alt="Chelow Kebab Koobideh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Koobideh-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>Plain Saffron &amp; Butter Rice</h4>
-                  <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge">Classic Saffron Chelow</span>
+                  <div class="chelow-variant-caption">
+                    <h4>Plain Saffron &amp; Butter Rice</h4>
+                    <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                  </div>
                 </div>
               </div>
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Koobideh with Zereshk and Sliced Pistachios">
                   <img src="assets/Chelow-Koobideh-Zereshk.png" alt="Chelow Kebab Koobideh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Koobideh-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>With Zereshk &amp; Sliced Pistachios</h4>
-                  <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
+                  <div class="chelow-variant-caption">
+                    <h4>With Zereshk &amp; Sliced Pistachios</h4>
+                    <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2441,34 +2541,38 @@
         <!-- Slide 2: Chelow Kebab Jujeh -->
         <div class="chelow-slide" data-chelow-slide="1">
           <div class="persian-card chelow-platter-card">
-            <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
-            <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
             <div class="chelow-card-header">
-              <div class="chelow-cut-label">Royal Platter 02 of 06</div>
-              <h3>Chelow Kebab Jujeh</h3>
+              <div class="chelow-card-title-block">
+                <div class="chelow-cut-label">Royal Platter 02 of 06</div>
+                <h3>Chelow Kebab Jujeh</h3>
+              </div>
               <p>Saffron-and-lemon marinated boneless chicken pieces seared over clean gas flames, plated alongside buttered basmati chelow, blistered tomatoes, fresh lemon, and sumac.</p>
             </div>
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge">Classic Saffron Chelow</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Jujeh with Plain Saffron Rice">
                   <img src="assets/Chelow-Jujeh-Plain.png" alt="Chelow Kebab Jujeh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Jujeh-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>Plain Saffron &amp; Butter Rice</h4>
-                  <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge">Classic Saffron Chelow</span>
+                  <div class="chelow-variant-caption">
+                    <h4>Plain Saffron &amp; Butter Rice</h4>
+                    <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                  </div>
                 </div>
               </div>
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Jujeh with Zereshk and Sliced Pistachios">
                   <img src="assets/Chelow-Jujeh-Zereshk.png" alt="Chelow Kebab Jujeh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Jujeh-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>With Zereshk &amp; Sliced Pistachios</h4>
-                  <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
+                  <div class="chelow-variant-caption">
+                    <h4>With Zereshk &amp; Sliced Pistachios</h4>
+                    <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2478,34 +2582,38 @@
         <!-- Slide 3: Chelow Kebab Barg -->
         <div class="chelow-slide" data-chelow-slide="2">
           <div class="persian-card chelow-platter-card">
-            <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
-            <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
             <div class="chelow-card-header">
-              <div class="chelow-cut-label">Royal Platter 03 of 06</div>
-              <h3>Chelow Kebab Barg</h3>
+              <div class="chelow-card-title-block">
+                <div class="chelow-cut-label">Royal Platter 03 of 06</div>
+                <h3>Chelow Kebab Barg</h3>
+              </div>
               <p>Hand-pounded prime tenderloin ribbon glazed in cultured saffron butter, accompanied by aromatic saffron basmati chelow, roasted vine tomatoes, and Shirazi salad.</p>
             </div>
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge">Classic Saffron Chelow</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Barg with Plain Saffron Rice">
                   <img src="assets/Chelow-Barg-Plain.png" alt="Chelow Kebab Barg with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Barg-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>Plain Saffron &amp; Butter Rice</h4>
-                  <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge">Classic Saffron Chelow</span>
+                  <div class="chelow-variant-caption">
+                    <h4>Plain Saffron &amp; Butter Rice</h4>
+                    <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                  </div>
                 </div>
               </div>
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Barg with Zereshk and Sliced Pistachios">
                   <img src="assets/Chelow-Barg-Zereshk.png" alt="Chelow Kebab Barg with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Barg-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>With Zereshk &amp; Sliced Pistachios</h4>
-                  <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
+                  <div class="chelow-variant-caption">
+                    <h4>With Zereshk &amp; Sliced Pistachios</h4>
+                    <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2515,34 +2623,38 @@
         <!-- Slide 4: Chelow Kebab Bakhtiari -->
         <div class="chelow-slide" data-chelow-slide="3">
           <div class="persian-card chelow-platter-card">
-            <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
-            <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
             <div class="chelow-card-header">
-              <div class="chelow-cut-label">Royal Platter 04 of 06</div>
-              <h3>Chelow Kebab Bakhtiari</h3>
+              <div class="chelow-card-title-block">
+                <div class="chelow-cut-label">Royal Platter 04 of 06</div>
+                <h3>Chelow Kebab Bakhtiari</h3>
+              </div>
               <p>Alternating morsels of golden saffron chicken and tender lamb filet seared over clean flames, served beside buttered saffron rice, grilled tomatoes, and herb-tossed salad.</p>
             </div>
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge">Classic Saffron Chelow</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Bakhtiari with Plain Saffron Rice">
                   <img src="assets/Chelow-Bakhtiari-Plain.png" alt="Chelow Kebab Bakhtiari with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Bakhtiari-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>Plain Saffron &amp; Butter Rice</h4>
-                  <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge">Classic Saffron Chelow</span>
+                  <div class="chelow-variant-caption">
+                    <h4>Plain Saffron &amp; Butter Rice</h4>
+                    <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                  </div>
                 </div>
               </div>
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Bakhtiari with Zereshk and Sliced Pistachios">
                   <img src="assets/Chelow-Bakhtiari-Zereshk.png" alt="Chelow Kebab Bakhtiari with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Bakhtiari-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>With Zereshk &amp; Sliced Pistachios</h4>
-                  <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
+                  <div class="chelow-variant-caption">
+                    <h4>With Zereshk &amp; Sliced Pistachios</h4>
+                    <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2552,34 +2664,38 @@
         <!-- Slide 5: Chelow Kebab Chenjeh -->
         <div class="chelow-slide" data-chelow-slide="4">
           <div class="persian-card chelow-platter-card">
-            <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
-            <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
             <div class="chelow-card-header">
-              <div class="chelow-cut-label">Royal Platter 05 of 06</div>
-              <h3>Chelow Kebab Chenjeh</h3>
+              <div class="chelow-card-title-block">
+                <div class="chelow-cut-label">Royal Platter 05 of 06</div>
+                <h3>Chelow Kebab Chenjeh</h3>
+              </div>
               <p>Succulent cubes of yogurt-and-pepper marinated prime lamb loin seared to a caramelized crust, presented with saffron basmati chelow, blistered tomatoes, and Shirazi salad.</p>
             </div>
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge">Classic Saffron Chelow</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Chenjeh with Plain Saffron Rice">
                   <img src="assets/Chelow-Chenjeh-Plain.png" alt="Chelow Kebab Chenjeh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Chenjeh-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>Plain Saffron &amp; Butter Rice</h4>
-                  <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge">Classic Saffron Chelow</span>
+                  <div class="chelow-variant-caption">
+                    <h4>Plain Saffron &amp; Butter Rice</h4>
+                    <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                  </div>
                 </div>
               </div>
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Chenjeh with Zereshk and Sliced Pistachios">
                   <img src="assets/Chelow-Chenjeh-Zereshk.png" alt="Chelow Kebab Chenjeh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Chenjeh-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>With Zereshk &amp; Sliced Pistachios</h4>
-                  <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
+                  <div class="chelow-variant-caption">
+                    <h4>With Zereshk &amp; Sliced Pistachios</h4>
+                    <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -2589,34 +2705,38 @@
         <!-- Slide 6: Chelow Kebab Shishlik -->
         <div class="chelow-slide" data-chelow-slide="5">
           <div class="persian-card chelow-platter-card">
-            <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
-            <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
             <div class="chelow-card-header">
-              <div class="chelow-cut-label">Royal Platter 06 of 06</div>
-              <h3>Chelow Kebab Shishlik</h3>
+              <div class="chelow-card-title-block">
+                <div class="chelow-cut-label">Royal Platter 06 of 06</div>
+                <h3>Chelow Kebab Shishlik</h3>
+              </div>
               <p>Crown-cut French-trimmed lamb chops seared over intense clean flames and basted with saffron butter, paired with fragrant chelow rice, grilled tomatoes, and Shirazi salad.</p>
             </div>
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge">Classic Saffron Chelow</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Shishlik with Plain Saffron Rice">
                   <img src="assets/Chelow-Shishlik-Plain.png" alt="Chelow Kebab Shishlik with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Shishlik-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>Plain Saffron &amp; Butter Rice</h4>
-                  <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge">Classic Saffron Chelow</span>
+                  <div class="chelow-variant-caption">
+                    <h4>Plain Saffron &amp; Butter Rice</h4>
+                    <p>Fluffy steamed basmati crowned with golden Sargol saffron rice and melting cultured butter.</p>
+                  </div>
                 </div>
               </div>
               <div class="chelow-variant-box">
-                <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Shishlik with Zereshk and Sliced Pistachios">
                   <img src="assets/Chelow-Shishlik-Zereshk.png" alt="Chelow Kebab Shishlik with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Shishlik-Kebab.png';">
-                  <span class="zoom-pill">🔍 Tap to Enlarge</span>
+                  <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
-                <div class="chelow-variant-caption">
-                  <h4>With Zereshk &amp; Sliced Pistachios</h4>
-                  <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                <div class="chelow-variant-details">
+                  <span class="chelow-variant-badge royal-garnish">Zereshk &amp; Pistachio Edition</span>
+                  <div class="chelow-variant-caption">
+                    <h4>With Zereshk &amp; Sliced Pistachios</h4>
+                    <p>Finished with ruby Khorasan barberries sautéed in butter and slivered Iranian green pistachios.</p>
+                  </div>
                 </div>
               </div>
             </div>
