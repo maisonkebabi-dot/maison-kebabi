@@ -741,7 +741,7 @@
     }
 
     /* ==========================================
-       SIGNATURE KEBABS SHOWCASE (#5C211A + GOLD TILE GALLERY)
+       SIGNATURE KEBABS SHOWCASE (#5C211A + ARTISTIC GOLD PERSIAN TILEWORK)
        ========================================== */
     .kebabs-section {
       background-color: var(--crimson-royal);
@@ -1096,7 +1096,7 @@
     }
 
     /* ==========================================
-       ROYAL CHELOW KEBABS SLIDER — RESPONSIVE ONE-SCREEN INTERFACE
+       ROYAL CHELOW KEBABS SLIDER — RESPONSIVE INTERFACE
        ========================================== */
     .chelow-section {
       padding: clamp(2rem, 4vw, 2.75rem) var(--gutter-x) clamp(2.25rem, 4.5vw, 3rem);
@@ -2100,7 +2100,6 @@
         border-bottom: none;
       }
 
-      /* Horizontal swipeable pill bar on mobile so tabs stay compact */
       .kebab-tabs,
       .chelow-tabs {
         flex-wrap: nowrap;
@@ -3322,7 +3321,7 @@
       handleFormSubmit('waitlistForm', 'waitlistSubmitBtn', 'waitlistInputFields', 'waitlistFeedback', '✨ <strong>Merci!</strong> Your tasting invitation is confirmed. Our concierge will message you on WhatsApp.');
       handleFormSubmit('careersForm', 'careersSubmitBtn', 'careersInputFields', 'careersFeedback', '✨ <strong>Application Received!</strong> Thank you for applying to join Maison Kebabi.');
 
-      // 5. Signature Kebabs Interactive Carousel
+      // 5. Signature Kebabs Interactive Carousel (Fixed: Horizontal-only tab centering without vertical page jump)
       const container = document.getElementById('skuSliderContainer');
       const track = document.getElementById('skuSliderTrack');
       const slides = track ? Array.from(track.querySelectorAll('[data-slide]')) : [];
@@ -3344,7 +3343,11 @@
             const active = idx === nextIdx;
             d.classList.toggle('active', active);
             if (active && d.parentElement) {
-              d.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              const parent = d.parentElement;
+              parent.scrollTo({
+                left: d.offsetLeft - parent.offsetWidth / 2 + d.offsetWidth / 2,
+                behavior: 'smooth'
+              });
             }
           });
           if (counterText) counterText.textContent = `Kebab ${nextIdx + 1} of ${count} • ${kebabNames[nextIdx]}`;
@@ -3383,7 +3386,7 @@
         startAuto();
       }
 
-      // 6. Royal Chelow Kebabs Dual-Image Interactive Slider
+      // 6. Royal Chelow Kebabs Dual-Image Interactive Slider (Fixed: Horizontal-only tab centering)
       const chelowContainer = document.getElementById('chelowSliderContainer');
       const chelowTrack = document.getElementById('chelowSliderTrack');
       const chelowSlides = chelowTrack ? Array.from(chelowTrack.querySelectorAll('[data-chelow-slide]')) : [];
@@ -3412,7 +3415,11 @@
             const active = idx === nextIdx;
             d.classList.toggle('active', active);
             if (active && d.parentElement) {
-              d.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+              const parent = d.parentElement;
+              parent.scrollTo({
+                left: d.offsetLeft - parent.offsetWidth / 2 + d.offsetWidth / 2,
+                behavior: 'smooth'
+              });
             }
           });
           if (chelowCounterText) {
