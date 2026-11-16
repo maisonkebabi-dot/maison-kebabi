@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Maison Kebabi | Artisanal Persian Grillhouse • Delhi NCR</title>
-  <meta name="description" content="Charcoal-kissed saffron kebabs, smoky hearth flames, and royal Persian grill ateliers. Discover Delhi NCR's premier Persian kebab experience.">
+  <meta name="description" content="Charcoal-kissed saffron kebabs, slow-simmered stone-crock Dizi (Abgoosht), and royal Persian grill ateliers. Discover Delhi NCR's premier Persian culinary experience.">
   
   <!-- Favicon & Brand Icons -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 82,18 96,50 82,82 50,96 18,82 4,50 18,18' fill='%230F1D2E' stroke='%23D4AF37' stroke-width='3'/%3E%3Ctext x='50' y='61' font-family='Georgia,serif' font-size='32' font-weight='bold' fill='%23FAF6EE' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
@@ -31,7 +31,7 @@
       --gold-leaf: #C59B38;           /* Burnished Shiraz Gold */
       --gold-luminous: #E3BE62;       /* Illuminated Manuscript Gold */
       --turquoise-tile: #1D5E63;      /* Persian Firoozeh Turquoise */
-      --mint-botanical: #1F4235;      /* Highland Sabzi & Mint */
+      --terracotta-hearth: #4E2218;   /* Earthenware Stone-Crock Hearth */
 
       /* Typography */
       --ink-dark: #1A1816;
@@ -1056,20 +1056,23 @@
     }
 
     /* ==========================================
-       THE DOOZI RITUAL (PERSIAN BOTANICAL GARDEN)
+       DIZI (ABGOOSHT) — PERSIAN EARTHENWARE STONE-CROCK RITUAL
        ========================================== */
-    .doozi-section {
-      background-color: var(--mint-botanical);
+    .dizi-section {
+      background-color: var(--terracotta-hearth);
       color: var(--ivory-light);
       padding: 6rem 1.5rem;
       border-bottom: 2px solid var(--gold-leaf);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23E3BE62' stroke-width='0.7' stroke-opacity='0.12'%3E%3Cpath d='M36,6 C46,20 52,26 66,36 C52,46 46,52 36,66 C26,52 20,46 6,36 C20,26 26,20 36,6 Z'/%3E%3Ccircle cx='36' cy='36' r='8'/%3E%3C/g%3E%3C/svg%3E");
+      /* Traditional Persian Terracotta & Gold Geometric Tessellation */
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(138, 36, 30, 0.45) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='76' height='76' viewBox='0 0 76 76'%3E%3Cg fill='none' stroke='%23E3BE62' stroke-width='0.75' stroke-opacity='0.14'%3E%3Cpolygon points='38,4 48,28 72,38 48,48 38,72 28,48 4,38 28,28'/%3E%3Ccircle cx='38' cy='38' r='11'/%3E%3Cpath d='M0,0 L14,14 M76,0 L62,14 M0,76 L14,62 M76,76 L62,62'/%3E%3C/g%3E%3C/svg%3E");
     }
 
-    .doozi-card {
+    .dizi-card {
       max-width: 1240px;
       margin: 0 auto;
-      background: rgba(9, 18, 29, 0.42);
+      background: rgba(9, 18, 29, 0.52);
       border: 1.5px solid var(--gold-leaf);
       border-radius: 16px;
       padding: 3.75rem;
@@ -1078,91 +1081,123 @@
       gap: 3.5rem;
       align-items: center;
       position: relative;
+      box-shadow: var(--shadow-lapis);
     }
 
-    .doozi-card::before {
+    .dizi-card::before {
       content: '';
       position: absolute;
       inset: 8px;
-      border: 1px solid rgba(227, 190, 98, 0.3);
+      border: 1px solid rgba(227, 190, 98, 0.32);
       border-radius: 10px;
       pointer-events: none;
     }
 
-    .doozi-content h2 {
+    .dizi-content h2 {
       font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      font-size: clamp(2.2rem, 3.8vw, 3.25rem);
       color: var(--ivory-light);
       margin-bottom: 1rem;
       line-height: 1.12;
     }
 
-    .doozi-content h2 span {
+    .dizi-content h2 span {
       color: var(--gold-luminous);
       font-style: italic;
     }
 
-    .doozi-content p {
+    .dizi-content p {
       color: var(--ivory-soft);
       font-size: 1rem;
-      margin-bottom: 1.2rem;
+      line-height: 1.75;
+      margin-bottom: 1.15rem;
     }
 
-    .doozi-pairings {
+    .dizi-ritual-steps {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
       margin-top: 1.75rem;
     }
 
-    .pairing-tile {
-      background: rgba(9, 18, 29, 0.55);
+    .ritual-tile {
+      background: rgba(9, 18, 29, 0.62);
       border: 1px solid rgba(227, 190, 98, 0.35);
+      border-left: 3px solid var(--gold-luminous);
       border-radius: 10px;
       padding: 1.35rem;
     }
 
-    .pairing-tile h5 {
+    .ritual-tile h5 {
       font-family: var(--font-serif);
-      font-size: 1.25rem;
+      font-size: 1.28rem;
       color: var(--gold-luminous);
-      margin-bottom: 4px;
+      margin-bottom: 5px;
     }
 
-    .pairing-tile p {
+    .ritual-tile p {
       font-size: 0.86rem;
+      line-height: 1.55;
       margin-bottom: 0;
     }
 
-    .doozi-arch-medallion {
+    .dizi-arch-medallion {
       background: var(--lapis-royal);
       border: 2px solid var(--gold-luminous);
       border-radius: 160px 160px 14px 14px;
       padding: 3rem 2rem;
       text-align: center;
       box-shadow: var(--shadow-lapis);
+      position: relative;
     }
 
-    .doozi-farsi {
+    .dizi-arch-medallion::before {
+      content: '';
+      position: absolute;
+      inset: 7px;
+      border-radius: 153px 153px 9px 9px;
+      border: 1px solid rgba(227, 190, 98, 0.28);
+      pointer-events: none;
+    }
+
+    .dizi-farsi {
       font-family: var(--font-serif);
-      font-size: 2.3rem;
+      font-size: 2.35rem;
       color: var(--gold-luminous);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
     }
 
-    .doozi-arch-medallion h3 {
+    .dizi-arch-medallion h3 {
       font-family: var(--font-display);
       font-size: 1.55rem;
       letter-spacing: 2px;
       color: var(--ivory-light);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
 
-    .doozi-arch-medallion p {
+    .dizi-arch-medallion p {
       font-family: var(--font-serif);
       font-style: italic;
       font-size: 1.15rem;
       color: var(--ivory-soft);
+      margin-bottom: 1.25rem;
+    }
+
+    .dizi-accompaniments {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .dizi-accompaniments span {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--gold-luminous);
+      background: rgba(227, 190, 98, 0.12);
+      border: 1px solid rgba(227, 190, 98, 0.35);
+      padding: 4px 10px;
+      border-radius: 50px;
     }
 
     /* ==========================================
@@ -1531,7 +1566,7 @@
       .craft-grid,
       .kebab-card,
       .emblem-grid,
-      .doozi-card,
+      .dizi-card,
       .careers-grid,
       .footer-grid {
         grid-template-columns: 1fr;
@@ -1576,11 +1611,11 @@
       }
 
       .emblem-pillars-grid,
-      .doozi-pairings {
+      .dizi-ritual-steps {
         grid-template-columns: 1fr;
       }
 
-      .doozi-card {
+      .dizi-card {
         padding: 2.25rem 1.5rem;
       }
 
@@ -1614,7 +1649,7 @@
 
   <!-- Top Welcome Strip -->
   <div class="top-banner">
-    Artisanal Persian Grillhouse • Crafting Live-Charcoal Kebabs for Delhi NCR
+    Artisanal Persian Grillhouse • Crafting Live-Charcoal Kebabs &amp; Stone-Crock Dizi for Delhi NCR
   </div>
 
   <!-- Sticky Navigation Header -->
@@ -1635,7 +1670,7 @@
           <li><a href="#heritage">Our Craft</a></li>
           <li><a href="#kebabs">Signature Kebabs</a></li>
           <li><a href="#emblem">Royal Emblem</a></li>
-          <li><a href="#doozi">Doozi Ritual</a></li>
+          <li><a href="#dizi">Dizi (Abgoosht)</a></li>
           <li><a href="#careers">Careers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -1654,7 +1689,7 @@
       <a href="#heritage">Our Craft</a>
       <a href="#kebabs">Signature Kebabs</a>
       <a href="#emblem">Royal Emblem</a>
-      <a href="#doozi">Doozi Ritual</a>
+      <a href="#dizi">Dizi (Abgoosht)</a>
       <a href="#careers">Careers</a>
       <a href="#contact">Contact</a>
       <a href="#waitlist" class="btn btn-gold" style="margin-top: 0.5rem;">Join First-Tasting List</a>
@@ -2034,35 +2069,41 @@
   </section>
 
   <!-- ==========================================
-       THE DOOZI REFRESHMENT RITUAL
+       DIZI (ABGOOSHT) — PERSIAN EARTHENWARE STONE-CROCK FEAST
        ========================================== -->
-  <section class="doozi-section" id="doozi">
-    <div class="doozi-card">
-      <div class="doozi-content">
-        <div class="kicker-pill kicker-pill-dark">The Botanical Counterpoint</div>
-        <h2>The Art of <span>Doozi</span> Refreshment</h2>
-        <p>In traditional Persian feasts, rich charcoal kebabs are balanced by cooling herbal elixirs. Our signature <strong>Doozi</strong> preparations cleanse the palate and elevate every bite.</p>
-        <p>Whipped organic yogurt infused with crushed Persian wild mint (نعناع فلفلی), damask rose petals, and chilled sparkling spring water, paired with 7-year aged pickled garlic (Sir-e Torshi).</p>
+  <section class="dizi-section" id="dizi">
+    <div class="dizi-card">
+      <div class="dizi-content">
+        <div class="kicker-pill kicker-pill-dark">Slow-Simmered Heritage</div>
+        <h2>The Royal Ritual of <span>Dizi (Abgoosht)</span></h2>
+        <p>Beyond the open charcoal grill lies Iran’s most beloved culinary ceremony. Cooked for hours in individual glazed earthenware stone crocks (<em>Dizi</em>), our <strong>Abgoosht</strong> unites tender bone-in lamb shanks, chickpeas, white kidney beans, baby potatoes, and sun-ripened tomatoes with dried Omani limes (<em>Limoo Amani</em>) and saffron.</p>
+        <p>Served in two authentic courses: first, you tear warm hearth-baked bread into the aromatic saffron-lamb broth (<em>Tilit</em>); second, you mash the fall-off-the-bone meat, legumes, and potatoes with a traditional brass pestle (<em>Gooshtkoob</em>).</p>
 
-        <div class="doozi-pairings">
-          <div class="pairing-tile">
-            <h5>Wild Mountain Mint</h5>
-            <p>Hand-rubbed highland mint leaves for aromatic cooling and effortless digestion.</p>
+        <div class="dizi-ritual-steps">
+          <div class="ritual-tile">
+            <h5>Course I • The Saffron Tilit Broth</h5>
+            <p>Rich, golden lamb &amp; dried-lime broth ladled over torn Sangak flatbread so every piece absorbs the slow-simmered essence.</p>
           </div>
-          <div class="pairing-tile">
-            <h5>7-Year Aged Sir-e Torshi</h5>
-            <p>Slow-matured vintage garlic offering a mellow, balsamic-like umami contrast.</p>
+          <div class="ritual-tile">
+            <h5>Course II • Gooshtkoob Mash</h5>
+            <p>Tender lamb, chickpeas, and potatoes pounded smooth inside the stone crock, enjoyed with fresh Sabzi herbs, raw sweet onion, and Torshi pickles.</p>
           </div>
         </div>
       </div>
 
-      <div class="doozi-arch-medallion">
-        <div class="doozi-farsi">نعناع فلفلی</div>
-        <h3>DOOZI ATELIER</h3>
+      <div class="dizi-arch-medallion">
+        <div class="dizi-farsi">دیزی و آبگوشت</div>
+        <h3>DIZI ATELIER</h3>
         <div class="persian-divider" aria-hidden="true">
           <svg viewBox="0 0 24 24"><polygon points="12,1 15,9 23,12 15,15 12,23 9,15 1,12 9,9"/></svg>
         </div>
-        <p>“The cooling botanical elixir that completes the master griller’s feast.”</p>
+        <p>“Six hours in glazed clay over gentle embers—a two-course Persian feast of broth and hand-mashed lamb.”</p>
+        <div class="dizi-accompaniments">
+          <span>Limoo Amani</span>
+          <span>Brass Gooshtkoob</span>
+          <span>Fresh Sabzi</span>
+          <span>Sir-e Torshi</span>
+        </div>
       </div>
     </div>
   </section>
@@ -2144,7 +2185,7 @@
           </div>
         </button>
         <p style="font-size: 0.92rem; color: var(--ivory-soft); max-width: 360px; margin-bottom: 1rem;">
-          Charcoal-kissed saffron kebabs and authentic Persian grill ateliers crafted daily for Delhi NCR tables.
+          Charcoal-kissed saffron kebabs and slow-simmered stone-crock Dizi crafted daily for Delhi NCR tables.
         </p>
         <p style="font-size: 0.84rem; color: var(--gold-luminous); font-weight: 600;">
           Dispatch Hubs: South Delhi • Noida • Gurugram
@@ -2157,7 +2198,7 @@
           <li><a href="#heritage">Our Fire Craft</a></li>
           <li><a href="#kebabs">Signature Kebabs</a></li>
           <li><a href="#emblem">Royal Emblem</a></li>
-          <li><a href="#doozi">Doozi Ritual</a></li>
+          <li><a href="#dizi">Dizi (Abgoosht)</a></li>
           <li><a href="#careers">Careers</a></li>
         </ul>
       </div>
