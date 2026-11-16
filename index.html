@@ -1512,23 +1512,28 @@
       background: var(--gold-shiraz);
     }
 
-    /* ==========================================
-       LIGHTBOX MODAL
+/* ==========================================
+       LIGHTBOX MODAL (SMOOTH FADE & SCALE)
        ========================================== */
     .lightbox-overlay {
       position: fixed;
       inset: 0;
       z-index: 99999;
-      background: rgba(70, 23, 18, 0.94);
-      backdrop-filter: blur(10px);
-      display: none;
+      background: #000000;
+      display: flex;
       align-items: center;
       justify-content: center;
       padding: 1.5rem;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.38s cubic-bezier(0.22, 1, 0.36, 1), visibility 0.38s ease;
     }
 
     .lightbox-overlay.active {
-      display: flex;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
 
     .lightbox-box {
@@ -1536,9 +1541,17 @@
       max-width: 480px;
       width: 100%;
       text-align: center;
+      opacity: 0;
+      transform: scale(0.92) translateY(14px);
+      transition: transform 0.42s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.38s ease;
     }
 
-.lightbox-frame {
+    .lightbox-overlay.active .lightbox-box {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    .lightbox-frame {
       width: 100%;
       height: 62vh;
       max-height: 440px;
@@ -1556,7 +1569,7 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      transition: transform 0.35s ease;
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .lightbox-frame.zoomed img {
@@ -1584,6 +1597,13 @@
       font-size: 1.1rem;
       cursor: pointer;
       z-index: 5;
+      transition: transform 0.25s ease, background-color 0.25s ease;
+    }
+
+    .lightbox-close:hover {
+      background: var(--gold-shiraz);
+      color: var(--crimson-royal);
+      transform: rotate(90deg) scale(1.08);
     }
 
     /* ==========================================
@@ -2348,32 +2368,46 @@
         }
       }
 
-      // 3. Lightbox & Zoom Viewer
-      let scrollPosition = 0;
+      // 3. Lightbox & Zoom Viewer (Smooth Open/Exit + Scroll Lock Compensation)
       const logoModal = document.getElementById('logoModal');
       const modalLogoWrapper = document.getElementById('modalLogoWrapper');
       const closeLogoModal = document.getElementById('closeLogoModal');
       const modalLogoImg = document.getElementById('modalLogoImg');
       const modalCaption = document.getElementById('modalCaption');
+      let closeTimer = null;
 
       function openModal(imageSrc, captionText) {
-        scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+        if (closeTimer) {
+          clearTimeout(closeTimer);
+          closeTimer = null;
+        }
         if (modalLogoImg && imageSrc) modalLogoImg.src = imageSrc;
         if (modalCaption) modalCaption.textContent = captionText || '';
         if (modalLogoWrapper) modalLogoWrapper.classList.remove('zoomed');
+
+        // Compensate for scrollbar width so background layout never shifts horizontally
+        const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+        document.body.style.paddingRight = scrollbarWidth > 0 ? `${scrollbarWidth}px` : '';
+        document.body.style.overflow = 'hidden';
+
         if (logoModal) {
-          logoModal.classList.add('active');
-          document.body.classList.add('modal-open');
+          requestAnimationFrame(() => {
+            logoModal.classList.add('active');
+          });
         }
       }
 
       function closeModal() {
-        if (logoModal) {
-          logoModal.classList.remove('active');
-          document.body.classList.remove('modal-open');
+        if (!logoModal || !logoModal.classList.contains('active')) return;
+        logoModal.classList.remove('active');
+
+        // Wait for the 380ms fade/scale-out animation to finish before unlocking scroll & clearing image
+        closeTimer = setTimeout(() => {
+          document.body.style.overflow = '';
+          document.body.style.paddingRight = '';
           if (modalLogoWrapper) modalLogoWrapper.classList.remove('zoomed');
-          window.scrollTo(0, scrollPosition);
-        }
+          closeTimer = null;
+        }, 400);
       }
 
       if (modalLogoWrapper) {
