@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maison Kebabi | Artisanal Persian Grillhouse • Delhi NCR</title>
-  <meta name="description" content="Charcoal-kissed saffron kebabs, smoky hearth flames, and royal Persian grill ateliers. Discover Delhi NCR's premier Persian kebab experience.">
+  <title>Maison Polow | Persian Rice Atelier • Delhi NCR</title>
+  <meta name="description" content="Aromatic saffron grains, golden crispy tahdig, and heirloom Persian rice ateliers. Discover Delhi NCR's premier Persian rice experience.">
   
   <!-- Favicon & Brand Icons -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23120E0C'/%3E%3Ccircle cx='50' cy='50' r='43' stroke='%23D49543' stroke-width='1.5' fill='none'/%3E%3Ctext x='50' y='61' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23F6F2EB' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
-  <meta name="theme-color" content="#120E0C">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230F1522'/%3E%3Ccircle cx='50' cy='50' r='43' stroke='%23C28C41' stroke-width='1.5' fill='none'/%3E%3Ctext x='50' y='61' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23F6F2EB' text-anchor='middle'%3EMP%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0F1522">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,42 +19,43 @@
     :root {
       color-scheme: dark;
 
-      /* Distinct Charcoal, Bronze-Gold & Ember Palette for Maison Kebabi */
-      --gold: #D49543;                  /* Radiant Bronze Gold */
-      --gold-light: #E8B365;          /* Warm Amber Highlight */
-      --gold-pressed: #B0742E;        /* Deep Bronze */
-      --gold-subtle: rgba(212, 149, 67, 0.15);
+      /* Core Brand Palette — Harmonized with Maison Polow Master Emblem */
+      --gold: #C28C41;
+      --gold-light: #DCA85B;
+      --gold-pressed: #9E6E2B;
+      --gold-subtle: rgba(194, 140, 65, 0.15);
 
-      /* Hearth & Ember Accents (Distinct from Maison Polow's Olive Green) */
-      --ember-red: #A63A21;           /* Smoky Sumac & Live Ember Red */
-      --ember-glow: #D96B38;          /* Flame Glow */
-      --copper: #C9783B;              /* Grilled Crust Copper */
+      /* Botanical & Spice Accents from Emblem Compartments */
+      --emerald: #3B4D35;        /* Garden Dill & Foliage */
+      --emerald-mid: #4B6042;    /* Fava Bean (Baghali) Olive */
+      --emerald-light: #5C7450;  /* Fresh Herb Highlight */
+      --ruby-accent: #852427;    /* Zereshk Barberry & Pomegranate Bud */
 
-      /* Neutral Surfaces — Deep Charcoal Hearth & Roasted Cumin */
-      --bg-dark: #120E0C;
-      --bg-section: #1A1411;
-      --bg-card: #221B16;
-      --bg-card-inner: #17110E;
-      --bg-card-hover: #2D231C;
-      --bg-footer: #0A0706;
+      /* Neutral Surfaces — Regal Midnight Sapphire & Twilight Blue Palette */
+      --bg-dark: #0F1522;         /* Deep Midnight Sapphire Abyss */
+      --bg-section: #141C2C;      /* Royal Slate Navy Section */
+      --bg-card: #1C263A;         /* Lapis Blue Card Surface */
+      --bg-card-inner: #121824;   /* Deep Inner Card Surface */
+      --bg-card-hover: #26344E;   /* Elevated Card Hover State */
+      --bg-footer: #0A0D16;       /* Deepest Twilight Abyss */
       --parchment-light: #F6F2EB;
 
       /* Typography Colours */
       --cream: #F6F2EB;
       --cream-muted: #D8CFC2;
-      --text-subtle: #A6998A;
-      --charcoal: #1A1411;
+      --text-subtle: #A3B1C6;
+      --charcoal: #0F1522;
 
       /* Borders & Overlays */
-      --border-subtle: #382A21;
-      --border-gold: rgba(212, 149, 67, 0.38);
-      --border-gold-strong: rgba(232, 179, 101, 0.72);
-      --overlay-backdrop: rgba(10, 7, 6, 0.93);
+      --border-subtle: #24324A;
+      --border-gold: rgba(194, 140, 65, 0.38);
+      --border-gold-strong: rgba(220, 168, 91, 0.72);
+      --overlay-backdrop: rgba(10, 13, 22, 0.94);
 
       /* Semantic States */
-      --status-success-bg: rgba(166, 58, 33, 0.9);
-      --status-success-text: #FBE6E6;
-      --status-success-border: #D96B38;
+      --status-success-bg: rgba(30, 58, 95, 0.9);
+      --status-success-text: #E2E8F0;
+      --status-success-border: #3B82F6;
       --status-error-bg: rgba(133, 36, 39, 0.88);
       --status-error-text: #FBE6E6;
       --status-error-border: #B84246;
@@ -128,7 +129,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(18, 14, 12, 0.93);
+      background: rgba(15, 21, 34, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-gold);
       padding: 0.85rem 2rem;
@@ -172,7 +173,7 @@
       width: 48px;
       height: 48px;
       border-radius: 50%;
-      box-shadow: 0 2px 12px rgba(212, 149, 67, 0.34);
+      box-shadow: 0 2px 12px rgba(194, 140, 65, 0.34);
       object-fit: cover;
       display: block;
       border: 1.5px solid var(--gold);
@@ -241,7 +242,7 @@
       background: var(--gold-light);
       color: var(--bg-dark);
       transform: translateY(-1.5px);
-      box-shadow: 0 8px 24px rgba(212, 149, 67, 0.36);
+      box-shadow: 0 8px 24px rgba(194, 140, 65, 0.36);
     }
 
     .btn-primary:active {
@@ -258,7 +259,7 @@
 
     .btn-secondary {
       display: inline-block;
-      background: rgba(166, 58, 33, 0.45);
+      background: rgba(30, 58, 95, 0.65);
       color: var(--cream);
       padding: 11px 24px;
       font-size: 0.9rem;
@@ -273,7 +274,7 @@
     }
 
     .btn-secondary:hover {
-      background: var(--ember-glow);
+      background: #3B82F6;
       border-color: var(--gold-light);
       transform: translateY(-1.5px);
     }
@@ -287,12 +288,12 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: rgba(34, 27, 22, 0.94);
+      background: rgba(28, 38, 58, 0.94);
       backdrop-filter: blur(12px);
       border: 1px solid var(--border-gold);
       padding: 10px 16px;
       border-radius: 50px;
-      box-shadow: 0 12px 32px rgba(10, 7, 6, 0.68), 0 0 18px rgba(212, 149, 67, 0.16);
+      box-shadow: 0 12px 32px rgba(10, 13, 22, 0.68), 0 0 18px rgba(194, 140, 65, 0.16);
       transition: transform 0.25s ease, border-color 0.25s ease;
     }
 
@@ -407,7 +408,7 @@
       transform: translateX(-50%);
       width: 700px;
       height: 460px;
-      background: radial-gradient(ellipse 65% 50% at 50% 45%, rgba(166, 58, 33, 0.32) 0%, rgba(212, 149, 67, 0.09) 48%, rgba(18, 14, 12, 0) 76%);
+      background: radial-gradient(ellipse 65% 50% at 50% 45%, rgba(30, 58, 138, 0.35) 0%, rgba(194, 140, 65, 0.1) 48%, rgba(15, 21, 34, 0) 76%);
       pointer-events: none;
       z-index: 0;
     }
@@ -441,7 +442,7 @@
       border-radius: 24px;
       padding: 2.8rem 2.2rem;
       border: 1px solid var(--border-gold);
-      box-shadow: 0 4px 12px rgba(10, 7, 6, 0.45), 0 24px 48px rgba(10, 7, 6, 0.6);
+      box-shadow: 0 4px 12px rgba(10, 13, 22, 0.45), 0 24px 48px rgba(10, 13, 22, 0.6);
       text-align: center;
       position: relative;
       z-index: 1;
@@ -458,7 +459,7 @@
       border: 2px solid var(--gold);
       padding: 4px;
       background: var(--parchment-light);
-      box-shadow: 0 10px 30px rgba(212, 149, 67, 0.32);
+      box-shadow: 0 10px 30px rgba(194, 140, 65, 0.32);
     }
 
     .hero-logo-img {
@@ -511,7 +512,7 @@
     .waitlist-form input:focus, .waitlist-form select:focus {
       border-color: var(--gold-light);
       background: var(--bg-card-hover);
-      box-shadow: 0 0 0 3px rgba(212, 149, 67, 0.24);
+      box-shadow: 0 0 0 3px rgba(194, 140, 65, 0.24);
       outline: none;
     }
 
@@ -583,7 +584,7 @@
       transform: translateY(-4px);
       background: var(--bg-card-hover);
       border-color: var(--border-gold-strong);
-      box-shadow: 0 18px 40px rgba(10, 7, 6, 0.55);
+      box-shadow: 0 18px 40px rgba(10, 13, 22, 0.55);
     }
 
     .craft-card h3 {
@@ -657,12 +658,12 @@
       border-radius: 24px;
       overflow: hidden;
       border: 1px solid var(--border-gold);
-      box-shadow: 0 4px 12px rgba(10, 7, 6, 0.45), 0 24px 48px rgba(10, 7, 6, 0.6);
+      box-shadow: 0 4px 12px rgba(10, 13, 22, 0.45), 0 24px 48px rgba(10, 13, 22, 0.6);
       min-height: 480px;
     }
 
     .sku-media {
-      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1C14 55%, var(--bg-dark) 100%);
+      background: radial-gradient(circle at 50% 45%, #1D3557 0%, #152238 55%, var(--bg-dark) 100%);
       padding: 2.5rem 2rem;
       display: flex;
       flex-direction: column;
@@ -696,7 +697,7 @@
       height: 330px;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 16px 36px rgba(10, 7, 6, 0.7);
+      box-shadow: 0 16px 36px rgba(10, 13, 22, 0.7);
       border: 1.5px solid var(--gold);
     }
 
@@ -717,7 +718,7 @@
     .sku-img-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(18, 14, 12, 0.08) 0%, rgba(18, 14, 12, 0) 50%, rgba(18, 14, 12, 0.8) 100%);
+      background: linear-gradient(180deg, rgba(15, 21, 34, 0.08) 0%, rgba(15, 21, 34, 0) 50%, rgba(15, 21, 34, 0.8) 100%);
       pointer-events: none;
     }
 
@@ -725,7 +726,7 @@
       position: absolute;
       top: 14px;
       left: 14px;
-      background: rgba(18, 14, 12, 0.92);
+      background: rgba(15, 21, 34, 0.92);
       backdrop-filter: blur(8px);
       color: var(--gold-light);
       font-size: 0.72rem;
@@ -742,7 +743,7 @@
       position: absolute;
       bottom: 14px;
       right: 14px;
-      background: rgba(18, 14, 12, 0.92);
+      background: rgba(15, 21, 34, 0.92);
       backdrop-filter: blur(8px);
       color: var(--gold-light);
       font-size: 0.72rem;
@@ -827,7 +828,7 @@
       width: 10px;
       height: 10px;
       border-radius: 50%;
-      background: rgba(212, 149, 67, 0.32);
+      background: rgba(194, 140, 65, 0.32);
       border: none;
       padding: 0;
       cursor: pointer;
@@ -856,7 +857,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(10, 7, 6, 0.35);
+      box-shadow: 0 4px 12px rgba(10, 13, 22, 0.35);
       transition: all 0.25s ease;
     }
 
@@ -895,11 +896,11 @@
 
     .emblem-artwork-container {
       position: relative;
-      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1C14 55%, var(--bg-dark) 100%);
+      background: radial-gradient(circle at 50% 45%, #1D3557 0%, #152238 55%, var(--bg-dark) 100%);
       border-radius: 24px;
       padding: 2.5rem;
       border: 1px solid var(--border-gold);
-      box-shadow: 0 20px 48px rgba(10, 7, 6, 0.6);
+      box-shadow: 0 20px 48px rgba(10, 13, 22, 0.6);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -928,7 +929,7 @@
       aspect-ratio: 1 / 1;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 16px 36px rgba(10, 7, 6, 0.7);
+      box-shadow: 0 16px 36px rgba(10, 13, 22, 0.7);
       border: 2px solid var(--gold);
       background: var(--parchment-light);
       position: relative;
@@ -946,7 +947,7 @@
       position: absolute;
       bottom: 14px;
       right: 14px;
-      background: rgba(18, 14, 12, 0.92);
+      background: rgba(15, 21, 34, 0.92);
       backdrop-filter: blur(8px);
       color: var(--gold-light);
       font-size: 0.72rem;
@@ -1013,97 +1014,6 @@
       line-height: 1.5;
     }
 
-    /* Doozi Special Highlight Section (Placed Immediately After Anatomy of Emblem) */
-    .doozi-section {
-      background: var(--bg-dark);
-      padding: 6rem 2rem;
-      border-bottom: 1px solid var(--border-subtle);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .doozi-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      background: var(--bg-card);
-      border-radius: 24px;
-      border: 1.5px solid var(--border-gold);
-      padding: 4rem 3rem;
-      box-shadow: 0 20px 60px rgba(10, 7, 6, 0.7), 0 0 30px rgba(212, 149, 67, 0.12);
-      display: grid;
-      grid-template-columns: 1fr 1.1fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-
-    .doozi-text h2 {
-      font-size: clamp(2.2rem, 4vw, 3.2rem);
-      color: var(--cream);
-      margin-bottom: 1rem;
-    }
-
-    .doozi-text h2 span {
-      color: var(--gold-light);
-      font-style: italic;
-    }
-
-    .doozi-text p {
-      color: var(--cream-muted);
-      font-size: 1.02rem;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
-    }
-
-    .doozi-features {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    .doozi-feature-box {
-      background: var(--bg-card-inner);
-      padding: 1.2rem;
-      border-radius: 12px;
-      border: 1px solid var(--border-subtle);
-    }
-
-    .doozi-feature-box h5 {
-      font-size: 1rem;
-      color: var(--gold-light);
-      margin-bottom: 4px;
-      font-family: var(--font-serif);
-    }
-
-    .doozi-feature-box p {
-      font-size: 0.82rem;
-      color: var(--text-subtle);
-      margin-bottom: 0;
-      line-height: 1.4;
-    }
-
-    .doozi-media-box {
-      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1C14 55%, var(--bg-dark) 100%);
-      border-radius: 18px;
-      padding: 2rem;
-      border: 1.5px solid var(--gold);
-      text-align: center;
-      position: relative;
-    }
-
-    .doozi-media-box h3 {
-      font-family: var(--font-serif);
-      font-size: 1.8rem;
-      color: var(--cream);
-      margin-bottom: 0.5rem;
-    }
-
-    .doozi-media-box p {
-      font-style: italic;
-      color: var(--cream-muted);
-      font-size: 0.95rem;
-    }
-
     /* Careers */
     .careers-section {
       background: var(--bg-dark);
@@ -1167,7 +1077,7 @@
       padding: 2.5rem;
       border-radius: 24px;
       border: 1px solid var(--border-gold);
-      box-shadow: 0 20px 48px rgba(10, 7, 6, 0.55);
+      box-shadow: 0 20px 48px rgba(10, 13, 22, 0.55);
       width: 100%;
       max-width: 100%;
     }
@@ -1216,7 +1126,7 @@
       border-radius: 14px;
       object-fit: cover;
       border: 1.5px solid var(--gold);
-      box-shadow: 0 8px 20px rgba(10, 7, 6, 0.7);
+      box-shadow: 0 8px 20px rgba(10, 13, 22, 0.7);
       background: var(--parchment-light);
       display: block;
       flex-shrink: 0;
@@ -1269,7 +1179,7 @@
     }
 
     .social-icon-btn:hover {
-      background: rgba(212, 149, 67, 0.28);
+      background: rgba(194, 140, 65, 0.28);
       border-color: var(--gold-light);
       color: var(--cream);
       transform: translateY(-2px);
@@ -1327,7 +1237,7 @@
       max-height: 420px;
       border-radius: 20px;
       background: var(--parchment-light);
-      box-shadow: 0 25px 60px rgba(10, 7, 6, 0.85), 0 0 0 2px var(--gold);
+      box-shadow: 0 25px 60px rgba(10, 13, 22, 0.85), 0 0 0 2px var(--gold);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1376,7 +1286,7 @@
       justify-content: center;
       cursor: pointer;
       z-index: 10;
-      box-shadow: 0 4px 12px rgba(10, 7, 6, 0.5);
+      box-shadow: 0 4px 12px rgba(10, 13, 22, 0.5);
       transition: background-color 0.2s ease, transform 0.2s ease;
     }
 
@@ -1473,7 +1383,7 @@
         text-align: center;
         padding: 0 1rem;
       }
-      .craft-section, .emblem-section, .doozi-section, .careers-section, footer, .menu-preview {
+      .craft-section, .emblem-section, .careers-section, footer, .menu-preview {
         padding-left: 1rem;
         padding-right: 1rem;
         text-align: center;
@@ -1484,11 +1394,10 @@
       .craft-card {
         text-align: center;
       }
-      .emblem-wrap, .doozi-container {
+      .emblem-wrap {
         grid-template-columns: 1fr;
         gap: 2.5rem;
         text-align: center;
-        padding: 2rem 1.5rem;
       }
       .emblem-story-content {
         text-align: center;
@@ -1547,6 +1456,7 @@
         height: 52vh;
         max-height: 360px;
       }
+      /* Hide text and volume slider on mobile to save space */
       .floating-audio-widget {
         bottom: 20px;
         right: 20px;
@@ -1564,22 +1474,23 @@
   <!-- Navigation -->
   <header>
     <div class="brand-logo-wrap">
-      <button type="button" class="nav-logo-button" id="headerLogoBtn" aria-label="View enlarged Maison Kebabi emblem" title="Click to view emblem">
-        <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="nav-logo-img" id="headerLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%23120E0C\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23D49543\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MK</text></svg>';">
+      <button type="button" class="nav-logo-button" id="headerLogoBtn" aria-label="View enlarged Maison Polow emblem" title="Click to view emblem">
+        <img src="assets/logo.png" alt="Maison Polow Emblem" class="nav-logo-img" id="headerLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230F1522\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23C28C41\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MP</text></svg>';">
       </button>
       
       <a href="#" style="text-decoration: none; color: inherit;" class="brand-title">
-        <span>MAISON KEBABI</span>
-        <span>Grillade & Feu</span>
+        <span>MAISON POLOW</span>
+        <span>Persian Rice Atelier</span>
       </a>
     </div>
     
     <nav>
       <ul>
-        <li><a href="#heritage">The Fire Craft</a></li>
-        <li><a href="#kebabs">Signature Kebabs</a></li>
-        <li><a href="#emblem">Anatomy of Emblem</a></li>
-        <li><a href="#doozi">The Doozi Ritual</a></li>
+        <li><a href="#heritage">The Heritage</a></li>
+        <li><a href="#signature">Signature Polows</a></li>
+        <li><a href="#emblem">Anatomy of Our Emblem</a></li>
+        <li><a href="#plates">Royal Non-Veg Plates</a></li>
+        <li><a href="#dishes">Khoresht</a></li>
         <li><a href="#careers">Careers</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><a href="#waitlist" class="btn-primary">Reserve Tasting Box</a></li>
@@ -1590,18 +1501,21 @@
   <!-- Floating Custom Audio Control Widget -->
   <div class="floating-audio-widget" id="floatingAudioWidget" role="region" aria-label="Audio Controls">
     <audio id="bgAudio" loop preload="auto">
-      <source src="assets/Website-مزون کباب.mp3" type="audio/mpeg">
+      <source src="assets/Website-مزون پلو.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
     
     <button type="button" class="audio-toggle-btn" id="audioToggleBtn" aria-label="Play or Pause Audio" title="Play / Pause Sound">
+      <!-- Play Icon SVG -->
       <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <!-- Pause Icon SVG (hidden by default) -->
       <svg id="pauseIcon" viewBox="0 0 24 24" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     </button>
 
     <div class="audio-details-wrap">
-      <div class="audio-title">Hearth Sound</div>
+      <div class="audio-title">Atelier Sound</div>
       <div class="volume-slider-wrap">
+        <!-- Speaker Icon -->
         <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
         <input type="range" min="0" max="1" step="0.05" value="0.5" class="volume-slider" id="volumeSlider" aria-label="Volume Slider" title="Adjust Volume">
       </div>
@@ -1612,19 +1526,19 @@
   <section class="hero">
     <div class="hero-content">
       <div class="badge">Delhi NCR • Launching Winter 2026</div>
-      <h1>Charcoal Fire. <span>Persian Soul at Delhi’s Table.</span></h1>
-      <p>Saffron-marinated tender cuts, smoky open-flame skewers, and centuries of authentic Persian grill mastery. Crafted daily over live charcoal embers in Delhi NCR.</p>
+      <h1>Persian Soul. <span>A Place at Delhi’s Table.</span></h1>
+      <p>Aromatic saffron grains, jewel-like barberries, and prized golden <em>tahdig</em> crusts. Handcrafted daily in Delhi NCR where rice is celebrated as the absolute hero of the feast.</p>
       <a href="#waitlist" class="btn-primary" style="padding: 14px 32px; font-size: 1rem;">Join The Private Tasting Drop</a>
     </div>
 
     <!-- Waitlist Card -->
     <div class="hero-card" id="waitlist">
       <div class="hero-logo-container" id="heroLogoTrigger" title="Click to view emblem">
-        <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="hero-logo-img" id="heroLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%23120E0C\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23D49543\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MK</text></svg>';">
+        <img src="assets/logo.png" alt="Maison Polow Persian Rice Atelier" class="hero-logo-img" id="heroLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230F1522\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23C28C41\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MP</text></svg>';">
       </div>
       
       <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--cream);">Join the First-Tasting Drop</h3>
-      <p style="font-size: 0.88rem; color: var(--cream-muted);">Be among the first 50 tables in South Delhi, Noida & Gurugram to experience royal Persian charcoal skewers and hearth-baked bread.</p>
+      <p style="font-size: 0.88rem; color: var(--cream-muted);">Be among the first 50 tables in South Delhi, Noida & Gurugram to experience royal Persian rice platters and warm Tahdig.</p>
       
       <form class="waitlist-form" id="waitlistForm">
         <input type="hidden" name="form_type" value="waitlist">
@@ -1648,219 +1562,281 @@
   <!-- Craft Pillars Section -->
   <section class="craft-section" id="heritage">
     <div class="section-header">
-      <div class="badge">The Persian Grill Philosophy</div>
-      <h2>Charcoal Smoke & Saffron Marinades</h2>
-      <p>We honor traditional open-flame Persian barbecuing. Every skewer is hand-pressed, seasoned with wild Sargol saffron, and charred over glowing hardwood charcoal.</p>
+      <div class="badge">The Persian Rice Philosophy</div>
+      <h2>Rice as the Centerpiece. Honored with Patience.</h2>
+      <p>We reject quick-boil shortcuts. Every grain of aged basmati is soaked, steamed, and bloomed in wild Sargol saffron to achieve celestial fluffiness.</p>
     </div>
 
     <div class="grid-3">
       <div class="craft-card">
-        <h3>Live Hardwood Embers</h3>
-        <p>No gas burners or electric grills. Consistent, clean heat from select hardwood charcoal imparts that signature smoky Persian outdoor aroma into every cut.</p>
+        <h3>Wild Sargol Saffron</h3>
+        <p>Pure hand-harvested red saffron threads bloomed in warm spring water, imparting a radiant golden hue and delicate floral aroma across every single long grain.</p>
       </div>
       <div class="craft-card">
-        <h3>Sargol Saffron Glaze</h3>
-        <p>Pure hand-harvested red saffron threads combined with cultured butter and fresh lemon juice, basted repeatedly during the grill rotation for a gleaming finish.</p>
+        <h3>The Golden Tahdig</h3>
+        <p>The prized crisp golden rice crust formed at the bottom of the heavy-bottomed pot—a textural masterpiece shared among honoured guests at the table.</p>
       </div>
       <div class="craft-card">
-        <h3>Hand-Pressed Koobideh</h3>
-        <p>Finest minced prime lamb and pasture-raised beef blended with grated onions and rock salt, masterfully textured along wide stainless steel skewers by hand.</p>
+        <h3>Jeweled Garnishes</h3>
+        <p>Platters crowned with tart ruby barberries (<em>Zereshk</em>), slivered pistachios, almonds, and slow-braised meats that turn every meal into a celebration.</p>
       </div>
     </div>
   </section>
 
-  <!-- Signature Kebabs Carousel Showcase -->
-  <section class="menu-preview" id="kebabs">
+  <!-- Signature Polow Carousel Showcase -->
+  <section class="menu-preview" id="signature">
     <div class="section-header">
       <div class="badge">The Atelier Repertoire</div>
-      <h2>Signature Persian Kebabs</h2>
-      <p>Featuring our six royal kebab masterpieces crafted over live fire, from succulent minced lamb skewers to prime bone-in chops.</p>
+      <h2>Heirloom Persian Rice Dishes</h2>
+      <p>Featuring all eight royal rice preparations crafted for sharing, from tangy barberry rice to baked saffron rice cakes.</p>
     </div>
 
     <div class="sku-slider-container" id="skuSliderContainer">
       <div class="sku-slider-track" id="skuSliderTrack">
         
-        <!-- KEBAB 1: Koobideh Kebab -->
+        <!-- DISH 1: Zereshk Polow -->
         <div class="sku-slide active" data-slide="0">
           <div class="sku-card">
             <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Koobideh Kebab" title="Click to view high-resolution image">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Zereshk Polow" title="Click to view high-resolution image">
                 <div class="sku-img-wrapper">
-                  <img src="assets/Koobideh-Kebab.png" alt="Koobideh Kebab - Minced Lamb & Beef Skewers" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                  <img src="assets/Zereshk-Polow.png" alt="Zereshk Polow - Barberry Rice" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
                   <div class="sku-img-overlay"></div>
-                  <span class="live-tag">Hearth Classic</span>
+                  <span class="live-tag">Celebratory Classic</span>
                   <span class="sku-hint-overlay">🔍 Click to Zoom</span>
                 </div>
               </button>
-              <p class="sku-quote">"Juicy hand-pressed lamb and beef skewers kissed by charcoal smoke."</p>
+              <p class="sku-quote">"Shimmering ruby barberries over fragrant saffron basmati."</p>
             </div>
 
             <div class="sku-details">
-              <span class="badge" style="width: fit-content;">Hero Offering • 01 of 06</span>
-              <h3>Koobideh Kebab</h3>
+              <span class="badge" style="width: fit-content;">Hero Offering • 01 of 08</span>
+              <h3>Zereshk Polow (Barberry Rice)</h3>
               <div class="sku-price">Price to be announced</div>
-              <p>The undisputed soul of the Persian grill. Finely minced prime lamb and beef blended with sweet onions, seasoned with sea salt and black pepper, hand-molded onto wide metal skewers and grilled over blazing hot coals.</p>
+              <p>Fluffy saffron-infused basmati rice layered and topped with tart, jewel-like red barberries gently sautéed in butter and sugar, traditionally served with tender braised or roasted chicken.</p>
               
               <div class="ingredient-tags">
-                <span>Prime Minced Lamb & Beef</span>
-                <span>Sweet Onions</span>
-                <span>Charcoal Flame</span>
-                <span>Sumac Dust</span>
+                <span>Aged Basmati</span>
+                <span>Wild Barberries (Zereshk)</span>
+                <span>Saffron Infusion</span>
+                <span>Pure Butter</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 2: Jujeh Kebab -->
+        <!-- DISH 2: Baghali Polow -->
         <div class="sku-slide" data-slide="1">
           <div class="sku-card">
             <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Jujeh Kebab" title="Click to view high-resolution image">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Baghali Polow" title="Click to view high-resolution image">
                 <div class="sku-img-wrapper">
-                  <img src="assets/Jujeh-Kebab.png" alt="Jujeh Kebab - Saffron Chicken Skewers" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
+                  <img src="assets/Baghali-Polow.png" alt="Baghali Polow - Dill and Fava Bean Rice" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=1000&q=80';">
                   <div class="sku-img-overlay"></div>
-                  <span class="live-tag">Saffron Favorite</span>
+                  <span class="live-tag">Spring Celebration</span>
                   <span class="sku-hint-overlay">🔍 Click to Zoom</span>
                 </div>
               </button>
-              <p class="sku-quote">"Tender chicken chunks steeped in saffron, onion, and lemon juice."</p>
+              <p class="sku-quote">"Fresh garden dill and tender fava beans."</p>
             </div>
 
             <div class="sku-details">
-              <span class="badge" style="width: fit-content;">Atelier Masterpiece • 02 of 06</span>
-              <h3>Jujeh Kebab</h3>
+              <span class="badge" style="width: fit-content;">Heritage Polow • 02 of 08</span>
+              <h3>Baghali Polow (Dill & Fava Bean Rice)</h3>
               <div class="sku-price">Price to be announced</div>
-              <p>Boneless chicken pieces marinated overnight in a rich emulsion of brewed Sargol saffron, fresh lemon juice, grated onion, and olive oil, resulting in exceptionally juicy skewers with golden charred edges.</p>
+              <p>An aromatic rice dish with fresh chopped dill and tender fava beans, traditionally served at celebrations alongside slow-cooked lamb shanks (mahicheh) braised in rich onion broth.</p>
               
               <div class="ingredient-tags">
-                <span>Boneless Chicken</span>
-                <span>Sargol Saffron</span>
-                <span>Lemon & Onion Bath</span>
-                <span>Butter Baste</span>
+                <span>Basmati Rice</span>
+                <span>Fresh Dill</span>
+                <span>Fava Beans</span>
+                <span>Suggested: Lamb Shank</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 3: Barg Kebab -->
+        <!-- DISH 3: Adas Polow -->
         <div class="sku-slide" data-slide="2">
           <div class="sku-card">
             <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Barg Kebab" title="Click to view high-resolution image">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Adas Polow" title="Click to view high-resolution image">
                 <div class="sku-img-wrapper">
-                  <img src="assets/Barg-Kebab.png" alt="Barg Kebab - Butter-Basted Tenderloin Filet" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1000&q=80';">
+                  <img src="assets/Adas-Polow.png" alt="Adas Polow - Lentil Rice" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=1000&q=80';">
                   <div class="sku-img-overlay"></div>
-                  <span class="live-tag">Royal Tenderloin</span>
+                  <span class="live-tag">Homestyle Comfort</span>
                   <span class="sku-hint-overlay">🔍 Click to Zoom</span>
                 </div>
               </button>
-              <p class="sku-quote">"Paper-thin pounded filet mignon basted in rich saffron butter."</p>
+              <p class="sku-quote">"Earthy brown lentils, sweet raisins, and soft dates."</p>
             </div>
 
             <div class="sku-details">
-              <span class="badge" style="width: fit-content;">Imperial Cut • 03 of 06</span>
-              <h3>Barg Kebab</h3>
+              <span class="badge" style="width: fit-content;">Comfort Classic • 03 of 08</span>
+              <h3>Adas Polow (Lentil Rice)</h3>
               <div class="sku-price">Price to be announced</div>
-              <p>An exquisite luxury cut of prime tenderloin beef or lamb, expertly hand-pounded to a delicate thickness, marinated in olive oil, garlic, and onions, then flame-grilled and generously brushed with melted saffron butter.</p>
+              <p>A comforting combination of rice, lentils, sweet raisins, and dates, bringing together earthy proteins and natural sweetness in perfect harmony.</p>
               
               <div class="ingredient-tags">
-                <span>Prime Tenderloin Filet</span>
-                <span>Saffron Butter Baste</span>
-                <span>Garlic Infusion</span>
-                <span>Delicate Smoke</span>
+                <span>Brown Lentils</span>
+                <span>Sweet Dates</span>
+                <span>Raisins</span>
+                <span>Warm Spices</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 4: Soltani Kebab -->
+        <!-- DISH 4: Lubia Polow -->
         <div class="sku-slide" data-slide="3">
           <div class="sku-card">
             <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Soltani Kebab" title="Click to view high-resolution image">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Lubia Polow" title="Click to view high-resolution image">
                 <div class="sku-img-wrapper">
-                  <img src="assets/Soltani-Kebab.png" alt="Soltani Kebab - Combination of Barg and Koobideh" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                  <img src="assets/Lubia-Polow.png" alt="Lubia Polow - Spiced Green Bean & Beef Rice" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80';">
                   <div class="sku-img-overlay"></div>
-                  <span class="live-tag">The Sovereign Feast</span>
+                  <span class="live-tag">Family Classic</span>
                   <span class="sku-hint-overlay">🔍 Click to Zoom</span>
                 </div>
               </button>
-              <p class="sku-quote">"The ultimate union of tender Barg filet and juicy Koobideh."</p>
+              <p class="sku-quote">"Tender green beans, spiced minced meat, and layered tomato aroma."</p>
             </div>
 
             <div class="sku-details">
-              <span class="badge" style="width: fit-content;">Sovereign Feast • 04 of 06</span>
-              <h3>Soltani Kebab</h3>
+              <span class="badge" style="width: fit-content;">Persian Heirloom • 04 of 08</span>
+              <h3>Lubia Polow (Green Bean & Minced Meat Rice)</h3>
               <div class="sku-price">Price to be announced</div>
-              <p>Translating to 'The Royal', this magnificent pairing unites one skewer of buttery tender Barg kebab with one skewer of succulent minced Koobideh kebab, served alongside charred vine tomatoes and buttered rice.</p>
+              <p>A comforting, layered rice specialty made with tender green beans, succulent minced beef or lamb, aromatic tomato sofrito, sweet cinnamon, and Persian spices, crowned with a golden tahdig.</p>
               
               <div class="ingredient-tags">
-                <span>Barg Kebab Skewer</span>
-                <span>Koobideh Kebab Skewer</span>
-                <span>Charred Vine Tomatoes</span>
-                <span>Saffron Butter</span>
+                <span>Green Beans</span>
+                <span>Minced Beef / Lamb</span>
+                <span>Tomato Sofrito</span>
+                <span>Cinnamon & Saffron</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 5: Chenjeh Kebab -->
+        <!-- DISH 5: Sabzi Polow -->
         <div class="sku-slide" data-slide="4">
           <div class="sku-card">
             <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Chenjeh Kebab" title="Click to view high-resolution image">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Sabzi Polow" title="Click to view high-resolution image">
                 <div class="sku-img-wrapper">
-                  <img src="assets/Chenjeh-Kebab.png" alt="Chenjeh Kebab - Marinated Lamb Chunks" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
+                  <img src="assets/Sabzi-Polow.png" alt="Sabzi Polow - Herb Rice with Fish" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80';">
                   <div class="sku-img-overlay"></div>
-                  <span class="live-tag">Hearth Cubes</span>
+                  <span class="live-tag">Festive Tradition</span>
                   <span class="sku-hint-overlay">🔍 Click to Zoom</span>
                 </div>
               </button>
-              <p class="sku-quote">"Cubed prime lamb loin marinated in yogurt, onion, and black pepper."</p>
+              <p class="sku-quote">"A fragrant garden of fresh green herbs and golden basmati."</p>
             </div>
 
             <div class="sku-details">
-              <span class="badge" style="width: fit-content;">Traditional Cut • 05 of 06</span>
-              <h3>Chenjeh Kebab</h3>
+              <span class="badge" style="width: fit-content;">Nowruz Classic • 05 of 08</span>
+              <h3>Sabzi Polow (Persian Herb Rice)</h3>
               <div class="sku-price">Price to be announced</div>
-              <p>Juicy, bite-sized cubes of prime lamb loin marinated in a tangy blend of yogurt, grated onion, and freshly cracked black pepper. Skewered and grilled over high charcoal heat for a delightfully smoky crust and tender center.</p>
+              <p>An aromatic pilaf layered with an abundant garden mix of fresh cilantro, parsley, dill, chives, and garlic, gently steamed with aged basmati rice and enriched with pure butter.</p>
               
               <div class="ingredient-tags">
-                <span>Prime Lamb Loin Cubes</span>
-                <span>Yogurt Marinade</span>
-                <span>Cracked Black Pepper</span>
-                <span>Onion Glaze</span>
+                <span>Fresh Dill & Cilantro</span>
+                <span>Parsley & Chives</span>
+                <span>Aged Basmati</span>
+                <span>Pure Butter</span>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 6: Shishlik -->
+        <!-- DISH 6: Saffron Polow -->
         <div class="sku-slide" data-slide="5">
           <div class="sku-card">
             <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Shishlik" title="Click to view high-resolution image">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Saffron Polow" title="Click to view high-resolution image">
                 <div class="sku-img-wrapper">
-                  <img src="assets/Shishlik.png" alt="Shishlik - Prime Bone-in Lamb Chops" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                  <img src="assets/Saffron-Polow.png" alt="Saffron Polow - Golden Saffron Rice" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80';">
                   <div class="sku-img-overlay"></div>
-                  <span class="live-tag">Master Cut</span>
+                  <span class="live-tag">Atelier Signature</span>
                   <span class="sku-hint-overlay">🔍 Click to Zoom</span>
                 </div>
               </button>
-              <p class="sku-quote">"Thick-cut prime bone-in lamb chops charred to smoky perfection."</p>
+              <p class="sku-quote">"Pure golden threads and fragrant butter steam."</p>
             </div>
 
             <div class="sku-details">
-              <span class="badge" style="width: fit-content;">Masterpiece • 06 of 06</span>
-              <h3>Shishlik Kebab</h3>
+              <span class="badge" style="width: fit-content;">Royal Heritage • 06 of 08</span>
+              <h3>Saffron Polow (Golden Saffron Rice)</h3>
               <div class="sku-price">Price to be announced</div>
-              <p>Magnificent thick-cut prime bone-in lamb chops marinated in garlic, olive oil, and crushed coriander seeds. Charbroiled over live embers until the exterior is wonderfully caramelized while retaining maximum juiciness.</p>
+              <p>A regal presentation of extra-long-grain aged basmati rice infused with generous quantities of brewed Sargol saffron, layered with clarified butter to achieve a brilliant golden hue and unmatched aroma.</p>
               
               <div class="ingredient-tags">
-                <span>Bone-In Lamb Chops</span>
-                <span>Garlic & Coriander</span>
-                <span>Charcoal Sear</span>
-                <span>Saffron Butter Finish</span>
+                <span>Sargol Saffron</span>
+                <span>Aged Basmati</span>
+                <span>Clarified Butter</span>
+                <span>Cardamom Note</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DISH 7: Shirin Polow -->
+        <div class="sku-slide" data-slide="6">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Shirin Polow" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Shirin-Polow.png" alt="Shirin Polow - Sweet Jeweled Rice" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Royal Feast</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Pistachios, orange peel, and rosewater aroma."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Wedding Tradition • 07 of 08</span>
+              <h3>Shirin Polow (Sweet Jeweled Rice)</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>A celebratory rice preparation with slivered pistachios, almonds, candied orange peel, carrots, and golden raisins, lightly scented with rosewater and saffron.</p>
+              
+              <div class="ingredient-tags">
+                <span>Slivered Pistachios</span>
+                <span>Candied Orange Peel</span>
+                <span>Rosewater</span>
+                <span>Golden Raisins</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DISH 8: Tahchin -->
+        <div class="sku-slide" data-slide="7">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Tahchin" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Tahchin.png" alt="Tahchin - Saffron Rice Cake" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Baked Showpiece</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Crisp golden yogurt crust encasing saffron chicken."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Atelier Masterpiece • 08 of 08</span>
+              <h3>Tahchin (Saffron Rice Cake)</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>A rich, savoury rice cake made with basmati rice, Greek yogurt, egg yolks, and saffron, layered with tender spiced chicken or lamb and baked until the outer shell forms a thick golden crust.</p>
+              
+              <div class="ingredient-tags">
+                <span>Yogurt & Egg Binding</span>
+                <span>Concentrated Saffron</span>
+                <span>Crisp Tahdig Shell</span>
+                <span>Tender Meat</span>
               </div>
             </div>
           </div>
@@ -1870,20 +1846,22 @@
 
       <!-- Carousel Controls -->
       <div class="slider-nav-bar">
-        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Kebab Carousel Navigation">
+        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Rice Carousel Navigation">
           <button class="slider-dot active" data-index="0" aria-label="Slide 1"></button>
           <button class="slider-dot" data-index="1" aria-label="Slide 2"></button>
           <button class="slider-dot" data-index="2" aria-label="Slide 3"></button>
           <button class="slider-dot" data-index="3" aria-label="Slide 4"></button>
           <button class="slider-dot" data-index="4" aria-label="Slide 5"></button>
           <button class="slider-dot" data-index="5" aria-label="Slide 6"></button>
+          <button class="slider-dot" data-index="6" aria-label="Slide 7"></button>
+          <button class="slider-dot" data-index="7" aria-label="Slide 8"></button>
         </div>
 
         <div class="slider-arrows">
-          <button class="slider-btn" id="prevSlideBtn" aria-label="Previous Kebab" title="Previous Kebab">
+          <button class="slider-btn" id="prevSlideBtn" aria-label="Previous Dish" title="Previous Dish">
             <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
           </button>
-          <button class="slider-btn" id="nextSlideBtn" aria-label="Next Kebab" title="Next Kebab">
+          <button class="slider-btn" id="nextSlideBtn" aria-label="Next Dish" title="Next Dish">
             <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
           </button>
         </div>
@@ -1896,9 +1874,9 @@
     <div class="emblem-wrap">
       
       <div class="emblem-artwork-container">
-        <button type="button" class="emblem-zoom-button" id="emblemZoomTrigger" aria-label="Zoom in on the Maison Kebabi Master Crest" title="Click to view high-resolution emblem">
+        <button type="button" class="emblem-zoom-button" id="emblemZoomTrigger" aria-label="Zoom in on the Maison Polow Master Crest" title="Click to view high-resolution emblem">
           <div class="emblem-artwork-frame">
-            <img src="assets/MK.jpg" alt="Maison Kebabi Master Crest" class="emblem-artwork-img" id="emblemArtworkImg" loading="lazy" onerror="this.onerror=null; this.src='assets/MK.jpg';">
+            <img src="assets/emblem-master.jpg" alt="Maison Polow Master Crest" class="emblem-artwork-img" id="emblemArtworkImg" loading="lazy" onerror="this.onerror=null; this.src='assets/logo.png';">
             <span class="emblem-hint-overlay">🔍 Click to Inspect</span>
           </div>
         </button>
@@ -1906,27 +1884,27 @@
 
       <div class="emblem-story-content">
         <div class="badge">Anatomy of Our Emblem</div>
-        <h2>The Architecture of Fire & Heritage</h2>
+        <h2>The Architecture of Craft & Tradition</h2>
         <p class="emblem-intro">
-          The Maison Kebabi visual identity is an intricate architectural harmony reflecting centuries of Persian grilling traditions, live charcoal embers, and artisanal butchery.
+          The Maison Polow visual identity is an intricate architectural harmony reflecting centuries of Persian culinary heritage and artisanal rice preparation.
         </p>
 
         <div class="emblem-pillars">
           <div class="emblem-pillar-card">
-            <h4>Shield & Crest Geometry</h4>
-            <p>The ornate central cartouche and heraldic shield represent the uncompromising standards of our master grillers and time-honored smoke recipes.</p>
+            <h4>Geometry & Shield Architecture</h4>
+            <p>The octagonal Persian starburst cartouche and inner segmented borders have been reconstructed with sharp, uniform strokes, eliminating overlapping artifacts and blurred transitions.</p>
           </div>
           <div class="emblem-pillar-card">
-            <h4>The Interlaced MK Monogram</h4>
-            <p>Clean typography and golden flourishes frame the central MK letters, symbolizing refined luxury and authentic culinary heritage.</p>
+            <h4>Monogram & Sunburst</h4>
+            <p>The interlaced gold MP monogram stands cleanly against the radial sunburst without the flower backing, retaining smooth, deliberate curves and balanced stroke contrast.</p>
           </div>
           <div class="emblem-pillar-card">
-            <h4>Flanking Skewer Cross</h4>
-            <p>Crossed stainless steel skewers loaded with aromatic kebabs and charred vegetables evoke the bustling open-flame hearths of ancient Persian bazaars.</p>
+            <h4>Botanical & Culinary Compartments</h4>
+            <p>Every ingredient—barberries, fava beans, golden wheat grains, green beans, lentils (adas), dill fronds, and the central bowl of steaming long-grain rice—has well-defined outlines and clean color separation.</p>
           </div>
           <div class="emblem-pillar-card">
-            <h4>Grillade & Feu Typography</h4>
-            <p>Finished with crisp typography rendering MAISON KEBABI, GUSTATORY ACCENTS, and GRILLADE & FEU against the deep espresso background.</p>
+            <h4>Flanking Harvest Crest & Typography</h4>
+            <p>Surrounding stalks of mature rice, foliage, and pomegranate buds feature crisp silhouettes, perfectly complemented by sharp, consistent typography rendering MAISON POLOW, PERSIAN RICE ATELIER, and TAHDIG • TAHCHIN against the warm alabaster background.</p>
           </div>
         </div>
       </div>
@@ -1934,32 +1912,349 @@
     </div>
   </section>
 
-  <!-- Special Section for Doozi (Placed Immediately After Anatomy of Emblem) -->
-  <section class="doozi-section" id="doozi">
-    <div class="doozi-container">
-      <div class="doozi-text">
-        <div class="badge">The Atelier Signature Ritual</div>
-        <h2>The Art of <span>Doozi</span> Refreshment</h2>
-        <p>In traditional Persian feasts, heavy charcoal kebabs are perfectly balanced by refreshing, cooling counterparts. Our proprietary <strong>Doozi</strong> preparations elevate every bite with artisanal craft.</p>
-        <p>Whipped organic yogurt infused with crushed Persian wild mint (نعناع فلفلی), rose petals, and chilled sparkling spring water, served alongside crisp pickled garlic (Sir-e Torshi) and fresh garden herbs.</p>
+  <!-- Royal Non-Veg Plates Section -->
+  <section class="menu-preview" id="plates">
+    <div class="section-header">
+      <div class="badge">Individual Meat & Rice Feasts</div>
+      <h2>Royal Non-Veg Plates</h2>
+      <p>Composed single-portion Persian plates pairing our heirloom saffron rice preparations with slow-braised meats, golden tahchin, and jeweled garnishes.</p>
+    </div>
 
-        <div class="doozi-features">
-          <div class="doozi-feature-box">
-            <h5>Wild Mint Infusion</h5>
-            <p>Hand-harvested mountain mint for digestive ease and aromatic cooling.</p>
-          </div>
-          <div class="doozi-feature-box">
-            <h5>7-Year Aged Sir-e Torshi</h5>
-            <p>Fermented garlic cloves offering a sharp, delightful umami contrast.</p>
+    <div class="sku-slider-container" id="platterSliderContainer">
+      <div class="sku-slider-track" id="platterSliderTrack">
+        
+        <!-- PLATE 1: Zereshk Polow ba Morgh -->
+        <div class="sku-slide active" data-platter-slide="0">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Zereshk Polow ba Morgh" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Zereshk-Polow-ba-Morgh.png" alt="Zereshk Polow ba Morgh - Barberry Rice with Saffron Chicken" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Royal Poultry Plate</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Braised saffron chicken leg crowned with ruby barberries and crisp tahchin."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Royal Non-Veg Plate • 01 of 05</span>
+              <h3>Zereshk Polow ba Morgh</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>A classic royal plate featuring a tender, slow-braised saffron chicken leg served over steamed basmati rice jeweled with butter-sautéed ruby barberries and slivered pistachios, accompanied by a golden slice of tahchin.</p>
+              
+              <div class="ingredient-tags">
+                <span>Braised Chicken Leg</span>
+                <span>Ruby Barberries (Zereshk)</span>
+                <span>Golden Tahchin Piece</span>
+                <span>Slivered Pistachios</span>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- PLATE 2: Baghali Polow ba Mahiche -->
+        <div class="sku-slide" data-platter-slide="1">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Baghali Polow ba Mahiche" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Baghali-Polow-ba-Mahiche.png" alt="Baghali Polow ba Mahiche - Dill & Fava Bean Rice with Lamb Shank" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Imperial Banquet</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Fall-off-the-bone saffron lamb shank over fragrant dill and fava bean rice."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Royal Non-Veg Plate • 02 of 05</span>
+              <h3>Baghali Polow ba Mahiche</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>The crown jewel of Persian celebration dining: a whole lamb shank slow-simmered for hours in saffron, onion, and warm spices, served beside dill and fava bean basmati rice and a crisp piece of tahchin.</p>
+              
+              <div class="ingredient-tags">
+                <span>Slow-Braised Lamb Shank</span>
+                <span>Dill & Fava Bean Rice</span>
+                <span>Golden Tahchin Piece</span>
+                <span>Saffron Jus</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLATE 3: Baghali Polow ba Morgh -->
+        <div class="sku-slide" data-platter-slide="2">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Baghali Polow ba Morgh" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Baghali-Polow-ba-Morgh.png" alt="Baghali Polow ba Morgh - Dill & Fava Bean Rice with Chicken" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Garden & Saffron</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Succulent saffron-glazed chicken paired with aromatic herb and fava rice."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Royal Non-Veg Plate • 03 of 05</span>
+              <h3>Baghali Polow ba Morgh</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>Succulent chicken leg braised in a rich saffron and caramelized onion reduction, paired with fluffy basmati rice folded with fresh garden dill and tender fava beans, alongside crispy tahchin.</p>
+              
+              <div class="ingredient-tags">
+                <span>Saffron Chicken Leg</span>
+                <span>Fresh Dill & Baghali</span>
+                <span>Golden Tahchin Piece</span>
+                <span>Saffron Rice Crown</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLATE 4: Adas Polow ba Ghosht -->
+        <div class="sku-slide" data-platter-slide="3">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Adas Polow ba Ghosht" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Adas-Polow-ba-Ghosht.png" alt="Adas Polow ba Ghosht - Lentil Rice with Braised Lamb" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Heritage Braise</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Tender spiced lamb with earthy lentils, sweet raisins, and saffron rice."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Royal Non-Veg Plate • 04 of 05</span>
+              <h3>Adas Polow ba Ghosht</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>Hearty slow-cooked lamb infused with cinnamon, saffron, and caramelized onions, served with fragrant brown lentil and golden raisin basmati rice and a crisp square of saffron tahchin.</p>
+              
+              <div class="ingredient-tags">
+                <span>Slow-Cooked Lamb (Ghosht)</span>
+                <span>Brown Lentils & Raisins</span>
+                <span>Golden Tahchin Piece</span>
+                <span>Cinnamon & Saffron</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PLATE 5: Adas Polow ba Morgh -->
+        <div class="sku-slide" data-platter-slide="4">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Adas Polow ba Morgh" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Adas-Polow-ba-Morgh.png" alt="Adas Polow ba Morgh - Lentil Rice with Saffron Chicken" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1543339308-43e59d6b73a6?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Sweet & Savoury</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Golden saffron chicken leg over warmly spiced lentil and raisin pilaf."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Royal Non-Veg Plate • 05 of 05</span>
+              <h3>Adas Polow ba Morgh</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>A balanced sweet-and-savoury plate combining roasted saffron chicken with steaming basmati rice layered with tender lentils, sweet raisins, caramelized onions, and a crisp tahchin slice.</p>
+              
+              <div class="ingredient-tags">
+                <span>Roasted Saffron Chicken</span>
+                <span>Lentils & Golden Raisins</span>
+                <span>Golden Tahchin Piece</span>
+                <span>Caramelized Onions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="doozi-media-box">
-        <h3>Doozi Atelier</h3>
-        <p>"The cooling elixir that completes the master griller's feast."</p>
-        <div style="margin-top: 1.5rem;">
-          <span class="badge" style="background: var(--gold-subtle); color: var(--gold-light);">Signature Pairing Ritual</span>
+      <!-- Royal Non-Veg Plates Carousel Controls -->
+      <div class="slider-nav-bar">
+        <div class="slider-dots" id="platterSliderDots" role="tablist" aria-label="Royal Non-Veg Plates Carousel Navigation">
+          <button class="slider-dot active" data-platter-index="0" aria-label="Slide 1"></button>
+          <button class="slider-dot" data-platter-index="1" aria-label="Slide 2"></button>
+          <button class="slider-dot" data-platter-index="2" aria-label="Slide 3"></button>
+          <button class="slider-dot" data-platter-index="3" aria-label="Slide 4"></button>
+          <button class="slider-dot" data-platter-index="4" aria-label="Slide 5"></button>
+        </div>
+
+        <div class="slider-arrows">
+          <button class="slider-btn" id="prevPlatterSlideBtn" aria-label="Previous Plate" title="Previous Plate">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          </button>
+          <button class="slider-btn" id="nextPlatterSlideBtn" aria-label="Next Plate" title="Next Plate">
+            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Signature Dishes Section (Khoresht) -->
+  <section class="menu-preview" id="dishes">
+    <div class="section-header">
+      <div class="badge">The Atelier Stews & Stewed Masterpieces</div>
+      <h2>Signature Persian Stews (Khoresh)</h2>
+      <p>Artisanal braises and stews simmered to perfection, paired ideally with our aromatic atelier rice or served standalone in custom Maison Polow designer bowls.</p>
+    </div>
+
+    <div class="sku-slider-container" id="dishSliderContainer">
+      <div class="sku-slider-track" id="dishSliderTrack">
+        
+        <!-- DISH 1: Ghormeh Sabzi -->
+        <div class="sku-slide active" data-dish-slide="0">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Ghormeh Sabzi" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Ghormeh-Sabzi.png" alt="Ghormeh Sabzi - Herb Stew" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Iconic Herb Stew</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"A fragrant symphony of slow-simmered greens, kidney beans, and tender lamb."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Signature Khoresh • 01 of 04</span>
+              <h3>Ghormeh Sabzi</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>Persia's most celebrated herb stew, featuring a slow-cooked blend of parsley, cilantro, fenugreek, leeks, tender kidney beans, and succulent meat infused with dried lime (limoo amani).</p>
+              
+              <div class="ingredient-tags">
+                <span>Fresh Herbs & Fenugreek</span>
+                <span>Kidney Beans</span>
+                <span>Dried Lime (Limoo Omani)</span>
+                <span>Tender Lamb / Mutton</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DISH 2: Khoresh Gheymeh -->
+        <div class="sku-slide" data-dish-slide="1">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Khoresh Gheymeh" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Gheymeh.png" alt="Khoresh Gheymeh - Yellow Split Pea Stew" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Golden Potato Crunch</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Yellow split peas and golden shoestring potatoes in saffron tomato broth."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Signature Khoresh • 02 of 04</span>
+              <h3>Khoresh Gheymeh</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>A rich, comforting stew of yellow split peas, diced lamb, and dried lime simmered in a fragrant tomato and saffron broth, crowned with a generous heap of crisp golden shoestring potatoes.</p>
+              
+              <div class="ingredient-tags">
+                <span>Yellow Split Peas</span>
+                <span>Saffron Tomato Broth</span>
+                <span>Crisp Shoestring Potatoes</span>
+                <span>Dried Lime Accent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DISH 3: Fesenjan -->
+        <div class="sku-slide" data-dish-slide="2">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Fesenjan" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Fesenjan.png" alt="Fesenjan - Pomegranate Walnut Stew" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Royal Walnut Glaze</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Rich toasted walnuts and tart pomegranate molasses reduction."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Signature Khoresh • 03 of 04</span>
+              <h3>Fesenjan</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>An exquisite, luxurious stew crafted from finely ground toasted walnuts and a tart-sweet pomegranate molasses reduction, slow-braised with tender chicken or duck until deeply rich and glossy.</p>
+              
+              <div class="ingredient-tags">
+                <span>Ground Toasted Walnuts</span>
+                <span>Pomegranate Molasses</span>
+                <span>Slow-Braised Poultry</span>
+                <span>Subtle Sweet-Tart Balance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DISH 4: Bademjan -->
+        <div class="sku-slide" data-dish-slide="3">
+          <div class="sku-card">
+            <div class="sku-media">
+              <button type="button" class="sku-img-btn" aria-label="Zoom in on Bademjan" title="Click to view high-resolution image">
+                <div class="sku-img-wrapper">
+                  <img src="assets/Bademjan.png" alt="Khoresh Bademjan - Eggplant Stew" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=1000&q=80';">
+                  <div class="sku-img-overlay"></div>
+                  <span class="live-tag">Golden Eggplant Braise</span>
+                  <span class="sku-hint-overlay">🔍 Click to Zoom</span>
+                </div>
+              </button>
+              <p class="sku-quote">"Golden pan-fried eggplants in a savory tomato and verjuice glaze."</p>
+            </div>
+
+            <div class="sku-details">
+              <span class="badge" style="width: fit-content;">Signature Khoresh • 04 of 04</span>
+              <h3>Bademjan (Khoresh Bademjan)</h3>
+              <div class="sku-price">Price to be announced</div>
+              <p>Golden pan-fried baby eggplants simmered in a delicate tomato, onion, and yellow tomato broth, enhanced with aromatic turmeric, saffron, and sour grape verjuice (ghooreh).</p>
+              
+              <div class="ingredient-tags">
+                <span>Pan-Fried Baby Eggplants</span>
+                <span>Verjuice (Ghooreh)</span>
+                <span>Tomato & Saffron Broth</span>
+                <span>Tender Braised Meat</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Dish Carousel Controls -->
+      <div class="slider-nav-bar">
+        <div class="slider-dots" id="dishSliderDots" role="tablist" aria-label="Signature Dishes Carousel Navigation">
+          <button class="slider-dot active" data-dish-index="0" aria-label="Slide 1"></button>
+          <button class="slider-dot" data-dish-index="1" aria-label="Slide 2"></button>
+          <button class="slider-dot" data-dish-index="2" aria-label="Slide 3"></button>
+          <button class="slider-dot" data-dish-index="3" aria-label="Slide 4"></button>
+        </div>
+
+        <div class="slider-arrows">
+          <button class="slider-btn" id="prevDishSlideBtn" aria-label="Previous Dish" title="Previous Dish">
+            <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
+          </button>
+          <button class="slider-btn" id="nextDishSlideBtn" aria-label="Next Dish" title="Next Dish">
+            <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+          </button>
         </div>
       </div>
     </div>
@@ -1970,13 +2265,13 @@
     <div class="careers-wrap">
       <div>
         <div class="badge">Join the Atelier</div>
-        <h2>Master Embers. Rekindle Heritage.</h2>
-        <p>We are building Delhi NCR’s premier Persian grill kitchen. We offer an equitable, respectful work environment with structured shifts and comprehensive charcoal-grilling training.</p>
+        <h2>Craft Grains. Rekindle Heritage.</h2>
+        <p>We are building Delhi NCR’s premier Persian rice kitchen. We offer an equitable, respectful work environment with structured shifts and comprehensive culinary training.</p>
         
         <div class="roles-list">
           <div class="role-item">
-            <h4>Master Grill Chef / Head Pitmaster</h4>
-            <p>Full Time • Experience in live charcoal management, Persian skewers, and fine dining.</p>
+            <h4>Master Rice Chef / Lead Production</h4>
+            <p>Full Time • Experience in steam-infusion, Tahdig preparation, or fine dining rice arts.</p>
           </div>
           <div class="role-item">
             <h4>Culinary Trainee / Commis</h4>
@@ -1997,7 +2292,7 @@
             <input type="email" name="email" placeholder="Email Address" required>
             <select name="position" required>
               <option value="" disabled selected>Position You Are Applying For</option>
-              <option value="Master Grill Chef">Master Grill Chef / Pitmaster</option>
+              <option value="Master Chef">Master Rice Chef / Lead</option>
               <option value="Commis">Culinary Trainee</option>
               <option value="Internship">6-Month Culinary Internship</option>
             </select>
@@ -2015,16 +2310,16 @@
     <div class="footer-inner">
       
       <div class="footer-brand-wrap">
-        <button type="button" class="footer-emblem-btn" id="footerEmblemBtn" aria-label="View enlarged Maison Kebabi master emblem" title="Click to inspect master crest">
-          <img src="assets/MK.jpg" alt="Maison Kebabi Master Emblem" class="footer-emblem-img" id="footerEmblemImg" onerror="this.onerror=null; this.src='assets/MK.jpg';">
+        <button type="button" class="footer-emblem-btn" id="footerEmblemBtn" aria-label="View enlarged Maison Polow master emblem" title="Click to inspect master crest">
+          <img src="assets/emblem-master.jpg" alt="Maison Polow Master Emblem" class="footer-emblem-img" id="footerEmblemImg" onerror="this.onerror=null; this.src='assets/logo.png';">
           <div class="footer-brand-title" style="display: flex; flex-direction: column;">
-            <span style="font-family: var(--font-serif); font-size: 1.7rem; font-weight: 700; color: var(--cream);">MAISON KEBABI</span>
-            <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-light);">Grillade & Feu</span>
+            <span style="font-family: var(--font-serif); font-size: 1.7rem; font-weight: 700; color: var(--cream);">MAISON POLOW</span>
+            <span style="font-size: 0.72rem; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: var(--gold-light);">Persian Rice Atelier</span>
           </div>
         </button>
 
         <p style="font-size: 0.9rem; color: var(--cream-muted); line-height: 1.6;">
-          Charcoal-kissed saffron kebabs and authentic Persian grill ateliers crafted daily for Delhi NCR tables.
+          Heirloom Persian rice dishes and saffron ateliers crafted daily for Delhi NCR tables.
         </p>
         <p style="font-size: 0.85rem; color: var(--cream-muted);">
           📍 Cloud Kitchen Dispatch: South Delhi, Noida & Gurugram Hubs
@@ -2034,10 +2329,11 @@
       <div class="footer-col">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="#heritage">Our Fire Craft</a></li>
-          <li><a href="#kebabs">Signature Kebabs</a></li>
-          <li><a href="#emblem">Anatomy of Emblem</a></li>
-          <li><a href="#doozi">The Doozi Ritual</a></li>
+          <li><a href="#heritage">Our Craft</a></li>
+          <li><a href="#signature">Signature Polows</a></li>
+          <li><a href="#emblem">Anatomy of Our Emblem</a></li>
+          <li><a href="#plates">Royal Non-Veg Plates</a></li>
+          <li><a href="#dishes">Khoresht</a></li>
           <li><a href="#careers">Careers</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -2046,20 +2342,20 @@
       <div class="footer-col">
         <h4>Direct Channels</h4>
         <ul>
-          <li><a href="mailto:concierge@maisonkebabi.com">concierge@</a></li>
-          <li><a href="mailto:careers@maisonkebabi.com">careers@</a></li>
+          <li><a href="mailto:concierge@maisonpolow.com">concierge@</a></li>
+          <li><a href="mailto:careers@maisonpolow.com">careers@</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Connect</h4>
-        <p style="font-size: 0.88rem; color: var(--cream-muted); margin-bottom: 0.75rem;">Follow our charcoal trials:</p>
+        <p style="font-size: 0.88rem; color: var(--cream-muted); margin-bottom: 0.75rem;">Follow our saffron trials:</p>
         
         <div class="social-links-wrap">
-          <a href="https://instagram.com/maisonkebabi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+          <a href="https://instagram.com/maisonpolow" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
-          <a href="https://facebook.com/maisonkebabi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+          <a href="https://facebook.com/maisonpolow" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
             <svg viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.5-10 10 0 5 3.66 9.13 8.44 9.88v-6.99h-2.54v-2.89h2.54v-2.2c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99c4.78-.75 8.44-4.88 8.44-9.88 0-5.5-4.5-10-10-10z"/></svg>
           </a>
         </div>
@@ -2067,17 +2363,17 @@
     </div>
 
     <div class="legal-bar">
-      <div>© 2026 Maison Kebabi. All rights reserved.</div>
-      <div>Maison Kebabi™ is a proprietary brand of <strong>ZibaCube Technologies Private Limited</strong>.</div>
+      <div>© 2026 Maison Polow. All rights reserved.</div>
+      <div>Maison Polow™ is a proprietary brand of <strong>ZibaCube Technologies Private Limited</strong>.</div>
     </div>
   </footer>
 
   <!-- Lightbox Modal -->
-  <div class="logo-modal-overlay" id="logoModal" role="dialog" aria-modal="true" aria-label="Maison Kebabi Brand Emblem">
+  <div class="logo-modal-overlay" id="logoModal" role="dialog" aria-modal="true" aria-label="Maison Polow Brand Emblem">
     <div class="logo-modal-container" id="logoModalContainer">
       <button type="button" class="logo-modal-close" id="closeLogoModal" aria-label="Close enlarged emblem">✕</button>
       <div class="modal-logo-wrapper" id="modalLogoWrapper" title="Click to zoom image">
-        <img src="" alt="Maison Kebabi Official Emblem" class="modal-logo-img" id="modalLogoImg">
+        <img src="" alt="Maison Polow Official Emblem" class="modal-logo-img" id="modalLogoImg">
       </div>
       <div class="modal-caption" id="modalCaption"></div>
     </div>
@@ -2128,6 +2424,7 @@
           });
         }
 
+        // First user interaction auto-start handler
         const autoStartOnFirstInteraction = () => {
           bgAudio.play().then(() => {
             updateAudioUI(true);
@@ -2217,6 +2514,7 @@
         }
       }
 
+      // Toggle zoom on clicking the modal image wrapper
       if (modalLogoWrapper) {
         modalLogoWrapper.addEventListener('click', (e) => {
           e.stopPropagation();
@@ -2227,30 +2525,31 @@
       if (headerLogoBtn) {
         headerLogoBtn.addEventListener('click', () => {
           const img = headerLogoBtn.querySelector('img');
-          openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Emblem');
+          openModal(img ? img.src : 'assets/logo.png', img ? img.alt : 'Maison Polow Emblem');
         });
       }
       if (heroLogoTrigger) {
         heroLogoTrigger.addEventListener('click', () => {
           const img = heroLogoTrigger.querySelector('img');
-          openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Grillhouse');
+          openModal(img ? img.src : 'assets/logo.png', img ? img.alt : 'Maison Polow Persian Rice Atelier');
         });
       }
       if (emblemZoomTrigger) {
         emblemZoomTrigger.addEventListener('click', (e) => { 
           e.preventDefault(); 
           const img = emblemZoomTrigger.querySelector('img');
-          openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Master Crest'); 
+          openModal(img ? img.src : 'assets/emblem-master.jpg', img ? img.alt : 'Maison Polow Master Crest'); 
         });
       }
       if (footerEmblemBtn) {
         footerEmblemBtn.addEventListener('click', (e) => { 
           e.preventDefault(); 
           const img = footerEmblemBtn.querySelector('img');
-          openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Master Emblem'); 
+          openModal(img ? img.src : 'assets/emblem-master.jpg', img ? img.alt : 'Maison Polow Master Emblem'); 
         });
       }
       
+      // Bind carousel product image zoom triggers dynamically
       document.querySelectorAll('.sku-img-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -2291,7 +2590,7 @@
 
           try {
             const formData = new FormData(form);
-            const response = await fetch('https://maisonkebabi.com/api', {
+            const response = await fetch('https://maisonpolow.com/api', {
               method: 'POST',
               body: formData,
               headers: { 'Accept': 'application/json' }
@@ -2313,7 +2612,7 @@
             }
             if (feedback) {
               feedback.className = 'form-feedback error';
-              feedback.innerHTML = '⚠️ Transmission encountered an issue. Please contact concierge@maisonkebabi.com directly.';
+              feedback.innerHTML = '⚠️ Transmission encountered an issue. Please contact concierge@maisonpolow.com directly.';
             }
           }
         });
@@ -2358,6 +2657,7 @@
         container.addEventListener('mouseenter', stopAuto);
         container.addEventListener('mouseleave', startAuto);
 
+        // Touch Swipe Gestures for Mobile
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -2383,7 +2683,7 @@
         startAuto();
       }
 
-      // Initialize Signature Kebabs Carousel
+      // Initialize Signature Polows Carousel
       initSlider({
         containerId: 'skuSliderContainer',
         trackId: 'skuSliderTrack',
@@ -2392,6 +2692,28 @@
         prevBtnId: 'prevSlideBtn',
         nextBtnId: 'nextSlideBtn',
         duration: 5200
+      });
+
+      // Initialize Royal Non-Veg Plates Carousel
+      initSlider({
+        containerId: 'platterSliderContainer',
+        trackId: 'platterSliderTrack',
+        slideAttr: 'data-platter-slide',
+        dotsContainerId: 'platterSliderDots',
+        prevBtnId: 'prevPlatterSlideBtn',
+        nextBtnId: 'nextPlatterSlideBtn',
+        duration: 5500
+      });
+
+      // Initialize Signature Dishes (Khoresht) Carousel
+      initSlider({
+        containerId: 'dishSliderContainer',
+        trackId: 'dishSliderTrack',
+        slideAttr: 'data-dish-slide',
+        dotsContainerId: 'dishSliderDots',
+        prevBtnId: 'prevDishSlideBtn',
+        nextDishSlideBtn: 'nextDishSlideBtn',
+        duration: 5800
       });
     })();
   </script>
