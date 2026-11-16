@@ -3155,7 +3155,7 @@
         });
       }
 
-      // 2. Ambient Persian Music Widget
+      // 2. Ambient Persian Music Widget (Auto-plays on user's first interaction)
       const bgAudio = document.getElementById('bgAudio');
       const audioToggleBtn = document.getElementById('audioToggleBtn');
       const playIcon = document.getElementById('playIcon');
@@ -3164,6 +3164,7 @@
 
       if (bgAudio && audioToggleBtn) {
         bgAudio.volume = 0.5;
+        let userManuallyPaused = false;
 
         function updateAudioUI(isPlaying) {
           playIcon.style.display = isPlaying ? 'none' : 'block';
@@ -3171,11 +3172,42 @@
           audioToggleBtn.classList.toggle('playing', isPlaying);
         }
 
+        function removeFirstClickListeners() {
+          ['pointerdown', 'click', 'touchstart', 'keydown'].forEach(evt => {
+            document.removeEventListener(evt, handleFirstInteraction, true);
+          });
+        }
+
+        function handleFirstInteraction(e) {
+          if (userManuallyPaused || !bgAudio.paused) {
+            removeFirstClickListeners();
+            return;
+          }
+          // Skip if the user directly clicked the play/pause button (its own handler runs)
+          if (e.target && e.target.closest('#audioToggleBtn')) {
+            removeFirstClickListeners();
+            return;
+          }
+          bgAudio.play().then(() => {
+            updateAudioUI(true);
+            removeFirstClickListeners();
+          }).catch(() => {
+            // Keep listeners attached if the browser didn't treat the event as a valid activation
+          });
+        }
+
+        ['pointerdown', 'click', 'touchstart', 'keydown'].forEach(evt => {
+          document.addEventListener(evt, handleFirstInteraction, { capture: true, passive: true });
+        });
+
         audioToggleBtn.addEventListener('click', (e) => {
           e.preventDefault();
+          removeFirstClickListeners();
           if (bgAudio.paused) {
+            userManuallyPaused = false;
             bgAudio.play().then(() => updateAudioUI(true)).catch(() => {});
           } else {
+            userManuallyPaused = true;
             bgAudio.pause();
             updateAudioUI(false);
           }
@@ -3321,7 +3353,7 @@
       handleFormSubmit('waitlistForm', 'waitlistSubmitBtn', 'waitlistInputFields', 'waitlistFeedback', '✨ <strong>Merci!</strong> Your tasting invitation is confirmed. Our concierge will message you on WhatsApp.');
       handleFormSubmit('careersForm', 'careersSubmitBtn', 'careersInputFields', 'careersFeedback', '✨ <strong>Application Received!</strong> Thank you for applying to join Maison Kebabi.');
 
-      // 5. Signature Kebabs Interactive Carousel (Fixed: Horizontal-only tab centering without vertical page jump)
+      // 5. Signature Kebabs Interactive Carousel (Horizontal-only tab centering without vertical page jump)
       const container = document.getElementById('skuSliderContainer');
       const track = document.getElementById('skuSliderTrack');
       const slides = track ? Array.from(track.querySelectorAll('[data-slide]')) : [];
@@ -3386,7 +3418,7 @@
         startAuto();
       }
 
-      // 6. Royal Chelow Kebabs Dual-Image Interactive Slider (Fixed: Horizontal-only tab centering)
+      // 6. Royal Chelow Kebabs Dual-Image Interactive Slider (Horizontal-only tab centering)
       const chelowContainer = document.getElementById('chelowSliderContainer');
       const chelowTrack = document.getElementById('chelowSliderTrack');
       const chelowSlides = chelowTrack ? Array.from(chelowTrack.querySelectorAll('[data-chelow-slide]')) : [];
