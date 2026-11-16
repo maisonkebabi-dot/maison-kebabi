@@ -7,56 +7,58 @@
   <meta name="description" content="Charcoal-kissed saffron kebabs, smoky hearth flames, and royal Persian grill ateliers. Discover Delhi NCR's premier Persian kebab experience.">
   
   <!-- Favicon & Brand Icons -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%230F1722'/%3E%3Crect x='6' y='6' width='88' height='88' rx='14' stroke='%23C8973E' stroke-width='1.5' fill='none'/%3E%3Ctext x='50' y='62' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23F6F2EB' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
-  <meta name="theme-color" content="#F6F2EB">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,4 82,18 96,50 82,82 50,96 18,82 4,50 18,18' fill='%230F1D2E' stroke='%23D4AF37' stroke-width='3'/%3E%3Ctext x='50' y='61' font-family='Georgia,serif' font-size='32' font-weight='bold' fill='%23FAF6EE' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0F1D2E">
 
-  <!-- Fonts -->
+  <!-- Google Fonts: Cinzel, Cormorant Garamond & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* Out-of-the-Box "Travertine, Imperial Lapis & Sumac Ember" Palette */
-      --stone-bg: #F6F2EB;            /* Warm Alabaster Travertine */
-      --stone-surface: #EBE4D8;       /* Smoked Limestone */
-      --stone-card: #FFFFFF;          /* Pure Porcelain Card Surface */
-      --lapis-night: #0F1722;         /* Imperial Persian Lapis & Charcoal Night */
-      --lapis-deep: #090E16;          /* Deepest Obsidian Midnight */
-      --lapis-card: #162130;          /* Elevated Lapis Slate */
+      /* Traditional Isfahan Lapis, Burnished Gold, Pomegranate & Parchment Palette */
+      --parchment-bg: #FAF6EE;        /* Warm Ivory Silk */
+      --parchment-tint: #F2EBD9;      /* Aged Saffron Parchment */
+      --card-surface: #FFFFFF;        /* Pure Porcelain */
       
-      --sumac-crimson: #8E241E;       /* Crushed Sumac & Live Hearth Crimson */
-      --sumac-bright: #B8332A;        /* Glowing Coal Accent */
-      --saffron-brass: #B8863B;       /* Burnished Forged Brass */
-      --saffron-gold: #D9A44E;        /* Luminous Sargol Saffron */
-      --mint-sage: #2A4B3C;           /* Persian Wild Mint & Torshi Herb */
+      --lapis-royal: #0F1D2E;         /* Deep Isfahan Cobalt-Lapis */
+      --lapis-midnight: #09121D;      /* Midnight Dome */
+      --lapis-tile: #16283E;          /* Glazed Ceramic Tile */
+      
+      --pomegranate: #8A241E;         /* Persian Anar / Sumac Crimson */
+      --pomegranate-hover: #A62D26;   /* Ember Glow */
+      --gold-leaf: #C59B38;           /* Burnished Shiraz Gold */
+      --gold-luminous: #E3BE62;       /* Illuminated Manuscript Gold */
+      --turquoise-tile: #1D5E63;      /* Persian Firoozeh Turquoise */
+      --mint-botanical: #1F4235;      /* Highland Sabzi & Mint */
 
-      /* Typography Colors */
-      --ink-primary: #14181F;         /* Deep Charcoal Ink */
-      --ink-secondary: #4A4F57;       /* Weathered Slate */
-      --ink-muted: #787D85;           /* Ash Grey */
-      --ivory-text: #F6F2EB;          /* Alabaster on Dark */
-      --ivory-muted: #B8B2A6;         /* Warm Stone Muted on Dark */
+      /* Typography */
+      --ink-dark: #1A1816;
+      --ink-body: #4A443D;
+      --ink-muted: #756C61;
+      --ivory-light: #FAF6EE;
+      --ivory-soft: #CFC7B8;
 
-      /* Architectural Hairlines & Borders */
-      --line-light: rgba(20, 24, 31, 0.12);
-      --line-strong: rgba(20, 24, 31, 0.25);
-      --line-brass: rgba(184, 134, 59, 0.4);
-      --line-dark-subtle: rgba(246, 242, 235, 0.12);
+      /* Borders & Shadows */
+      --border-gold: rgba(197, 155, 56, 0.45);
+      --border-gold-strong: rgba(197, 155, 56, 0.85);
+      --border-subtle: rgba(26, 24, 22, 0.12);
+      --shadow-card: 0 18px 45px rgba(15, 29, 46, 0.08);
+      --shadow-lapis: 0 24px 55px rgba(9, 18, 29, 0.35);
 
-      /* Semantic Feedback */
-      --status-success-bg: #163628;
+      /* Semantic Status */
+      --status-success-bg: #143627;
       --status-success-text: #E6F7EE;
       --status-success-border: #3B8561;
       --status-error-bg: #4A1512;
       --status-error-text: #FCE8E6;
       --status-error-border: #B8332A;
 
-      /* Typography Suites */
+      /* Font Stacks */
       --font-display: 'Cinzel', Georgia, serif;
       --font-serif: 'Cormorant Garamond', Georgia, serif;
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-mono: 'JetBrains Mono', monospace;
     }
 
     * {
@@ -66,28 +68,23 @@
     }
 
     :focus-visible {
-      outline: 2px solid var(--sumac-crimson);
+      outline: 2px solid var(--gold-leaf);
       outline-offset: 3px;
     }
 
-    html, body {
-      max-width: 100%;
-      overflow-x: hidden;
+    html {
       scroll-behavior: smooth;
     }
 
-    section, footer, #waitlist {
-      scroll-margin-top: 90px;
-    }
-
     body {
-      background-color: var(--stone-bg);
-      color: var(--ink-primary);
+      background-color: var(--parchment-bg);
+      color: var(--ink-dark);
       font-family: var(--font-sans);
-      line-height: 1.6;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-      background-image: radial-gradient(rgba(20, 24, 31, 0.04) 1px, transparent 0);
-      background-size: 28px 28px;
+      overflow-x: hidden;
+      /* Traditional Persian Girih Octagonal Star Tessellation Watermark */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.75' stroke-opacity='0.14'%3E%3Cpolygon points='48,6 60,36 90,48 60,60 48,90 36,60 6,48 36,36'/%3E%3Cpolygon points='48,18 69,27 78,48 69,69 48,78 27,69 18,48 27,27'/%3E%3Ccircle cx='48' cy='48' r='6'/%3E%3Cpath d='M0,0 L18,18 M96,0 L78,18 M0,96 L18,78 M96,96 L78,78'/%3E%3C/g%3E%3C/svg%3E");
     }
 
     body.modal-open {
@@ -96,540 +93,489 @@
       width: 100%;
     }
 
-    /* Architectural Top Telemetry Bar */
-    .telemetry-bar {
-      background: var(--lapis-deep);
-      color: var(--ivory-muted);
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 1.2px;
-      text-transform: uppercase;
-      padding: 8px 2rem;
+    section, footer, #waitlist {
+      scroll-margin-top: 86px;
+    }
+
+    /* ==========================================
+       TRADITIONAL PERSIAN ORNAMENTAL DIVIDERS
+       ========================================== */
+    .persian-divider {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--line-dark-subtle);
+      justify-content: center;
+      gap: 16px;
+      margin: 1.25rem auto;
+      max-width: 320px;
     }
 
-    .telemetry-bar span.live-indicator {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--saffron-gold);
-    }
-
-    .telemetry-bar span.live-indicator::before {
+    .persian-divider::before,
+    .persian-divider::after {
       content: '';
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--sumac-bright);
-      box-shadow: 0 0 8px var(--sumac-bright);
-      animation: emberPulse 2s infinite;
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, var(--gold-leaf), transparent);
     }
 
-    @keyframes emberPulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.45; transform: scale(0.85); }
+    .persian-divider svg {
+      width: 24px;
+      height: 24px;
+      fill: var(--gold-leaf);
+      flex-shrink: 0;
     }
 
-    /* Editorial Header Navigation */
+    /* ==========================================
+       USER-FRIENDLY STICKY NAVIGATION + MOBILE DRAWER
+       ========================================== */
+    .top-banner {
+      background: var(--lapis-midnight);
+      color: var(--gold-luminous);
+      text-align: center;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 8px 16px;
+      border-bottom: 1px solid var(--border-gold);
+    }
+
     header {
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(246, 242, 235, 0.92);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid var(--line-strong);
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-      height: 82px;
-      width: 100%;
+      background: rgba(250, 246, 238, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1.5px solid var(--border-gold);
+      box-shadow: 0 4px 20px rgba(15, 29, 46, 0.05);
     }
 
-    .brand-logo-wrap {
+    .header-inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      height: 80px;
       display: flex;
       align-items: center;
-      gap: 16px;
-      padding-right: 2rem;
-      border-right: 1px solid var(--line-light);
-      height: 100%;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
-    .nav-logo-button {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: zoom-in;
-      border-radius: 50%;
-      display: inline-flex;
+    .brand-lockup {
+      display: flex;
       align-items: center;
-      justify-content: center;
-      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      gap: 14px;
+      text-decoration: none;
     }
 
-    .nav-logo-button:hover {
-      transform: scale(1.08) rotate(-3deg);
+    .nav-logo-btn {
+      background: none;
+      border: 2px solid var(--gold-leaf);
+      padding: 2px;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      cursor: zoom-in;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      flex-shrink: 0;
+      background: var(--lapis-royal);
+    }
+
+    .nav-logo-btn:hover {
+      transform: scale(1.06);
+      box-shadow: 0 0 16px rgba(197, 155, 56, 0.45);
     }
 
     .nav-logo-img {
-      width: 48px;
-      height: 48px;
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       object-fit: cover;
-      border: 1.5px solid var(--saffron-brass);
-      background: var(--lapis-night);
-      box-shadow: 0 4px 14px rgba(15, 23, 34, 0.18);
+      display: block;
     }
 
-    .brand-title {
+    .brand-text {
       display: flex;
       flex-direction: column;
-      text-decoration: none;
     }
 
-    .brand-title span:first-child {
+    .brand-text .brand-name {
       font-family: var(--font-display);
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 700;
       letter-spacing: 2px;
-      color: var(--ink-primary);
+      color: var(--lapis-royal);
       line-height: 1.1;
     }
 
-    .brand-title span:last-child {
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 2.5px;
-      color: var(--sumac-crimson);
-      margin-top: 3px;
+    .brand-text .brand-sub {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.92rem;
+      color: var(--pomegranate);
+      font-weight: 600;
     }
 
-    nav {
-      display: flex;
-      justify-content: center;
-      height: 100%;
-    }
-
-    nav ul {
+    /* Desktop Nav */
+    .desktop-nav ul {
       display: flex;
       list-style: none;
-      gap: 2.2rem;
+      gap: 1.85rem;
       align-items: center;
-      height: 100%;
     }
 
-    nav a {
+    .desktop-nav a {
       text-decoration: none;
-      color: var(--ink-secondary);
-      font-size: 0.8rem;
+      color: var(--ink-dark);
+      font-size: 0.85rem;
       font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      transition: color 0.2s ease;
+      letter-spacing: 0.6px;
+      padding: 6px 2px;
       position: relative;
-      padding: 6px 0;
+      transition: color 0.2s ease;
     }
 
-    nav a::after {
-      content: '';
+    .desktop-nav a::after {
+      content: '◆';
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 1.5px;
-      background: var(--sumac-crimson);
-      transition: width 0.25s ease;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%) scale(0);
+      font-size: 0.55rem;
+      color: var(--gold-leaf);
+      transition: transform 0.2s ease;
     }
 
-    nav a:hover {
-      color: var(--ink-primary);
+    .desktop-nav a:hover {
+      color: var(--pomegranate);
     }
 
-    nav a:hover::after {
-      width: 100%;
+    .desktop-nav a:hover::after {
+      transform: translateX(-50%) scale(1);
     }
 
-    .header-cta-wrap {
-      padding-left: 2rem;
-      border-left: 1px solid var(--line-light);
-      height: 100%;
+    .header-actions {
       display: flex;
       align-items: center;
+      gap: 12px;
     }
 
-    /* Buttons */
-    .btn-primary {
+    /* Mobile Hamburger Button */
+    .mobile-menu-btn {
+      display: none;
+      background: var(--lapis-royal);
+      color: var(--gold-luminous);
+      border: 1px solid var(--gold-leaf);
+      width: 44px;
+      height: 44px;
+      border-radius: 6px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .mobile-menu-btn svg {
+      width: 22px;
+      height: 22px;
+      fill: currentColor;
+    }
+
+    /* Mobile Navigation Drawer */
+    .mobile-nav-drawer {
+      display: none;
+      background: var(--lapis-royal);
+      border-bottom: 2px solid var(--gold-leaf);
+      padding: 1.5rem;
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+
+    .mobile-nav-drawer.open {
+      display: flex;
+    }
+
+    .mobile-nav-drawer a {
+      color: var(--ivory-light);
+      text-decoration: none;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(197, 155, 56, 0.2);
+    }
+
+    /* ==========================================
+       BUTTONS
+       ========================================== */
+    .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      background: var(--lapis-night);
-      color: var(--ivory-text);
+      gap: 8px;
       padding: 13px 26px;
-      font-family: var(--font-mono);
-      font-size: 0.78rem;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      border: 1px solid var(--lapis-night);
-      border-radius: 2px;
+      border-radius: 6px;
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
       text-decoration: none;
       cursor: pointer;
-      transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
-      position: relative;
-      overflow: hidden;
+      transition: all 0.25s ease;
+      border: 1.5px solid transparent;
+    }
+
+    .btn-primary {
+      background: var(--pomegranate);
+      color: #FFFFFF;
+      border-color: var(--gold-leaf);
+      box-shadow: 0 8px 20px rgba(138, 36, 30, 0.22);
     }
 
     .btn-primary:hover {
-      background: var(--sumac-crimson);
-      border-color: var(--sumac-crimson);
-      color: #FFFFFF;
+      background: var(--pomegranate-hover);
       transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(142, 36, 30, 0.25);
+      box-shadow: 0 12px 26px rgba(138, 36, 30, 0.32);
     }
 
-    .btn-primary:disabled {
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-luminous) 0%, var(--gold-leaf) 100%);
+      color: var(--lapis-midnight);
+      font-weight: 700;
+      border-color: var(--gold-luminous);
+    }
+
+    .btn-gold:hover {
+      background: #FFFFFF;
+      color: var(--lapis-midnight);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(227, 190, 98, 0.35);
+    }
+
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.75);
+      color: var(--lapis-royal);
+      border-color: var(--gold-leaf);
+    }
+
+    .btn-outline:hover {
+      background: var(--lapis-royal);
+      color: var(--ivory-light);
+    }
+
+    .btn:disabled {
       opacity: 0.6;
       cursor: not-allowed;
       transform: none;
     }
 
-    .btn-gold {
-      background: linear-gradient(135deg, var(--saffron-gold) 0%, var(--saffron-brass) 100%);
-      color: var(--lapis-deep);
-      border: 1px solid var(--saffron-gold);
-      font-weight: 600;
+    /* ==========================================
+       TRADITIONAL PERSIAN MIHRAB ARCH CARD FRAME
+       ========================================== */
+    .persian-card {
+      background: var(--card-surface);
+      border: 1.5px solid var(--border-gold);
+      border-radius: 12px;
+      position: relative;
+      box-shadow: var(--shadow-card);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
     }
 
-    .btn-gold:hover {
-      background: var(--ivory-text);
-      border-color: var(--ivory-text);
-      color: var(--lapis-deep);
-      box-shadow: 0 10px 28px rgba(217, 164, 78, 0.35);
+    .persian-card::before {
+      content: '';
+      position: absolute;
+      inset: 6px;
+      border: 1px solid rgba(197, 155, 56, 0.28);
+      border-radius: 8px;
+      pointer-events: none;
     }
 
-    /* Micro Badges */
-    .badge {
+    .persian-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-leaf);
+      box-shadow: 0 22px 48px rgba(15, 29, 46, 0.13);
+    }
+
+    /* Corner Arabesque Flourish SVG helper */
+    .corner-ornament {
+      position: absolute;
+      width: 28px;
+      height: 28px;
+      pointer-events: none;
+      opacity: 0.75;
+    }
+    .corner-tl { top: 10px; left: 10px; }
+    .corner-tr { top: 10px; right: 10px; transform: scaleX(-1); }
+    .corner-bl { bottom: 10px; left: 10px; transform: scaleY(-1); }
+    .corner-br { bottom: 10px; right: 10px; transform: scale(-1); }
+
+    /* ==========================================
+       HERO SECTION: MIHRAB ARCH & SHAHNAMEH PALACE
+       ========================================== */
+    .hero-section {
+      padding: 4.5rem 1.5rem 5.5rem;
+      position: relative;
+      border-bottom: 2px solid var(--border-gold);
+      background: linear-gradient(180deg, rgba(250, 246, 238, 0.6) 0%, rgba(242, 235, 217, 0.85) 100%);
+    }
+
+    .hero-grid {
+      max-width: 1320px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.9fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    .kicker-pill {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      font-weight: 500;
+      background: rgba(15, 29, 46, 0.06);
+      border: 1px solid var(--border-gold);
+      color: var(--pomegranate);
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--sumac-crimson);
-      background: rgba(142, 36, 30, 0.07);
-      padding: 6px 14px;
-      border-left: 2px solid var(--sumac-crimson);
+      padding: 6px 16px;
+      border-radius: 50px;
       margin-bottom: 1.25rem;
     }
 
-    .badge-dark {
-      color: var(--saffron-gold);
-      background: rgba(217, 164, 78, 0.12);
-      border-left: 2px solid var(--saffron-gold);
+    .kicker-pill-dark {
+      background: rgba(227, 190, 98, 0.14);
+      border-color: var(--gold-leaf);
+      color: var(--gold-luminous);
     }
 
-    /* Floating Vinyl Turntable Audio Widget */
-    .floating-audio-widget {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: var(--lapis-night);
-      color: var(--ivory-text);
-      border: 1px solid var(--saffron-brass);
-      padding: 10px 18px 10px 10px;
-      border-radius: 4px;
-      box-shadow: 0 16px 40px rgba(9, 14, 22, 0.45);
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .floating-audio-widget:hover {
-      border-color: var(--saffron-gold);
-      transform: translateY(-2px);
-    }
-
-    .audio-toggle-btn {
-      background: var(--sumac-crimson);
-      color: var(--ivory-text);
-      border: 1px solid var(--saffron-gold);
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      transition: all 0.2s ease;
-      flex-shrink: 0;
-    }
-
-    .audio-toggle-btn:hover {
-      background: var(--sumac-bright);
-      transform: scale(1.06);
-    }
-
-    .audio-toggle-btn svg {
-      width: 16px;
-      height: 16px;
-      fill: currentColor;
-    }
-
-    @keyframes pulseSpin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    .audio-toggle-btn.playing {
-      background: var(--saffron-gold);
-      color: var(--lapis-deep);
-    }
-
-    .audio-toggle-btn.playing svg {
-      animation: pulseSpin 4s linear infinite;
-    }
-
-    .audio-details-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
-
-    .audio-title {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--saffron-gold);
-    }
-
-    .volume-slider-wrap {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .volume-slider-wrap svg {
-      width: 12px;
-      height: 12px;
-      fill: var(--ivory-muted);
-    }
-
-    .volume-slider {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 76px;
-      height: 3px;
-      background: rgba(246, 242, 235, 0.2);
-      cursor: pointer;
-    }
-
-    .volume-slider::-webkit-slider-thumb {
-      -webkit-appearance: none;
-      appearance: none;
-      width: 10px;
-      height: 10px;
-      background: var(--saffron-gold);
-      cursor: pointer;
-    }
-
-    /* ==========================================
-       HERO SECTION: ASYMMETRIC ARCHITECTURAL GRID
-       ========================================== */
-    .hero-wrapper {
-      border-bottom: 1px solid var(--line-strong);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero {
-      max-width: 1360px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.2fr 0.85fr;
-      min-height: calc(100vh - 115px);
-    }
-
-    .hero-content {
-      padding: 5rem 4rem 5rem 2rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      border-right: 1px solid var(--line-strong);
-      position: relative;
-    }
-
-    .hero-watermark {
-      position: absolute;
-      top: 2rem;
-      right: 2rem;
+    .hero-copy h1 {
       font-family: var(--font-serif);
-      font-size: 4.5rem;
-      color: rgba(20, 24, 31, 0.05);
-      pointer-events: none;
-      user-select: none;
-      line-height: 1;
+      font-size: clamp(2.8rem, 5vw, 4.6rem);
+      font-weight: 700;
+      color: var(--lapis-royal);
+      line-height: 1.08;
+      margin-bottom: 1.25rem;
     }
 
-    .hero-headline-group h1 {
-      font-family: var(--font-serif);
-      font-size: clamp(3rem, 5.6vw, 5.2rem);
-      font-weight: 600;
-      color: var(--ink-primary);
-      line-height: 1.04;
-      letter-spacing: -0.5px;
-      margin-bottom: 1.75rem;
-    }
-
-    .hero-headline-group h1 span {
+    .hero-copy h1 span {
       display: block;
-      color: var(--sumac-crimson);
+      color: var(--pomegranate);
       font-style: italic;
-      font-weight: 500;
+      font-weight: 600;
     }
 
-    .hero-lead {
-      font-size: clamp(1.02rem, 1.4vw, 1.18rem);
-      color: var(--ink-secondary);
+    .hero-subtitle {
+      font-size: 1.08rem;
+      color: var(--ink-body);
       max-width: 560px;
-      margin-bottom: 2.5rem;
+      margin-bottom: 2rem;
       line-height: 1.75;
     }
 
-    .hero-cta-row {
+    .hero-cta-group {
       display: flex;
-      align-items: center;
-      gap: 1.25rem;
       flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 2.75rem;
     }
 
-    .hero-specs-ledger {
-      margin-top: 4rem;
-      padding-top: 2rem;
-      border-top: 1px solid var(--line-light);
+    .hero-highlights {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
+      gap: 1rem;
+      padding-top: 1.75rem;
+      border-top: 1px solid var(--border-gold);
     }
 
-    .spec-stat {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .spec-stat .stat-num {
+    .highlight-item strong {
+      display: block;
       font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--ink-primary);
+      font-size: 1.35rem;
+      color: var(--lapis-royal);
     }
 
-    .spec-stat .stat-label {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .highlight-item span {
+      font-size: 0.82rem;
       color: var(--ink-muted);
-      margin-top: 2px;
     }
 
-    /* Right Column: Imperial Lapis Concierge Vault */
-    .hero-vault-col {
-      padding: 4rem 2rem 4rem 3.5rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(180deg, rgba(235, 228, 216, 0.4) 0%, rgba(235, 228, 216, 0.9) 100%);
-    }
-
-    .hero-card {
-      background: var(--lapis-night);
-      color: var(--ivory-text);
-      padding: 3rem 2.5rem;
-      border: 1px solid var(--saffron-brass);
+    /* Right Side: Traditional Persian Pointed Arch (Mihrab) Waitlist Card */
+    .mihrab-card {
+      background: var(--lapis-royal);
+      color: var(--ivory-light);
+      /* Pointed Persian Arch Top Silhouette */
+      border-radius: 180px 180px 16px 16px;
+      border: 2px solid var(--gold-leaf);
+      padding: 3.5rem 2.5rem 2.75rem;
       position: relative;
-      width: 100%;
-      box-shadow: 0 28px 60px rgba(9, 14, 22, 0.28);
+      box-shadow: var(--shadow-lapis);
+      /* Subtle Persian Turquoise & Gold Geometric Tile Background */
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(29, 94, 99, 0.45) 0%, transparent 65%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23E3BE62' stroke-width='0.6' stroke-opacity='0.12'%3E%3Cpolygon points='32,4 40,24 60,32 40,40 32,60 24,40 4,32 24,24'/%3E%3Ccircle cx='32' cy='32' r='10'/%3E%3C/g%3E%3C/svg%3E");
     }
 
-    /* Double-line Architectural Corner Frame */
-    .hero-card::before {
+    .mihrab-card::before {
       content: '';
       position: absolute;
       inset: 8px;
-      border: 1px solid rgba(217, 164, 78, 0.22);
+      border-radius: 172px 172px 10px 10px;
+      border: 1px solid rgba(227, 190, 98, 0.35);
       pointer-events: none;
     }
 
-    .vault-header {
-      display: flex;
-      align-items: center;
-      gap: 1.25rem;
-      margin-bottom: 1.75rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid var(--line-dark-subtle);
-    }
-
-    .hero-logo-container {
-      width: 78px;
-      height: 78px;
-      flex-shrink: 0;
-      cursor: zoom-in;
+    .mihrab-crest {
+      width: 92px;
+      height: 92px;
+      margin: 0 auto 1.25rem;
       border-radius: 50%;
-      border: 2px solid var(--saffron-gold);
-      padding: 3px;
-      background: var(--stone-bg);
+      border: 2.5px solid var(--gold-luminous);
+      padding: 4px;
+      background: var(--parchment-bg);
+      cursor: zoom-in;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
       transition: transform 0.3s ease;
     }
 
-    .hero-logo-container:hover {
+    .mihrab-crest:hover {
       transform: scale(1.06);
     }
 
-    .hero-logo-img {
+    .mihrab-crest img {
       width: 100%;
       height: 100%;
       border-radius: 50%;
       object-fit: cover;
     }
 
-    .vault-title-wrap span.vault-kicker {
-      font-family: var(--font-mono);
-      font-size: 0.65rem;
+    .mihrab-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .mihrab-header span {
+      font-size: 0.74rem;
       text-transform: uppercase;
       letter-spacing: 2px;
-      color: var(--saffron-gold);
-      display: block;
-      margin-bottom: 4px;
-    }
-
-    .vault-title-wrap h3 {
-      font-family: var(--font-serif);
-      font-size: 1.75rem;
+      color: var(--gold-luminous);
       font-weight: 600;
-      color: var(--ivory-text);
-      line-height: 1.15;
     }
 
-    .vault-desc {
-      font-size: 0.88rem;
-      color: var(--ivory-muted);
-      margin-bottom: 1.5rem;
-      line-height: 1.6;
+    .mihrab-header h2 {
+      font-family: var(--font-serif);
+      font-size: 2rem;
+      color: var(--ivory-light);
+      margin-top: 4px;
+    }
+
+    .mihrab-header p {
+      font-size: 0.9rem;
+      color: var(--ivory-soft);
+      margin-top: 6px;
     }
 
     /* Forms */
-    .waitlist-form {
+    .styled-form {
       display: flex;
       flex-direction: column;
       gap: 12px;
@@ -637,32 +583,41 @@
       z-index: 2;
     }
 
-    .waitlist-form input,
-    .waitlist-form select {
-      padding: 14px 16px;
-      border: 1px solid rgba(246, 242, 235, 0.18);
-      border-radius: 2px;
-      font-family: var(--font-sans);
-      font-size: 0.9rem;
-      background: rgba(9, 14, 22, 0.65);
-      color: var(--ivory-text);
-      transition: all 0.2s ease;
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gold-luminous);
+      margin-bottom: 4px;
+      letter-spacing: 0.4px;
+    }
+
+    .styled-form input,
+    .styled-form select {
       width: 100%;
+      padding: 13px 15px;
+      border-radius: 6px;
+      border: 1px solid rgba(227, 190, 98, 0.35);
+      background: rgba(9, 18, 29, 0.75);
+      color: var(--ivory-light);
+      font-family: var(--font-sans);
+      font-size: 0.92rem;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .waitlist-form select option {
-      background: var(--lapis-night);
-      color: var(--ivory-text);
+    .styled-form select option {
+      background: var(--lapis-royal);
+      color: var(--ivory-light);
     }
 
-    .waitlist-form input::placeholder {
-      color: rgba(184, 178, 166, 0.65);
+    .styled-form input::placeholder {
+      color: rgba(207, 199, 184, 0.6);
     }
 
-    .waitlist-form input:focus,
-    .waitlist-form select:focus {
-      border-color: var(--saffron-gold);
-      background: var(--lapis-deep);
+    .styled-form input:focus,
+    .styled-form select:focus {
+      border-color: var(--gold-luminous);
+      box-shadow: 0 0 0 3px rgba(227, 190, 98, 0.18);
       outline: none;
     }
 
@@ -670,8 +625,8 @@
       display: none;
       margin-top: 12px;
       padding: 14px 16px;
-      border-radius: 2px;
-      font-size: 0.88rem;
+      border-radius: 6px;
+      font-size: 0.9rem;
       line-height: 1.5;
     }
 
@@ -690,1112 +645,966 @@
     }
 
     /* ==========================================
-       CRAFT PILLARS: EDITORIAL MONOLITH CODEX
+       SECTION HEADERS
+       ========================================== */
+    .section-header-center {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 3.5rem;
+    }
+
+    .section-header-center h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 4vw, 3.3rem);
+      color: var(--lapis-royal);
+      line-height: 1.12;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-header-center p {
+      font-size: 1.02rem;
+      color: var(--ink-body);
+    }
+
+    /* ==========================================
+       THE PERSIAN GRILL CRAFT (3 ORNATE ARCH CARDS)
        ========================================== */
     .craft-section {
-      background: var(--stone-surface);
-      padding: 6.5rem 2rem;
-      border-bottom: 1px solid var(--line-strong);
+      padding: 5.5rem 1.5rem;
+      border-bottom: 1.5px solid var(--border-gold);
     }
 
-    .section-header-split {
-      max-width: 1360px;
-      margin: 0 auto 4rem;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3rem;
-      align-items: end;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid var(--line-strong);
-    }
-
-    .section-header-split h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.4rem, 4vw, 3.6rem);
-      color: var(--ink-primary);
-      line-height: 1.08;
-    }
-
-    .section-header-split p {
-      color: var(--ink-secondary);
-      font-size: 1.02rem;
-      max-width: 520px;
-      justify-self: end;
-    }
-
-    .grid-3 {
-      max-width: 1360px;
+    .craft-grid {
+      max-width: 1320px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border: 1px solid var(--line-strong);
-      background: var(--stone-card);
+      gap: 2rem;
     }
 
     .craft-card {
-      padding: 3.2rem 2.5rem;
-      border-right: 1px solid var(--line-strong);
-      position: relative;
-      transition: background-color 0.3s ease;
+      padding: 2.75rem 2.25rem;
+      text-align: center;
+      border-top: 4px solid var(--gold-leaf);
+    }
+
+    .craft-medallion {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 1.5rem;
+      background: var(--lapis-royal);
+      border: 1.5px solid var(--gold-leaf);
+      border-radius: 50%;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .craft-card:last-child {
-      border-right: none;
-    }
-
-    .craft-card:hover {
-      background: var(--lapis-night);
-      color: var(--ivory-text);
-    }
-
-    .craft-num {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      color: var(--sumac-crimson);
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 2rem;
-      display: flex;
-      justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid var(--line-light);
-      padding-bottom: 0.85rem;
-    }
-
-    .craft-card:hover .craft-num {
-      color: var(--saffron-gold);
-      border-bottom-color: var(--line-dark-subtle);
+      justify-content: center;
+      color: var(--gold-luminous);
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(15, 29, 46, 0.15);
     }
 
     .craft-card h3 {
       font-family: var(--font-serif);
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: inherit;
+      font-size: 1.75rem;
+      color: var(--lapis-royal);
+      margin-bottom: 0.75rem;
     }
 
     .craft-card p {
-      color: var(--ink-secondary);
-      font-size: 0.94rem;
-      line-height: 1.7;
-    }
-
-    .craft-card:hover p {
-      color: var(--ivory-muted);
+      color: var(--ink-body);
+      font-size: 0.95rem;
     }
 
     /* ==========================================
-       SIGNATURE KEBABS: INTERACTIVE SKEWER LEDGER
+       SIGNATURE KEBABS SHOWCASE (ISFAHAN COBALT TILE GALLERY)
        ========================================== */
-    .menu-preview {
-      background: var(--lapis-night);
-      color: var(--ivory-text);
-      padding: 6.5rem 2rem;
-      border-bottom: 1px solid var(--saffron-brass);
-      position: relative;
+    .kebabs-section {
+      background-color: var(--lapis-royal);
+      color: var(--ivory-light);
+      padding: 6rem 1.5rem;
+      border-bottom: 2px solid var(--gold-leaf);
+      /* Traditional Persian Star & Cross Tile Background Pattern */
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.75' stroke-opacity='0.11'%3E%3Cpolygon points='40,4 50,30 76,40 50,50 40,76 30,50 4,40 30,30'/%3E%3Crect x='22' y='22' width='36' height='36' transform='rotate(45 40 40)'/%3E%3C/g%3E%3C/svg%3E");
     }
 
-    .menu-header-inner {
-      max-width: 1360px;
-      margin: 0 auto 3rem;
+    .kebabs-section .section-header-center h2 {
+      color: var(--ivory-light);
+    }
+
+    .kebabs-section .section-header-center p {
+      color: var(--ivory-soft);
+    }
+
+    /* User-Friendly Pill Tabs for 6 Kebabs */
+    .kebab-tabs {
+      max-width: 1180px;
+      margin: 0 auto 2rem;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
       flex-wrap: wrap;
-      gap: 2rem;
+      justify-content: center;
+      gap: 10px;
     }
 
-    .menu-header-inner h2 {
+    .kebab-tab-btn {
+      background: rgba(9, 18, 29, 0.65);
+      border: 1px solid rgba(197, 155, 56, 0.4);
+      color: var(--ivory-soft);
+      padding: 10px 20px;
+      border-radius: 50px;
       font-family: var(--font-serif);
-      font-size: clamp(2.5rem, 4.2vw, 3.8rem);
-      color: var(--ivory-text);
-      line-height: 1.08;
-    }
-
-    .menu-header-inner p {
-      color: var(--ivory-muted);
-      max-width: 460px;
-      font-size: 0.98rem;
-    }
-
-    .sku-slider-container {
-      max-width: 1360px;
-      margin: 0 auto;
-      user-select: none;
-    }
-
-    /* Interactive 6-Tab Skewer Index Bar */
-    .slider-dots {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      border: 1px solid var(--line-dark-subtle);
-      border-bottom: none;
-      background: var(--lapis-deep);
-    }
-
-    .slider-dot {
-      background: transparent;
-      border: none;
-      border-right: 1px solid var(--line-dark-subtle);
-      padding: 1.1rem 1rem;
-      color: var(--ivory-muted);
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      font-size: 1.15rem;
+      font-weight: 600;
       cursor: pointer;
-      text-align: left;
       transition: all 0.25s ease;
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
+    }
+
+    .kebab-tab-btn:hover {
+      border-color: var(--gold-luminous);
+      color: var(--ivory-light);
+    }
+
+    .kebab-tab-btn.active {
+      background: linear-gradient(135deg, var(--gold-luminous) 0%, var(--gold-leaf) 100%);
+      color: var(--lapis-midnight);
+      border-color: var(--gold-luminous);
+      box-shadow: 0 6px 18px rgba(227, 190, 98, 0.3);
+    }
+
+    /* Featured Kebab Showcase Card */
+    .kebab-showcase-wrapper {
+      max-width: 1180px;
+      margin: 0 auto;
       position: relative;
     }
 
-    .slider-dot:last-child {
-      border-right: none;
-    }
-
-    .slider-dot span.dot-idx {
-      font-size: 0.62rem;
-      color: var(--saffron-brass);
-    }
-
-    .slider-dot span.dot-name {
-      font-family: var(--font-serif);
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: var(--ivory-text);
-      text-transform: none;
-      letter-spacing: 0.3px;
-    }
-
-    .slider-dot::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0%;
-      height: 3px;
-      background: var(--saffron-gold);
-      transition: width 0.3s ease;
-    }
-
-    .slider-dot.active {
-      background: var(--lapis-card);
-    }
-
-    .slider-dot.active::after {
-      width: 100%;
-    }
-
-    .sku-slider-track {
+    .kebab-track {
       position: relative;
       display: grid;
       grid-template-columns: 1fr;
-      border: 1px solid var(--saffron-brass);
-      background: var(--lapis-card);
-      overflow: hidden;
-      cursor: grab;
     }
 
-    .sku-slider-track:active {
-      cursor: grabbing;
-    }
-
-    .sku-slide {
+    .kebab-slide {
       grid-area: 1 / 1;
       opacity: 0;
-      transform: translateY(8px);
-      pointer-events: none;
       visibility: hidden;
-      transition: opacity 0.55s ease, transform 0.55s ease, visibility 0.55s ease;
+      transform: translateY(10px);
+      transition: opacity 0.45s ease, transform 0.45s ease, visibility 0.45s ease;
     }
 
-    .sku-slide.active {
+    .kebab-slide.active {
       opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
       visibility: visible;
+      transform: translateY(0);
       z-index: 2;
     }
 
-    .sku-card {
+    .kebab-card {
+      background: var(--lapis-tile);
+      border: 1.5px solid var(--gold-leaf);
+      border-radius: 16px;
+      padding: 2.75rem;
       display: grid;
-      grid-template-columns: 1.05fr 1.15fr;
-      min-height: 520px;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 3rem;
+      align-items: center;
+      box-shadow: var(--shadow-lapis);
+      position: relative;
     }
 
-    .sku-media {
-      background: radial-gradient(circle at 50% 45%, rgba(142, 36, 30, 0.42) 0%, var(--lapis-deep) 80%);
-      padding: 3rem;
+    .kebab-card::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(227, 190, 98, 0.25);
+      border-radius: 11px;
+      pointer-events: none;
+    }
+
+    /* Pointed Arch Image Frame inside Kebab Card */
+    .kebab-media-box {
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      border-right: 1px solid var(--line-dark-subtle);
-      position: relative;
     }
 
-    .sku-img-btn {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: zoom-in;
-      display: block;
+    .kebab-arch-frame {
       width: 100%;
-      max-width: 440px;
-      transition: transform 0.35s ease;
-    }
-
-    .sku-img-btn:hover {
-      transform: scale(1.02);
-    }
-
-    .sku-img-wrapper {
-      position: relative;
-      width: 100%;
+      max-width: 390px;
       height: 360px;
-      border: 1px solid var(--saffron-gold);
+      border-radius: 195px 195px 14px 14px;
+      border: 2px solid var(--gold-luminous);
+      padding: 6px;
+      background: var(--lapis-midnight);
+      position: relative;
+      cursor: zoom-in;
       overflow: hidden;
-      box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
     }
 
-    .sku-product-img {
+    .kebab-arch-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      border-radius: 188px 188px 10px 10px;
+      transition: transform 0.6s ease;
       display: block;
-      transition: transform 0.7s ease;
     }
 
-    .sku-img-btn:hover .sku-product-img {
+    .kebab-arch-frame:hover img {
       transform: scale(1.06);
     }
 
-    .live-tag {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: rgba(9, 14, 22, 0.88);
-      color: var(--saffron-gold);
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      padding: 6px 12px;
-      border: 1px solid var(--saffron-brass);
-      z-index: 2;
-    }
-
-    .sku-hint-overlay {
+    .zoom-pill {
       position: absolute;
       bottom: 14px;
-      right: 14px;
-      background: rgba(9, 14, 22, 0.88);
-      color: var(--ivory-text);
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      padding: 5px 12px;
-      border: 1px solid var(--line-dark-subtle);
-      z-index: 2;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(9, 18, 29, 0.88);
+      color: var(--gold-luminous);
+      border: 1px solid var(--gold-leaf);
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      white-space: nowrap;
     }
 
-    .sku-quote {
-      margin-top: 1.5rem;
+    .kebab-poetic-quote {
+      margin-top: 1.25rem;
       font-family: var(--font-serif);
-      font-size: 1.2rem;
       font-style: italic;
-      color: var(--saffron-gold);
+      font-size: 1.18rem;
+      color: var(--gold-luminous);
       text-align: center;
     }
 
-    .sku-details {
-      padding: 3.5rem 4rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .sku-meta-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid var(--line-dark-subtle);
-    }
-
-    .sku-details h3 {
+    .kebab-info h3 {
       font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 3.5vw, 3.1rem);
-      color: var(--ivory-text);
-      margin-bottom: 0.4rem;
+      font-size: clamp(2.1rem, 3.4vw, 2.9rem);
+      color: var(--ivory-light);
+      margin-bottom: 0.35rem;
     }
 
-    .sku-price {
-      font-family: var(--font-mono);
-      font-size: 0.85rem;
+    .kebab-tagline {
+      color: var(--gold-luminous);
+      font-size: 0.86rem;
+      font-weight: 600;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: var(--saffron-gold);
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.25rem;
     }
 
-    .sku-details p {
-      color: var(--ivory-muted);
-      font-size: 0.98rem;
+    .kebab-info p {
+      color: var(--ivory-soft);
+      font-size: 1rem;
       line-height: 1.75;
+      margin-bottom: 1.75rem;
     }
 
-    /* Culinary Spec Matrix inside each Kebab Slide */
-    .culinary-matrix {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-top: 2rem;
-      padding-top: 1.5rem;
-      border-top: 1px solid var(--line-dark-subtle);
-    }
-
-    .ingredient-tags {
-      grid-column: 1 / -1;
+    .ingredient-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 0.5rem;
+      margin-bottom: 1.75rem;
     }
 
-    .ingredient-tags span {
-      background: var(--lapis-deep);
-      padding: 7px 14px;
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--ivory-text);
-      border: 1px solid var(--line-dark-subtle);
+    .ingredient-pills span {
+      background: rgba(9, 18, 29, 0.7);
+      border: 1px solid rgba(197, 155, 56, 0.35);
+      color: var(--ivory-light);
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 500;
     }
 
-    /* Slider Footer Controls */
-    .slider-nav-bar {
+    .carousel-controls {
       display: flex;
       align-items: center;
       justify-content: space-between;
       margin-top: 1.5rem;
+      padding: 0 0.5rem;
     }
 
-    .slider-status-hint {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--ivory-muted);
+    .carousel-counter {
+      font-size: 0.85rem;
+      color: var(--gold-luminous);
+      font-weight: 600;
       letter-spacing: 1px;
-      text-transform: uppercase;
     }
 
-    .slider-arrows {
+    .carousel-btns {
       display: flex;
       gap: 10px;
     }
 
-    .slider-btn {
-      width: 48px;
-      height: 48px;
-      background: var(--lapis-deep);
-      border: 1px solid var(--saffron-brass);
-      color: var(--ivory-text);
-      display: inline-flex;
+    .circle-arrow-btn {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--lapis-midnight);
+      border: 1.5px solid var(--gold-leaf);
+      color: var(--gold-luminous);
+      display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       transition: all 0.2s ease;
     }
 
-    .slider-btn:hover {
-      background: var(--saffron-gold);
-      color: var(--lapis-deep);
+    .circle-arrow-btn:hover {
+      background: var(--gold-leaf);
+      color: var(--lapis-midnight);
     }
 
-    .slider-btn svg {
+    .circle-arrow-btn svg {
       width: 20px;
       height: 20px;
       fill: currentColor;
     }
 
     /* ==========================================
-       ANATOMY OF OUR EMBLEM: ARCHITECTURAL BLUEPRINT
+       ANATOMY OF OUR EMBLEM (SHAMSA ROSETTE & CREST)
        ========================================== */
     .emblem-section {
-      background: var(--stone-bg);
-      padding: 6.5rem 2rem;
-      border-bottom: 1px solid var(--line-strong);
+      padding: 6rem 1.5rem;
+      border-bottom: 1.5px solid var(--border-gold);
     }
 
-    .emblem-wrap {
-      max-width: 1360px;
+    .emblem-grid {
+      max-width: 1280px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 0.95fr 1.25fr;
-      gap: 4.5rem;
-      align-items: center;
-    }
-
-    .emblem-artwork-container {
-      background: var(--lapis-night);
-      padding: 3rem;
-      border: 1px solid var(--ink-primary);
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 24px 50px rgba(15, 23, 34, 0.16);
-    }
-
-    /* Blueprint Crosshairs */
-    .emblem-artwork-container::before,
-    .emblem-artwork-container::after {
-      content: '+';
-      position: absolute;
-      font-family: var(--font-mono);
-      font-size: 1rem;
-      color: var(--saffron-gold);
-    }
-    .emblem-artwork-container::before { top: 12px; left: 16px; }
-    .emblem-artwork-container::after { bottom: 12px; right: 16px; }
-
-    .emblem-zoom-button {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: zoom-in;
-      width: 100%;
-      max-width: 420px;
-      transition: transform 0.35s ease;
-    }
-
-    .emblem-zoom-button:hover {
-      transform: scale(1.03);
-    }
-
-    .emblem-artwork-frame {
-      width: 100%;
-      aspect-ratio: 1 / 1;
-      border: 2px solid var(--saffron-gold);
-      background: var(--stone-bg);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .emblem-artwork-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .emblem-hint-overlay {
-      position: absolute;
-      bottom: 14px;
-      right: 14px;
-      background: var(--lapis-night);
-      color: var(--saffron-gold);
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      padding: 6px 12px;
-      border: 1px solid var(--saffron-brass);
-    }
-
-    .emblem-story-content h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 3.8vw, 3.4rem);
-      color: var(--ink-primary);
-      margin-bottom: 1rem;
-      line-height: 1.1;
-    }
-
-    .emblem-intro {
-      font-size: 1.04rem;
-      color: var(--ink-secondary);
-      margin-bottom: 2.5rem;
-      line-height: 1.75;
-    }
-
-    .emblem-pillars {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      border: 1px solid var(--line-strong);
-      background: var(--stone-card);
-    }
-
-    .emblem-pillar-card {
-      padding: 1.8rem;
-      border-right: 1px solid var(--line-light);
-      border-bottom: 1px solid var(--line-light);
-      transition: background-color 0.25s ease;
-    }
-
-    .emblem-pillar-card:nth-child(2n) { border-right: none; }
-    .emblem-pillar-card:nth-last-child(-n+2) { border-bottom: none; }
-
-    .emblem-pillar-card:hover {
-      background: var(--stone-surface);
-    }
-
-    .emblem-pillar-card h4 {
-      font-family: var(--font-serif);
-      font-size: 1.3rem;
-      color: var(--sumac-crimson);
-      margin-bottom: 6px;
-    }
-
-    .emblem-pillar-card p {
-      font-size: 0.88rem;
-      color: var(--ink-secondary);
-      line-height: 1.6;
-    }
-
-    /* ==========================================
-       THE DOOZI RITUAL: BOTANICAL APOTHECARY
-       ========================================== */
-    .doozi-section {
-      background: var(--mint-sage);
-      color: var(--ivory-text);
-      padding: 6.5rem 2rem;
-      border-bottom: 1px solid var(--saffron-brass);
-      position: relative;
-    }
-
-    .doozi-container {
-      max-width: 1360px;
-      margin: 0 auto;
-      background: rgba(9, 14, 22, 0.35);
-      border: 1px solid rgba(217, 164, 78, 0.45);
-      padding: 4.5rem 4rem;
-      display: grid;
-      grid-template-columns: 1.2fr 0.85fr;
+      grid-template-columns: 0.9fr 1.15fr;
       gap: 4rem;
       align-items: center;
     }
 
-    .doozi-text h2 {
-      font-family: var(--font-serif);
-      font-size: clamp(2.4rem, 4vw, 3.5rem);
-      color: var(--ivory-text);
-      margin-bottom: 1.25rem;
-      line-height: 1.1;
+    .emblem-shamsa-card {
+      background: var(--lapis-royal);
+      border: 2px solid var(--gold-leaf);
+      border-radius: 16px;
+      padding: 2.75rem;
+      text-align: center;
+      position: relative;
+      box-shadow: var(--shadow-lapis);
     }
 
-    .doozi-text h2 span {
-      color: var(--saffron-gold);
-      font-style: italic;
+    .emblem-shamsa-card::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(227, 190, 98, 0.35);
+      border-radius: 10px;
+      pointer-events: none;
     }
 
-    .doozi-text p {
-      color: rgba(246, 242, 235, 0.86);
-      font-size: 1.02rem;
-      line-height: 1.75;
-      margin-bottom: 1.25rem;
+    .emblem-zoom-btn {
+      background: none;
+      border: none;
+      cursor: zoom-in;
+      width: 100%;
+      max-width: 360px;
+      transition: transform 0.3s ease;
     }
 
-    .doozi-features {
+    .emblem-zoom-btn:hover {
+      transform: scale(1.03);
+    }
+
+    .emblem-ring {
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 3px solid var(--gold-luminous);
+      padding: 8px;
+      background: var(--parchment-bg);
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+    }
+
+    .emblem-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .emblem-pillars-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1.25rem;
       margin-top: 2rem;
     }
 
-    .doozi-feature-box {
-      background: rgba(9, 14, 22, 0.55);
+    .emblem-pillar-box {
       padding: 1.5rem;
-      border-left: 3px solid var(--saffron-gold);
     }
 
-    .doozi-feature-box h5 {
+    .emblem-pillar-box h4 {
       font-family: var(--font-serif);
-      font-size: 1.25rem;
-      color: var(--saffron-gold);
+      font-size: 1.3rem;
+      color: var(--pomegranate);
       margin-bottom: 6px;
     }
 
-    .doozi-feature-box p {
-      font-size: 0.85rem;
-      color: var(--ivory-muted);
-      margin-bottom: 0;
-      line-height: 1.5;
+    .emblem-pillar-box p {
+      font-size: 0.9rem;
+      color: var(--ink-body);
     }
 
-    .doozi-media-box {
-      background: var(--lapis-night);
-      padding: 3.5rem 2.5rem;
-      border: 1px solid var(--saffron-gold);
-      text-align: center;
+    /* ==========================================
+       THE DOOZI RITUAL (PERSIAN BOTANICAL GARDEN)
+       ========================================== */
+    .doozi-section {
+      background-color: var(--mint-botanical);
+      color: var(--ivory-light);
+      padding: 6rem 1.5rem;
+      border-bottom: 2px solid var(--gold-leaf);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23E3BE62' stroke-width='0.7' stroke-opacity='0.12'%3E%3Cpath d='M36,6 C46,20 52,26 66,36 C52,46 46,52 36,66 C26,52 20,46 6,36 C20,26 26,20 36,6 Z'/%3E%3Ccircle cx='36' cy='36' r='8'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .doozi-card {
+      max-width: 1240px;
+      margin: 0 auto;
+      background: rgba(9, 18, 29, 0.42);
+      border: 1.5px solid var(--gold-leaf);
+      border-radius: 16px;
+      padding: 3.75rem;
+      display: grid;
+      grid-template-columns: 1.2fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
       position: relative;
     }
 
-    .doozi-media-box::before {
-      content: 'نعناع فلفلی';
-      display: block;
+    .doozi-card::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(227, 190, 98, 0.3);
+      border-radius: 10px;
+      pointer-events: none;
+    }
+
+    .doozi-content h2 {
       font-family: var(--font-serif);
-      font-size: 2.2rem;
-      color: var(--saffron-gold);
+      font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+      color: var(--ivory-light);
       margin-bottom: 1rem;
-      opacity: 0.85;
+      line-height: 1.12;
     }
 
-    .doozi-media-box h3 {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      color: var(--ivory-text);
-      letter-spacing: 2px;
-      margin-bottom: 0.75rem;
-    }
-
-    .doozi-media-box p {
-      font-family: var(--font-serif);
+    .doozi-content h2 span {
+      color: var(--gold-luminous);
       font-style: italic;
-      color: var(--ivory-muted);
-      font-size: 1.15rem;
     }
 
-    /* ==========================================
-       CAREERS SECTION: ATELIER GUILD LEDGER
-       ========================================== */
-    .careers-section {
-      background: var(--stone-bg);
-      padding: 6.5rem 2rem;
+    .doozi-content p {
+      color: var(--ivory-soft);
+      font-size: 1rem;
+      margin-bottom: 1.2rem;
     }
 
-    .careers-wrap {
-      max-width: 1360px;
-      margin: 0 auto;
+    .doozi-pairings {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4.5rem;
-      align-items: start;
+      gap: 1rem;
+      margin-top: 1.75rem;
     }
 
-    .careers-wrap h2 {
+    .pairing-tile {
+      background: rgba(9, 18, 29, 0.55);
+      border: 1px solid rgba(227, 190, 98, 0.35);
+      border-radius: 10px;
+      padding: 1.35rem;
+    }
+
+    .pairing-tile h5 {
       font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 3.8vw, 3.3rem);
-      color: var(--ink-primary);
-      margin-bottom: 1rem;
-      line-height: 1.1;
+      font-size: 1.25rem;
+      color: var(--gold-luminous);
+      margin-bottom: 4px;
     }
 
-    .careers-wrap > div:first-child > p {
-      color: var(--ink-secondary);
-      font-size: 1rem;
-      line-height: 1.75;
-      margin-bottom: 2rem;
-    }
-
-    .roles-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1.25rem;
-    }
-
-    .role-item {
-      background: var(--stone-card);
-      padding: 1.75rem;
-      border: 1px solid var(--line-strong);
-      border-left: 4px solid var(--sumac-crimson);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-
-    .role-item:hover {
-      transform: translateX(4px);
-      box-shadow: 0 12px 28px rgba(20, 24, 31, 0.08);
-    }
-
-    .role-item h4 {
-      font-family: var(--font-serif);
-      font-size: 1.35rem;
-      color: var(--ink-primary);
-      margin-bottom: 6px;
-    }
-
-    .role-item p {
-      font-size: 0.88rem;
-      color: var(--ink-secondary);
+    .pairing-tile p {
+      font-size: 0.86rem;
       margin-bottom: 0;
     }
 
-    .hiring-box {
-      background: var(--lapis-night);
-      color: var(--ivory-text);
-      padding: 3rem 2.75rem;
-      border: 1px solid var(--ink-primary);
-      box-shadow: 0 24px 48px rgba(15, 23, 34, 0.18);
+    .doozi-arch-medallion {
+      background: var(--lapis-royal);
+      border: 2px solid var(--gold-luminous);
+      border-radius: 160px 160px 14px 14px;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: var(--shadow-lapis);
+    }
+
+    .doozi-farsi {
+      font-family: var(--font-serif);
+      font-size: 2.3rem;
+      color: var(--gold-luminous);
+      margin-bottom: 0.75rem;
+    }
+
+    .doozi-arch-medallion h3 {
+      font-family: var(--font-display);
+      font-size: 1.55rem;
+      letter-spacing: 2px;
+      color: var(--ivory-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .doozi-arch-medallion p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--ivory-soft);
     }
 
     /* ==========================================
-       FOOTER: ARCHITECTURAL COLOPHON
+       CAREERS SECTION
        ========================================== */
-    footer {
-      background: var(--lapis-deep);
-      color: var(--ivory-text);
-      padding: 5rem 2rem 2.5rem;
-      border-top: 2px solid var(--saffron-brass);
+    .careers-section {
+      padding: 6rem 1.5rem;
     }
 
-    .footer-inner {
-      max-width: 1360px;
+    .careers-grid {
+      max-width: 1280px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1.2fr;
-      gap: 3.5rem;
-      padding-bottom: 3.5rem;
-      border-bottom: 1px solid var(--line-dark-subtle);
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
     }
 
-    .footer-brand-wrap {
+    .careers-info h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.2rem, 3.8vw, 3.1rem);
+      color: var(--lapis-royal);
+      margin-bottom: 1rem;
+      line-height: 1.12;
+    }
+
+    .careers-info > p {
+      color: var(--ink-body);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .roles-stack {
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
     }
 
-    .footer-emblem-btn {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: zoom-in;
-      display: inline-flex;
-      align-items: center;
-      gap: 16px;
-      text-align: left;
-      width: fit-content;
+    .role-card {
+      padding: 1.65rem 1.85rem;
+      border-left: 4px solid var(--pomegranate);
     }
 
-    .footer-emblem-img {
-      width: 68px;
-      height: 68px;
+    .role-card h4 {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--lapis-royal);
+      margin-bottom: 4px;
+    }
+
+    .role-card p {
+      font-size: 0.9rem;
+      color: var(--ink-body);
+    }
+
+    .careers-form-card {
+      background: var(--lapis-royal);
+      color: var(--ivory-light);
+      border: 1.5px solid var(--gold-leaf);
+      border-radius: 14px;
+      padding: 2.75rem;
+      box-shadow: var(--shadow-lapis);
+      position: relative;
+    }
+
+    .careers-form-card::before {
+      content: '';
+      position: absolute;
+      inset: 7px;
+      border: 1px solid rgba(227, 190, 98, 0.28);
+      border-radius: 9px;
+      pointer-events: none;
+    }
+
+    /* ==========================================
+       FOOTER
+       ========================================== */
+    footer {
+      background: var(--lapis-midnight);
+      color: var(--ivory-light);
+      padding: 4.5rem 1.5rem 2.25rem;
+      border-top: 2px solid var(--gold-leaf);
+    }
+
+    .footer-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1.1fr;
+      gap: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(197, 155, 56, 0.25);
+    }
+
+    .footer-brand-btn {
+      background: none;
+      border: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      cursor: zoom-in;
+      text-align: left;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand-btn img {
+      width: 64px;
+      height: 64px;
       border-radius: 50%;
+      border: 2px solid var(--gold-leaf);
       object-fit: cover;
-      border: 1.5px solid var(--saffron-gold);
-      background: var(--stone-bg);
+      background: var(--parchment-bg);
     }
 
     .footer-col h4 {
-      font-family: var(--font-mono);
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 1.4rem;
-      color: var(--saffron-gold);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      letter-spacing: 1.8px;
+      color: var(--gold-luminous);
+      margin-bottom: 1.2rem;
     }
 
     .footer-col ul {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.8rem;
+      gap: 0.7rem;
     }
 
     .footer-col a {
-      color: var(--ivory-muted);
+      color: var(--ivory-soft);
       text-decoration: none;
-      font-size: 0.9rem;
-      transition: color 0.2s;
+      font-size: 0.92rem;
+      transition: color 0.2s ease;
     }
 
     .footer-col a:hover {
-      color: var(--saffron-gold);
+      color: var(--gold-luminous);
     }
 
-    .social-links-wrap {
+    .social-row {
       display: flex;
-      align-items: center;
       gap: 12px;
-      margin-top: 0.5rem;
+      margin-top: 0.75rem;
     }
 
-    .social-icon-btn {
+    .social-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid var(--gold-leaf);
+      color: var(--gold-luminous);
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      height: 44px;
-      border: 1px solid var(--line-dark-subtle);
-      color: var(--saffron-gold);
-      text-decoration: none;
       transition: all 0.25s ease;
     }
 
-    .social-icon-btn:hover {
-      background: var(--saffron-gold);
-      border-color: var(--saffron-gold);
-      color: var(--lapis-deep);
+    .social-btn:hover {
+      background: var(--gold-leaf);
+      color: var(--lapis-midnight);
       transform: translateY(-2px);
     }
 
-    .social-icon-btn svg {
+    .social-btn svg {
       width: 18px;
       height: 18px;
       fill: currentColor;
     }
 
-    .legal-bar {
-      max-width: 1360px;
+    .footer-bottom {
+      max-width: 1280px;
       margin: 0 auto;
-      padding-top: 2rem;
+      padding-top: 1.75rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-family: var(--font-mono);
-      font-size: 0.74rem;
-      color: var(--ivory-muted);
-    }
-
-    /* Lightbox Modal */
-    .logo-modal-overlay {
-      position: fixed;
-      inset: 0;
-      z-index: 99999;
-      background: rgba(9, 14, 22, 0.94);
-      backdrop-filter: blur(12px);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem;
-    }
-
-    .logo-modal-overlay.active {
-      display: flex;
-    }
-
-    .logo-modal-container {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      max-width: 460px;
-    }
-
-    .modal-logo-wrapper {
-      width: 100%;
-      height: 60vh;
-      max-height: 440px;
-      background: var(--stone-bg);
-      border: 2px solid var(--saffron-gold);
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      cursor: zoom-in;
-    }
-
-    .modal-logo-img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      transition: transform 0.4s ease;
-    }
-
-    .modal-logo-wrapper.zoomed .modal-logo-img {
-      transform: scale(1.55);
-      cursor: zoom-out;
-    }
-
-    .modal-caption {
-      margin-top: 1rem;
-      font-family: var(--font-mono);
+      flex-wrap: wrap;
+      gap: 1rem;
       font-size: 0.8rem;
-      color: var(--ivory-text);
-      text-align: center;
-      letter-spacing: 1px;
-      text-transform: uppercase;
+      color: var(--ivory-soft);
     }
 
-    .logo-modal-close {
-      position: absolute;
-      top: -14px;
-      right: -14px;
+    /* ==========================================
+       FLOATING AUDIO WIDGET
+       ========================================== */
+    .audio-widget {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--lapis-royal);
+      border: 1.5px solid var(--gold-leaf);
+      padding: 8px 16px 8px 8px;
+      border-radius: 50px;
+      box-shadow: 0 12px 32px rgba(9, 18, 29, 0.45);
+    }
+
+    .audio-play-btn {
       width: 40px;
       height: 40px;
-      background: var(--sumac-crimson);
-      border: 1.5px solid var(--saffron-gold);
-      color: var(--ivory-text);
-      font-size: 1.1rem;
-      font-weight: 700;
+      border-radius: 50%;
+      background: var(--pomegranate);
+      border: 1.5px solid var(--gold-luminous);
+      color: #FFFFFF;
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
-      z-index: 10;
+      flex-shrink: 0;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .audio-play-btn:hover {
+      background: var(--pomegranate-hover);
+      transform: scale(1.06);
+    }
+
+    .audio-play-btn.playing {
+      background: var(--gold-leaf);
+      color: var(--lapis-midnight);
+    }
+
+    .audio-play-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .audio-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .audio-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold-luminous);
+    }
+
+    .volume-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .volume-row svg {
+      width: 13px;
+      height: 13px;
+      fill: var(--ivory-soft);
+    }
+
+    .volume-range {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 72px;
+      height: 3px;
+      background: rgba(250, 246, 238, 0.25);
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .volume-range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 11px;
+      height: 11px;
+      border-radius: 50%;
+      background: var(--gold-luminous);
     }
 
     /* ==========================================
-       MOBILE RESPONSIVE & CENTER ALIGNMENT
+       LIGHTBOX MODAL
        ========================================== */
-    @media (max-width: 960px) {
-      .telemetry-bar {
-        justify-content: center;
-        text-align: center;
-      }
-      .telemetry-bar span:last-child {
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(9, 18, 29, 0.94);
+      backdrop-filter: blur(10px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .lightbox-overlay.active {
+      display: flex;
+    }
+
+    .lightbox-box {
+      position: relative;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .lightbox-frame {
+      width: 100%;
+      height: 62vh;
+      max-height: 440px;
+      background: var(--parchment-bg);
+      border: 2px solid var(--gold-luminous);
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-in;
+    }
+
+    .lightbox-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.35s ease;
+    }
+
+    .lightbox-frame.zoomed img {
+      transform: scale(1.55);
+      cursor: zoom-out;
+    }
+
+    .lightbox-caption {
+      margin-top: 0.9rem;
+      color: var(--gold-luminous);
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -16px;
+      right: -16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--pomegranate);
+      border: 1.5px solid var(--gold-luminous);
+      color: #FFFFFF;
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    /* ==========================================
+       RESPONSIVE BREAKPOINTS
+       ========================================== */
+    @media (max-width: 980px) {
+      .desktop-nav,
+      .header-cta-desktop {
         display: none;
       }
-      header {
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+
+      .hero-grid,
+      .craft-grid,
+      .kebab-card,
+      .emblem-grid,
+      .doozi-card,
+      .careers-grid,
+      .footer-grid {
         grid-template-columns: 1fr;
-        height: auto;
-        padding: 1rem;
-        gap: 0.75rem;
+      }
+
+      .hero-grid {
         text-align: center;
       }
-      .brand-logo-wrap {
-        border-right: none;
-        padding-right: 0;
-        flex-direction: column;
-        justify-content: center;
-        gap: 8px;
+
+      .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
       }
-      nav, .header-cta-wrap {
-        display: none;
-      }
-      .hero {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-      .hero-content {
-        padding: 3rem 1.25rem;
-        border-right: none;
-        border-bottom: 1px solid var(--line-strong);
-        text-align: center;
-        align-items: center;
-      }
-      .hero-cta-row {
+
+      .hero-cta-group {
         justify-content: center;
       }
-      .hero-specs-ledger {
-        width: 100%;
-        text-align: center;
-      }
-      .hero-vault-col {
-        padding: 2.5rem 1rem;
-      }
-      .vault-header {
-        flex-direction: column;
-        text-align: center;
-      }
-      .hero-card {
-        padding: 2.2rem 1.5rem;
-        text-align: center;
-      }
-      .section-header-split {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 1rem;
-      }
-      .section-header-split p {
-        justify-self: center;
-      }
-      .grid-3 {
-        grid-template-columns: 1fr;
-      }
-      .craft-card {
-        border-right: none;
-        border-bottom: 1px solid var(--line-strong);
-        text-align: center;
-        padding: 2.5rem 1.5rem;
-      }
-      .craft-num {
-        justify-content: center;
-        gap: 12px;
-      }
-      .menu-header-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .slider-dots {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .slider-dot {
-        text-align: center;
-        align-items: center;
-        border-bottom: 1px solid var(--line-dark-subtle);
-      }
-      .sku-card {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-      .sku-media {
-        padding: 2rem 1.25rem;
-        border-right: none;
-        border-bottom: 1px solid var(--line-dark-subtle);
-      }
-      .sku-img-wrapper {
-        height: 260px;
-      }
-      .sku-details {
-        padding: 2.2rem 1.5rem;
-        align-items: center;
-        text-align: center;
-      }
-      .sku-meta-row {
-        justify-content: center;
+
+      .mihrab-card {
+        border-radius: 140px 140px 14px 14px;
+        padding: 3rem 1.75rem 2.25rem;
+        max-width: 520px;
+        margin: 0 auto;
         width: 100%;
       }
-      .ingredient-tags {
+
+      .mihrab-card::before {
+        border-radius: 132px 132px 10px 10px;
+      }
+
+      .kebab-card {
+        padding: 2rem 1.5rem;
+        text-align: center;
+      }
+
+      .kebab-arch-frame {
+        height: 280px;
+      }
+
+      .ingredient-pills {
         justify-content: center;
       }
-      .emblem-wrap,
-      .doozi-container,
-      .careers-wrap {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center;
-      }
-      .emblem-pillars,
-      .doozi-features {
+
+      .emblem-pillars-grid,
+      .doozi-pairings {
         grid-template-columns: 1fr;
       }
-      .emblem-pillar-card {
-        border-right: none !important;
-        border-bottom: 1px solid var(--line-light) !important;
+
+      .doozi-card {
+        padding: 2.25rem 1.5rem;
       }
-      .doozi-container {
-        padding: 2.5rem 1.5rem;
-      }
-      .role-item, .hiring-box {
+
+      .footer-grid {
         text-align: center;
       }
-      .footer-inner {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-        text-align: center;
-      }
-      .footer-brand-wrap {
-        align-items: center;
-      }
-      .footer-emblem-btn {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .social-links-wrap {
+
+      .footer-brand-btn,
+      .social-row {
         justify-content: center;
       }
-      .legal-bar {
-        flex-direction: column;
-        gap: 0.75rem;
+
+      .footer-bottom {
+        justify-content: center;
         text-align: center;
       }
-      .floating-audio-widget {
-        bottom: 18px;
-        right: 18px;
-        padding: 8px;
-        border-radius: 50%;
+
+      .audio-widget {
+        padding: 6px;
+        bottom: 16px;
+        right: 16px;
       }
-      .audio-details-wrap {
+
+      .audio-meta {
         display: none;
       }
     }
@@ -1803,424 +1612,361 @@
 </head>
 <body>
 
-  <!-- Architectural Top Telemetry Strip -->
-  <div class="telemetry-bar">
-    <span class="live-indicator">ATELIER DISPATCH • DELHI NCR</span>
-    <span>28.6139° N, 77.2090° E • LIVE HARDWOOD CHARCOAL • SARGOL SAFFRON</span>
+  <!-- Top Welcome Strip -->
+  <div class="top-banner">
+    Artisanal Persian Grillhouse • Crafting Live-Charcoal Kebabs for Delhi NCR
   </div>
 
-  <!-- Editorial Header -->
+  <!-- Sticky Navigation Header -->
   <header>
-    <div class="brand-logo-wrap">
-      <button type="button" class="nav-logo-button" id="headerLogoBtn" aria-label="View enlarged Maison Kebabi emblem" title="Click to view emblem">
-        <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="nav-logo-img" id="headerLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230F1722\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23D9A44E\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MK</text></svg>';">
-      </button>
-      
-      <a href="#" class="brand-title">
-        <span>MAISON KEBABI</span>
-        <span>Grillade &amp; Feu • Atelier</span>
-      </a>
-    </div>
-    
-    <nav>
-      <ul>
-        <li><a href="#heritage">The Fire Craft</a></li>
-        <li><a href="#kebabs">Skewer Ledger</a></li>
-        <li><a href="#emblem">The Crest</a></li>
-        <li><a href="#doozi">Doozi Ritual</a></li>
-        <li><a href="#careers">Guild Careers</a></li>
-        <li><a href="#contact">Colophon</a></li>
-      </ul>
-    </nav>
+    <div class="header-inner">
+      <div class="brand-lockup">
+        <button type="button" class="nav-logo-btn" id="headerLogoBtn" aria-label="View enlarged Maison Kebabi emblem" title="Click to inspect emblem">
+          <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="nav-logo-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230F1D2E\'/><circle cx=\'100\' cy=\'100\' r=\'86\' stroke=\'%23E3BE62\' stroke-width=\'3\' fill=\'none\'/><text x=\'100\' y=\'125\' font-family=\'Georgia,serif\' font-size=\'64\' font-weight=\'bold\' fill=\'%23FAF6EE\' text-anchor=\'middle\'>MK</text></svg>';">
+        </button>
+        <a href="#" class="brand-text" style="text-decoration: none;">
+          <span class="brand-name">MAISON KEBABI</span>
+          <span class="brand-sub">Grillade &amp; Feu • Persian Atelier</span>
+        </a>
+      </div>
 
-    <div class="header-cta-wrap">
-      <a href="#waitlist" class="btn-primary">Reserve Tasting Box</a>
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul>
+          <li><a href="#heritage">Our Craft</a></li>
+          <li><a href="#kebabs">Signature Kebabs</a></li>
+          <li><a href="#emblem">Royal Emblem</a></li>
+          <li><a href="#doozi">Doozi Ritual</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#waitlist" class="btn btn-primary header-cta-desktop">Join Tasting List</a>
+        <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z"/></svg>
+        </button>
+      </div>
     </div>
+
+    <!-- Mobile Slide-Down Drawer -->
+    <nav class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation">
+      <a href="#heritage">Our Craft</a>
+      <a href="#kebabs">Signature Kebabs</a>
+      <a href="#emblem">Royal Emblem</a>
+      <a href="#doozi">Doozi Ritual</a>
+      <a href="#careers">Careers</a>
+      <a href="#contact">Contact</a>
+      <a href="#waitlist" class="btn btn-gold" style="margin-top: 0.5rem;">Join First-Tasting List</a>
+    </nav>
   </header>
 
-  <!-- Floating Custom Audio Control Widget -->
-  <div class="floating-audio-widget" id="floatingAudioWidget" role="region" aria-label="Audio Controls">
+  <!-- Floating Persian Music Widget -->
+  <div class="audio-widget" role="region" aria-label="Ambient Persian Hearth Music">
     <audio id="bgAudio" loop preload="auto">
       <source src="assets/Website-مزون کباب.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
     </audio>
-    
-    <button type="button" class="audio-toggle-btn" id="audioToggleBtn" aria-label="Play or Pause Audio" title="Play / Pause Sound">
+    <button type="button" class="audio-play-btn" id="audioToggleBtn" aria-label="Play or Pause Music" title="Play / Pause Ambient Music">
       <svg id="playIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
       <svg id="pauseIcon" viewBox="0 0 24 24" style="display: none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
     </button>
-
-    <div class="audio-details-wrap">
-      <div class="audio-title">Hearth Acoustic</div>
-      <div class="volume-slider-wrap">
-        <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
-        <input type="range" min="0" max="1" step="0.05" value="0.5" class="volume-slider" id="volumeSlider" aria-label="Volume Slider" title="Adjust Volume">
+    <div class="audio-meta">
+      <span class="audio-label">Persian Santoor</span>
+      <div class="volume-row">
+        <svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+        <input type="range" min="0" max="1" step="0.05" value="0.5" class="volume-range" id="volumeSlider" aria-label="Music Volume">
       </div>
     </div>
   </div>
 
-  <!-- Asymmetric Split Hero Section -->
-  <div class="hero-wrapper">
-    <section class="hero">
-      <div class="hero-content">
-        <div class="hero-watermark" aria-hidden="true">آتش و زعفران</div>
-        
-        <div class="hero-headline-group">
-          <div class="badge">EDITION I • LAUNCHING WINTER 2026</div>
-          <h1>Architecture of Fire. <span>Persian Soul at Delhi’s Table.</span></h1>
-          <p class="hero-lead">
-            Saffron-marinated tender cuts, wide forged steel skewers, and centuries of imperial Persian grill mastery. Hand-pressed and charred daily over live hardwood embers in Delhi NCR.
-          </p>
-          <div class="hero-cta-row">
-            <a href="#waitlist" class="btn-primary">Request Private Allocation</a>
-            <a href="#kebabs" class="btn-primary" style="background: transparent; color: var(--ink-primary);">Inspect 06 Signature Cuts →</a>
-          </div>
+  <!-- ==========================================
+       HERO SECTION WITH TRADITIONAL MIHRAB ARCH
+       ========================================== -->
+  <section class="hero-section">
+    <div class="hero-grid">
+      
+      <div class="hero-copy">
+        <div class="kicker-pill">Launching Winter 2026 • Delhi NCR</div>
+        <h1>Imperial Persian Fire. <span>Crafted for Delhi’s Table.</span></h1>
+        <p class="hero-subtitle">
+          Experience centuries-old Persian grill artistry: hand-pressed kebabs on wide forged steel skewers, steeped in wild Khorasan saffron and seared daily over glowing hardwood charcoal.
+        </p>
+
+        <div class="hero-cta-group">
+          <a href="#waitlist" class="btn btn-primary">Reserve Early Tasting</a>
+          <a href="#kebabs" class="btn btn-outline">Explore 6 Signature Kebabs</a>
         </div>
 
-        <div class="hero-specs-ledger">
-          <div class="spec-stat">
-            <span class="stat-num">650°C</span>
-            <span class="stat-label">Live Hardwood Core</span>
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <strong>650°C Hearth</strong>
+            <span>100% Hardwood Charcoal</span>
           </div>
-          <div class="spec-stat">
-            <span class="stat-num">25 MM</span>
-            <span class="stat-label">SS-304 Flat Skewers</span>
+          <div class="highlight-item">
+            <strong>25 mm Blades</strong>
+            <span>Forged Flat Steel Skewers</span>
           </div>
-          <div class="spec-stat">
-            <span class="stat-num">24 HR</span>
-            <span class="stat-label">Sargol Saffron Steep</span>
+          <div class="highlight-item">
+            <strong>24-Hr Steep</strong>
+            <span>Pure Sargol Saffron</span>
           </div>
         </div>
       </div>
 
-      <!-- Waitlist Vault Card -->
-      <div class="hero-vault-col">
-        <div class="hero-card" id="waitlist">
-          <div class="vault-header">
-            <div class="hero-logo-container" id="heroLogoTrigger" title="Click to view emblem">
-              <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="hero-logo-img" id="heroLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230F1722\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23D9A44E\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MK</text></svg>';">
+      <!-- Traditional Persian Pointed Arch (Mihrab) Invitation Card -->
+      <div class="mihrab-card" id="waitlist">
+        <div class="mihrab-crest" id="heroLogoTrigger" title="Click to inspect emblem">
+          <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230F1D2E\'/><circle cx=\'100\' cy=\'100\' r=\'86\' stroke=\'%23E3BE62\' stroke-width=\'3\' fill=\'none\'/><text x=\'100\' y=\'125\' font-family=\'Georgia,serif\' font-size=\'64\' font-weight=\'bold\' fill=\'%23FAF6EE\' text-anchor=\'middle\'>MK</text></svg>';">
+        </div>
+
+        <div class="mihrab-header">
+          <span>Founding Guests Registry</span>
+          <h2>First-Tasting Invitation</h2>
+          <p>Join our inaugural dispatch list for South Delhi, Gurugram &amp; Noida.</p>
+        </div>
+
+        <form class="styled-form" id="waitlistForm">
+          <input type="hidden" name="form_type" value="waitlist">
+          <div id="waitlistInputFields" style="display: flex; flex-direction: column; gap: 12px;">
+            <div class="form-group">
+              <label for="wlName">Full Name</label>
+              <input type="text" id="wlName" name="full_name" placeholder="e.g., Kabir Malhotra" required>
             </div>
-            <div class="vault-title-wrap">
-              <span class="vault-kicker">THE FIRST-TASTING LEDGER</span>
-              <h3>Private Table Allocation</h3>
+            <div class="form-group">
+              <label for="wlWhatsapp">WhatsApp Number</label>
+              <input type="tel" id="wlWhatsapp" name="whatsapp" placeholder="10-digit mobile number" pattern="[0-9]{10,12}" title="Enter a valid 10 to 12 digit phone number" required>
             </div>
-          </div>
-          
-          <p class="vault-desc">
-            Be among the first 50 tables in South Delhi, Noida &amp; Gurugram to receive our inaugural charcoal skewer dispatch and hearth-baked bread.
-          </p>
-          
-          <form class="waitlist-form" id="waitlistForm">
-            <input type="hidden" name="form_type" value="waitlist">
-            <div id="waitlistInputFields" style="display: flex; flex-direction: column; gap: 12px;">
-              <input type="text" name="full_name" placeholder="Your Full Name" required>
-              <input type="tel" name="whatsapp" placeholder="WhatsApp Number (10–12 digits)" pattern="[0-9]{10,12}" title="Please enter a valid 10 to 12 digit phone number" required>
-              <select name="catchment_area" required>
-                <option value="" disabled selected>Select Your Delhi NCR Catchment</option>
+            <div class="form-group">
+              <label for="wlArea">Delivery Neighbourhood</label>
+              <select id="wlArea" name="catchment_area" required>
+                <option value="" disabled selected>Choose your Delhi NCR zone</option>
                 <option value="South Delhi">South Delhi (GK / Vasant Vihar / Defence Colony)</option>
                 <option value="Gurugram">Gurugram (DLF Phase 1–5 / Golf Course Rd)</option>
                 <option value="Central Delhi">Central / North Delhi</option>
                 <option value="Noida">Noida</option>
               </select>
-              <button type="submit" class="btn-primary btn-gold" id="waitlistSubmitBtn" style="margin-top: 6px; width: 100%;">Claim Exclusive Invitation</button>
             </div>
-            <div class="form-feedback" id="waitlistFeedback"></div>
-          </form>
-        </div>
+            <button type="submit" class="btn btn-gold" id="waitlistSubmitBtn" style="margin-top: 6px; width: 100%;">Request Priority Invite</button>
+          </div>
+          <div class="form-feedback" id="waitlistFeedback"></div>
+        </form>
       </div>
-    </section>
-  </div>
 
-  <!-- Craft Pillars Section -->
+    </div>
+  </section>
+
+  <!-- ==========================================
+       THE PERSIAN GRILL CRAFT (3 ORNATE CARDS)
+       ========================================== -->
   <section class="craft-section" id="heritage">
-    <div class="section-header-split">
-      <div>
-        <div class="badge">THE PERSIAN GRILL DOCTRINE</div>
-        <h2>Charcoal Smoke &amp; Saffron Alchemy</h2>
+    <div class="section-header-center">
+      <div class="kicker-pill">The Art of the Persian Grill</div>
+      <h2>Charcoal Smoke &amp; Saffron Alchemy</h2>
+      <div class="persian-divider" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="12,1 15,9 23,12 15,15 12,23 9,15 1,12 9,9"/></svg>
       </div>
-      <p>
-        We reject gas burners and electric elements. Every skewer is hand-forged by weight, steeped in wild Khorasan Sargol saffron, and seared over glowing hardwood embers.
-      </p>
+      <p>Every skewer is hand-forged by weight, steeped in wild Persian Sargol saffron, and seared over glowing hardwood embers—never gas or electric coils.</p>
     </div>
 
-    <div class="grid-3">
-      <div class="craft-card">
-        <div class="craft-num">
-          <span>PILLAR 01</span>
-          <span>THERMAL DISCIPLINE</span>
-        </div>
-        <div>
-          <h3>Live Hardwood Embers</h3>
-          <p>Pure radiant heat from dense hardwood charcoal imparts an unmistakable smoky Persian hearth aroma while sealing natural juices within seconds of contact.</p>
-        </div>
+    <div class="craft-grid">
+      <div class="persian-card craft-card">
+        <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
+        <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
+        <div class="craft-medallion">I</div>
+        <h3>Live Hardwood Embers</h3>
+        <p>Pure radiant heat from dense hardwood charcoal imparts an unmistakable smoky Persian hearth aroma while locking in natural juices within seconds.</p>
       </div>
 
-      <div class="craft-card">
-        <div class="craft-num">
-          <span>PILLAR 02</span>
-          <span>GOLDEN EMULSION</span>
-        </div>
-        <div>
-          <h3>Sargol Saffron Glaze</h3>
-          <p>Hand-harvested crimson saffron threads bloomed over cracked ice and emulsified with cultured butter and fresh lemon—basted continuously during rotation.</p>
-        </div>
+      <div class="persian-card craft-card">
+        <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
+        <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
+        <div class="craft-medallion">II</div>
+        <h3>Sargol Saffron Glaze</h3>
+        <p>Hand-harvested crimson saffron threads bloomed over cracked ice and emulsified with cultured butter and fresh lemon—basted continuously over the fire.</p>
       </div>
 
-      <div class="craft-card">
-        <div class="craft-num">
-          <span>PILLAR 03</span>
-          <span>ARTISANAL BUTCHERY</span>
-        </div>
-        <div>
-          <h3>Hand-Pressed Koobideh</h3>
-          <p>Prime minced lamb and pasture-raised cuts kneaded with pressed sweet onions and rock salt, ribbed deftly by thumb along wide stainless steel blades.</p>
-        </div>
+      <div class="persian-card craft-card">
+        <svg class="corner-ornament corner-tl" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
+        <svg class="corner-ornament corner-tr" viewBox="0 0 32 32"><path d="M2,30 L2,10 C2,5 5,2 10,2 L30,2 M6,24 L6,12 C6,8 8,6 12,6 L24,6" fill="none" stroke="#C59B38" stroke-width="1.5"/></svg>
+        <div class="craft-medallion">III</div>
+        <h3>Hand-Pressed Koobideh</h3>
+        <p>Prime minced cuts kneaded with pressed sweet onions and rock salt, ribbed deftly by thumb along wide 25 mm stainless steel blades.</p>
       </div>
     </div>
   </section>
 
-  <!-- Signature Kebabs Interactive Ledger Showcase -->
-  <section class="menu-preview" id="kebabs">
-    <div class="menu-header-inner">
-      <div>
-        <div class="badge badge-dark">THE ATELIER REPERTOIRE • 06 CUTS</div>
-        <h2>Signature Persian Kebabs</h2>
+  <!-- ==========================================
+       SIGNATURE PERSIAN KEBABS (ISFAHAN COBALT GALLERY)
+       ========================================== -->
+  <section class="kebabs-section" id="kebabs">
+    <div class="section-header-center">
+      <div class="kicker-pill kicker-pill-dark">Royal Grill Repertoire</div>
+      <h2>Signature Persian Kebabs</h2>
+      <div class="persian-divider" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><polygon points="12,1 15,9 23,12 15,15 12,23 9,15 1,12 9,9"/></svg>
       </div>
-      <p>Select any skewer from the index below or swipe across the ledger to inspect our six royal open-flame preparations.</p>
+      <p>Tap any kebab below or swipe through our six signature open-flame cuts. Click any dish photograph to inspect in full detail.</p>
     </div>
 
-    <div class="sku-slider-container" id="skuSliderContainer">
-      
-      <!-- Interactive 6-Tab Skewer Selector -->
-      <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Kebab Carousel Navigation">
-        <button class="slider-dot active" data-index="0" aria-label="Slide 1">
-          <span class="dot-idx">CUT 01</span>
-          <span class="dot-name">Koobideh</span>
-        </button>
-        <button class="slider-dot" data-index="1" aria-label="Slide 2">
-          <span class="dot-idx">CUT 02</span>
-          <span class="dot-name">Jujeh</span>
-        </button>
-        <button class="slider-dot" data-index="2" aria-label="Slide 3">
-          <span class="dot-idx">CUT 03</span>
-          <span class="dot-name">Barg</span>
-        </button>
-        <button class="slider-dot" data-index="3" aria-label="Slide 4">
-          <span class="dot-idx">CUT 04</span>
-          <span class="dot-name">Soltani</span>
-        </button>
-        <button class="slider-dot" data-index="4" aria-label="Slide 5">
-          <span class="dot-idx">CUT 05</span>
-          <span class="dot-name">Chenjeh</span>
-        </button>
-        <button class="slider-dot" data-index="5" aria-label="Slide 6">
-          <span class="dot-idx">CUT 06</span>
-          <span class="dot-name">Shishlik</span>
-        </button>
-      </div>
+    <!-- Easy Pill Navigation -->
+    <div class="kebab-tabs" id="sliderDots" role="tablist" aria-label="Choose a Signature Kebab">
+      <button type="button" class="kebab-tab-btn active" data-index="0">Koobideh</button>
+      <button type="button" class="kebab-tab-btn" data-index="1">Jujeh</button>
+      <button type="button" class="kebab-tab-btn" data-index="2">Barg</button>
+      <button type="button" class="kebab-tab-btn" data-index="3">Soltani</button>
+      <button type="button" class="kebab-tab-btn" data-index="4">Chenjeh</button>
+      <button type="button" class="kebab-tab-btn" data-index="5">Shishlik</button>
+    </div>
 
-      <div class="sku-slider-track" id="skuSliderTrack">
-        
-        <!-- KEBAB 1: Koobideh Kebab -->
-        <div class="sku-slide active" data-slide="0">
-          <div class="sku-card">
-            <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Koobideh Kebab" title="Click to view high-resolution image">
-                <div class="sku-img-wrapper">
-                  <img src="assets/Koobideh-Kebab.png" alt="Koobideh Kebab - Minced Lamb & Beef Skewers" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
-                  <span class="live-tag">Hearth Classic</span>
-                  <span class="sku-hint-overlay">🔍 Click to Inspect</span>
-                </div>
-              </button>
-              <p class="sku-quote">"Juicy hand-pressed lamb and beef skewers kissed by charcoal smoke."</p>
-            </div>
+    <div class="kebab-showcase-wrapper" id="skuSliderContainer">
+      <div class="kebab-track" id="skuSliderTrack">
 
-            <div class="sku-details">
-              <div class="sku-meta-row">
-                <span class="badge badge-dark" style="margin-bottom: 0;">SPECIMEN 01 / 06 • HERO OFFERING</span>
+        <!-- 1. Koobideh -->
+        <div class="kebab-slide active" data-slide="0">
+          <div class="kebab-card">
+            <div class="kebab-media-box">
+              <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Koobideh Kebab">
+                <img src="assets/Koobideh-Kebab.png" alt="Koobideh Kebab - Hand-pressed lamb & beef skewers" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
+              <p class="kebab-poetic-quote">“Juicy hand-pressed skewers kissed by glowing charcoal smoke.”</p>
+            </div>
+            <div class="kebab-info">
+              <div class="kebab-tagline">Hearth Classic • Signature Cut 01</div>
               <h3>Koobideh Kebab</h3>
-              <div class="sku-price">Allocation Price To Be Announced</div>
               <p>The undisputed soul of the Persian grill. Finely minced prime lamb and beef blended with sweet onions, seasoned with sea salt and black pepper, hand-molded onto wide metal skewers and grilled over blazing hot coals.</p>
-              
-              <div class="culinary-matrix">
-                <div class="ingredient-tags">
-                  <span>Prime Minced Lamb &amp; Beef</span>
-                  <span>Pressed Sweet Onions</span>
-                  <span>25mm Wide Blade</span>
-                  <span>Wild Sumac Dust</span>
-                </div>
+              <div class="ingredient-pills">
+                <span>Prime Minced Lamb &amp; Beef</span>
+                <span>Pressed Sweet Onions</span>
+                <span>25 mm Wide Skewer</span>
+                <span>Wild Sumac Dust</span>
               </div>
+              <a href="#waitlist" class="btn btn-gold">Get Notified at Launch</a>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 2: Jujeh Kebab -->
-        <div class="sku-slide" data-slide="1">
-          <div class="sku-card">
-            <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Jujeh Kebab" title="Click to view high-resolution image">
-                <div class="sku-img-wrapper">
-                  <img src="assets/Jujeh-Kebab.png" alt="Jujeh Kebab - Saffron Chicken Skewers" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
-                  <span class="live-tag">Saffron Favorite</span>
-                  <span class="sku-hint-overlay">🔍 Click to Inspect</span>
-                </div>
-              </button>
-              <p class="sku-quote">"Tender chicken chunks steeped in saffron, onion, and lemon juice."</p>
-            </div>
-
-            <div class="sku-details">
-              <div class="sku-meta-row">
-                <span class="badge badge-dark" style="margin-bottom: 0;">SPECIMEN 02 / 06 • ATELIER MASTERPIECE</span>
+        <!-- 2. Jujeh -->
+        <div class="kebab-slide" data-slide="1">
+          <div class="kebab-card">
+            <div class="kebab-media-box">
+              <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Jujeh Kebab">
+                <img src="assets/Jujeh-Kebab.png" alt="Jujeh Kebab - Saffron chicken skewers" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
+                <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
+              <p class="kebab-poetic-quote">“Tender chicken steeped in saffron, fresh lemon, and sweet onion.”</p>
+            </div>
+            <div class="kebab-info">
+              <div class="kebab-tagline">Saffron Favorite • Signature Cut 02</div>
               <h3>Jujeh Kebab</h3>
-              <div class="sku-price">Allocation Price To Be Announced</div>
               <p>Boneless chicken pieces marinated overnight in a rich emulsion of brewed Sargol saffron, fresh lemon juice, grated onion, and olive oil, resulting in exceptionally juicy skewers with golden charred edges.</p>
-              
-              <div class="culinary-matrix">
-                <div class="ingredient-tags">
-                  <span>Boneless Prime Poultry</span>
-                  <span>Sargol Saffron Steep</span>
-                  <span>Lemon &amp; Onion Bath</span>
-                  <span>Cultured Butter Baste</span>
-                </div>
+              <div class="ingredient-pills">
+                <span>Boneless Prime Poultry</span>
+                <span>Sargol Saffron Steep</span>
+                <span>Lemon &amp; Onion Bath</span>
+                <span>Cultured Butter Baste</span>
               </div>
+              <a href="#waitlist" class="btn btn-gold">Get Notified at Launch</a>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 3: Barg Kebab -->
-        <div class="sku-slide" data-slide="2">
-          <div class="sku-card">
-            <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Barg Kebab" title="Click to view high-resolution image">
-                <div class="sku-img-wrapper">
-                  <img src="assets/Barg-Kebab.png" alt="Barg Kebab - Butter-Basted Tenderloin Filet" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1000&q=80';">
-                  <span class="live-tag">Royal Tenderloin</span>
-                  <span class="sku-hint-overlay">🔍 Click to Inspect</span>
-                </div>
-              </button>
-              <p class="sku-quote">"Paper-thin pounded filet mignon basted in rich saffron butter."</p>
-            </div>
-
-            <div class="sku-details">
-              <div class="sku-meta-row">
-                <span class="badge badge-dark" style="margin-bottom: 0;">SPECIMEN 03 / 06 • IMPERIAL CUT</span>
+        <!-- 3. Barg -->
+        <div class="kebab-slide" data-slide="2">
+          <div class="kebab-card">
+            <div class="kebab-media-box">
+              <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Barg Kebab">
+                <img src="assets/Barg-Kebab.png" alt="Barg Kebab - Butter-basted tenderloin filet" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1000&q=80';">
+                <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
+              <p class="kebab-poetic-quote">“Delicately pounded tenderloin basted in rich saffron butter.”</p>
+            </div>
+            <div class="kebab-info">
+              <div class="kebab-tagline">Imperial Cut • Signature Cut 03</div>
               <h3>Barg Kebab</h3>
-              <div class="sku-price">Allocation Price To Be Announced</div>
-              <p>An exquisite luxury cut of prime tenderloin beef or lamb, expertly hand-pounded to a delicate thickness, marinated in olive oil, garlic, and onions, then flame-grilled and generously brushed with melted saffron butter.</p>
-              
-              <div class="culinary-matrix">
-                <div class="ingredient-tags">
-                  <span>Prime Tenderloin Filet</span>
-                  <span>Saffron Butter Baste</span>
-                  <span>Garlic Infusion</span>
-                  <span>Delicate Smoke</span>
-                </div>
+              <p>An exquisite luxury cut of prime tenderloin, expertly hand-pounded to a delicate thickness, marinated in olive oil, garlic, and onions, then flame-grilled and generously brushed with melted saffron butter.</p>
+              <div class="ingredient-pills">
+                <span>Prime Tenderloin Filet</span>
+                <span>Saffron Butter Baste</span>
+                <span>Garlic Infusion</span>
+                <span>Delicate Charcoal Smoke</span>
               </div>
+              <a href="#waitlist" class="btn btn-gold">Get Notified at Launch</a>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 4: Soltani Kebab -->
-        <div class="sku-slide" data-slide="3">
-          <div class="sku-card">
-            <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Soltani Kebab" title="Click to view high-resolution image">
-                <div class="sku-img-wrapper">
-                  <img src="assets/Soltani-Kebab.png" alt="Soltani Kebab - Combination of Barg and Koobideh" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
-                  <span class="live-tag">The Sovereign Feast</span>
-                  <span class="sku-hint-overlay">🔍 Click to Inspect</span>
-                </div>
-              </button>
-              <p class="sku-quote">"The ultimate union of tender Barg filet and juicy Koobideh."</p>
-            </div>
-
-            <div class="sku-details">
-              <div class="sku-meta-row">
-                <span class="badge badge-dark" style="margin-bottom: 0;">SPECIMEN 04 / 06 • SOVEREIGN FEAST</span>
+        <!-- 4. Soltani -->
+        <div class="kebab-slide" data-slide="3">
+          <div class="kebab-card">
+            <div class="kebab-media-box">
+              <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Soltani Kebab">
+                <img src="assets/Soltani-Kebab.png" alt="Soltani Kebab - Royal union of Barg and Koobideh" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
+              <p class="kebab-poetic-quote">“The royal union of buttery Barg filet and juicy Koobideh.”</p>
+            </div>
+            <div class="kebab-info">
+              <div class="kebab-tagline">The Sovereign Feast • Signature Cut 04</div>
               <h3>Soltani Kebab</h3>
-              <div class="sku-price">Allocation Price To Be Announced</div>
-              <p>Translating to 'The Royal', this magnificent pairing unites one skewer of buttery tender Barg kebab with one skewer of succulent minced Koobideh kebab, served alongside charred vine tomatoes and buttered rice.</p>
-              
-              <div class="culinary-matrix">
-                <div class="ingredient-tags">
-                  <span>Barg Filet Skewer</span>
-                  <span>Koobideh Skewer</span>
-                  <span>Charred Vine Tomatoes</span>
-                  <span>Saffron Butter</span>
-                </div>
+              <p>Translating to ‘The Royal’, this magnificent pairing unites one skewer of buttery tender Barg kebab with one skewer of succulent minced Koobideh kebab, served alongside charred vine tomatoes and saffron butter.</p>
+              <div class="ingredient-pills">
+                <span>Barg Filet Skewer</span>
+                <span>Koobideh Skewer</span>
+                <span>Charred Vine Tomatoes</span>
+                <span>Saffron Butter Finish</span>
               </div>
+              <a href="#waitlist" class="btn btn-gold">Get Notified at Launch</a>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 5: Chenjeh Kebab -->
-        <div class="sku-slide" data-slide="4">
-          <div class="sku-card">
-            <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Chenjeh Kebab" title="Click to view high-resolution image">
-                <div class="sku-img-wrapper">
-                  <img src="assets/Chenjeh-Kebab.png" alt="Chenjeh Kebab - Marinated Lamb Chunks" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
-                  <span class="live-tag">Hearth Cubes</span>
-                  <span class="sku-hint-overlay">🔍 Click to Inspect</span>
-                </div>
-              </button>
-              <p class="sku-quote">"Cubed prime lamb loin marinated in yogurt, onion, and black pepper."</p>
-            </div>
-
-            <div class="sku-details">
-              <div class="sku-meta-row">
-                <span class="badge badge-dark" style="margin-bottom: 0;">SPECIMEN 05 / 06 • TRADITIONAL CUT</span>
+        <!-- 5. Chenjeh -->
+        <div class="kebab-slide" data-slide="4">
+          <div class="kebab-card">
+            <div class="kebab-media-box">
+              <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chenjeh Kebab">
+                <img src="assets/Chenjeh-Kebab.png" alt="Chenjeh Kebab - Marinated lamb loin cubes" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
+                <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
+              <p class="kebab-poetic-quote">“Cubed prime lamb loin marinated in yogurt, onion, and black pepper.”</p>
+            </div>
+            <div class="kebab-info">
+              <div class="kebab-tagline">Traditional Hearth Cubes • Signature Cut 05</div>
               <h3>Chenjeh Kebab</h3>
-              <div class="sku-price">Allocation Price To Be Announced</div>
-              <p>Juicy, bite-sized cubes of prime lamb loin marinated in a tangy blend of yogurt, grated onion, and freshly cracked black pepper. Skewered and grilled over high charcoal heat for a delightfully smoky crust and tender center.</p>
-              
-              <div class="culinary-matrix">
-                <div class="ingredient-tags">
-                  <span>Prime Lamb Loin Cubes</span>
-                  <span>Yogurt Marinade</span>
-                  <span>Cracked Black Pepper</span>
-                  <span>Onion Glaze</span>
-                </div>
+              <p>Juicy, bite-sized cubes of prime lamb loin marinated in a tangy blend of yogurt, grated onion, and freshly cracked black pepper. Skewered and grilled over high charcoal heat for a smoky crust and tender center.</p>
+              <div class="ingredient-pills">
+                <span>Prime Lamb Loin Cubes</span>
+                <span>Yogurt Marinade</span>
+                <span>Cracked Black Pepper</span>
+                <span>Onion Glaze</span>
               </div>
+              <a href="#waitlist" class="btn btn-gold">Get Notified at Launch</a>
             </div>
           </div>
         </div>
 
-        <!-- KEBAB 6: Shishlik -->
-        <div class="sku-slide" data-slide="5">
-          <div class="sku-card">
-            <div class="sku-media">
-              <button type="button" class="sku-img-btn" aria-label="Zoom in on Shishlik" title="Click to view high-resolution image">
-                <div class="sku-img-wrapper">
-                  <img src="assets/Shishlik.png" alt="Shishlik - Prime Bone-in Lamb Chops" class="sku-product-img" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
-                  <span class="live-tag">Master Cut</span>
-                  <span class="sku-hint-overlay">🔍 Click to Inspect</span>
-                </div>
-              </button>
-              <p class="sku-quote">"Thick-cut prime bone-in lamb chops charred to smoky perfection."</p>
+        <!-- 6. Shishlik -->
+        <div class="kebab-slide" data-slide="5">
+          <div class="kebab-card">
+            <div class="kebab-media-box">
+              <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Shishlik Kebab">
+                <img src="assets/Shishlik.png" alt="Shishlik - Prime bone-in lamb chops" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                <span class="zoom-pill">🔍 Tap to Enlarge</span>
+              </div>
+              <p class="kebab-poetic-quote">“Thick-cut prime bone-in lamb chops charred to smoky perfection.”</p>
             </div>
-
-            <div class="sku-details">
-              <div class="sku-meta-row">
-                <span class="badge badge-dark" style="margin-bottom: 0;">SPECIMEN 06 / 06 • CROWN RACK</span>
-              </div>
+            <div class="kebab-info">
+              <div class="kebab-tagline">Crown Rack • Signature Cut 06</div>
               <h3>Shishlik Kebab</h3>
-              <div class="sku-price">Allocation Price To Be Announced</div>
-              <p>Magnificent thick-cut prime bone-in lamb chops marinated in garlic, olive oil, and crushed coriander seeds. Charbroiled over live embers until the exterior is wonderfully caramelized while retaining maximum juiciness.</p>
-              
-              <div class="culinary-matrix">
-                <div class="ingredient-tags">
-                  <span>Bone-In Lamb Chops</span>
-                  <span>Garlic &amp; Coriander</span>
-                  <span>Charcoal Sear</span>
-                  <span>Saffron Butter Finish</span>
-                </div>
+              <p>Magnificent thick-cut prime bone-in lamb chops marinated in garlic, olive oil, and crushed coriander seeds. Charbroiled over live embers until the exterior is caramelized while retaining maximum juiciness.</p>
+              <div class="ingredient-pills">
+                <span>Bone-In Lamb Chops</span>
+                <span>Garlic &amp; Coriander</span>
+                <span>Charcoal Sear</span>
+                <span>Saffron Butter Finish</span>
               </div>
+              <a href="#waitlist" class="btn btn-gold">Get Notified at Launch</a>
             </div>
           </div>
         </div>
@@ -2228,13 +1974,13 @@
       </div>
 
       <!-- Carousel Bottom Controls -->
-      <div class="slider-nav-bar">
-        <div class="slider-status-hint">SWIPE OR USE ARROWS TO CYCLE REPERTOIRE</div>
-        <div class="slider-arrows">
-          <button class="slider-btn" id="prevSlideBtn" aria-label="Previous Kebab" title="Previous Kebab">
+      <div class="carousel-controls">
+        <span class="carousel-counter" id="slideCounterText">Kebab 1 of 6 • Koobideh</span>
+        <div class="carousel-btns">
+          <button type="button" class="circle-arrow-btn" id="prevSlideBtn" aria-label="Previous Kebab" title="Previous Kebab">
             <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/></svg>
           </button>
-          <button class="slider-btn" id="nextSlideBtn" aria-label="Next Kebab" title="Next Kebab">
+          <button type="button" class="circle-arrow-btn" id="nextSlideBtn" aria-label="Next Kebab" title="Next Kebab">
             <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
           </button>
         </div>
@@ -2242,42 +1988,44 @@
     </div>
   </section>
 
-  <!-- Anatomy of Our Emblem Section -->
+  <!-- ==========================================
+       ANATOMY OF OUR EMBLEM
+       ========================================== -->
   <section class="emblem-section" id="emblem">
-    <div class="emblem-wrap">
+    <div class="emblem-grid">
       
-      <div class="emblem-artwork-container">
-        <button type="button" class="emblem-zoom-button" id="emblemZoomTrigger" aria-label="Zoom in on the Maison Kebabi Master Crest" title="Click to view high-resolution emblem">
-          <div class="emblem-artwork-frame">
-            <img src="assets/MK.jpg" alt="Maison Kebabi Master Crest" class="emblem-artwork-img" id="emblemArtworkImg" loading="lazy" onerror="this.onerror=null; this.src='assets/MK.jpg';">
-            <span class="emblem-hint-overlay">🔍 Click to Inspect Seal</span>
+      <div class="emblem-shamsa-card">
+        <button type="button" class="emblem-zoom-btn" id="emblemZoomTrigger" aria-label="Inspect Maison Kebabi Master Crest">
+          <div class="emblem-ring">
+            <img src="assets/MK.jpg" alt="Maison Kebabi Master Crest" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230F1D2E\'/><circle cx=\'100\' cy=\'100\' r=\'86\' stroke=\'%23E3BE62\' stroke-width=\'3\' fill=\'none\'/><text x=\'100\' y=\'125\' font-family=\'Georgia,serif\' font-size=\'64\' font-weight=\'bold\' fill=\'%23FAF6EE\' text-anchor=\'middle\'>MK</text></svg>';">
           </div>
+          <p style="color: var(--gold-luminous); font-size: 0.85rem; margin-top: 1.25rem; font-weight: 600;">🔍 Click Emblem to Inspect Craftsmanship</p>
         </button>
       </div>
 
-      <div class="emblem-story-content">
-        <div class="badge">HERALDIC ARCHITECTURE</div>
-        <h2>Anatomy of Our Emblem</h2>
-        <p class="emblem-intro">
-          The Maison Kebabi visual identity is an intricate architectural harmony reflecting centuries of Persian grilling traditions, live charcoal embers, and artisanal butchery.
+      <div>
+        <div class="kicker-pill">Heraldic Symbolism</div>
+        <h2 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 3.8vw, 3.2rem); color: var(--lapis-royal); line-height: 1.12; margin-bottom: 1rem;">Anatomy of Our Emblem</h2>
+        <p style="font-size: 1.02rem; color: var(--ink-body);">
+          The Maison Kebabi crest weaves classical Persian illumination geometry with the tools of the master pitmaster—honoring live charcoal, forged steel skewers, and royal hospitality.
         </p>
 
-        <div class="emblem-pillars">
-          <div class="emblem-pillar-card">
-            <h4>01. Shield &amp; Crest Geometry</h4>
-            <p>The ornate central cartouche and heraldic shield represent the uncompromising standards of our master grillers and time-honored smoke recipes.</p>
+        <div class="emblem-pillars-grid">
+          <div class="persian-card emblem-pillar-box">
+            <h4>01. Persian Cartouche &amp; Shield</h4>
+            <p>The ornate central cartouche reflects traditional Persian manuscript borders and our uncompromising standards of open-flame craft.</p>
           </div>
-          <div class="emblem-pillar-card">
+          <div class="persian-card emblem-pillar-box">
             <h4>02. Interlaced MK Monogram</h4>
-            <p>Clean typography and golden flourishes frame the central MK letters, symbolizing refined luxury and authentic culinary heritage.</p>
+            <p>Golden flourishes frame the central MK letters, uniting Parisian atelier precision with timeless Iranian culinary heritage.</p>
           </div>
-          <div class="emblem-pillar-card">
-            <h4>03. Flanking Skewer Cross</h4>
-            <p>Crossed stainless steel skewers loaded with aromatic kebabs and charred vegetables evoke the bustling open-flame hearths of ancient Persian bazaars.</p>
+          <div class="persian-card emblem-pillar-box">
+            <h4>03. Crossed Steel Skewers</h4>
+            <p>Flanking flat skewers laden with charred meats and vine tomatoes evoke the bustling grill hearths of Tehran and Isfahan.</p>
           </div>
-          <div class="emblem-pillar-card">
-            <h4>04. Grillade &amp; Feu Inscription</h4>
-            <p>Finished with crisp typography rendering MAISON KEBABI, GUSTATORY ACCENTS, and GRILLADE &amp; FEU in sovereign equilibrium.</p>
+          <div class="persian-card emblem-pillar-box">
+            <h4>04. Grillade &amp; Feu Seal</h4>
+            <p>Crowned with crisp typography honoring fire, smoke, and gustatory harmony at every table we serve.</p>
           </div>
         </div>
       </div>
@@ -2285,76 +2033,96 @@
     </div>
   </section>
 
-  <!-- Special Section for Doozi -->
+  <!-- ==========================================
+       THE DOOZI REFRESHMENT RITUAL
+       ========================================== -->
   <section class="doozi-section" id="doozi">
-    <div class="doozi-container">
-      <div class="doozi-text">
-        <div class="badge badge-dark">THE ATELIER COUNTERPOINT</div>
+    <div class="doozi-card">
+      <div class="doozi-content">
+        <div class="kicker-pill kicker-pill-dark">The Botanical Counterpoint</div>
         <h2>The Art of <span>Doozi</span> Refreshment</h2>
-        <p>In traditional Persian feasts, heavy charcoal kebabs are balanced by cooling botanical elixirs. Our proprietary <strong>Doozi</strong> preparations cleanse the palate and elevate every bite.</p>
-        <p>Whipped organic yogurt infused with crushed Persian wild mint (نعناع فلفلی), damask rose petals, and chilled sparkling spring water, served alongside 7-year aged pickled garlic (Sir-e Torshi).</p>
+        <p>In traditional Persian feasts, rich charcoal kebabs are balanced by cooling herbal elixirs. Our signature <strong>Doozi</strong> preparations cleanse the palate and elevate every bite.</p>
+        <p>Whipped organic yogurt infused with crushed Persian wild mint (نعناع فلفلی), damask rose petals, and chilled sparkling spring water, paired with 7-year aged pickled garlic (Sir-e Torshi).</p>
 
-        <div class="doozi-features">
-          <div class="doozi-feature-box">
+        <div class="doozi-pairings">
+          <div class="pairing-tile">
             <h5>Wild Mountain Mint</h5>
-            <p>Hand-rubbed dried highland mint leaves for digestive ease and aromatic cooling.</p>
+            <p>Hand-rubbed highland mint leaves for aromatic cooling and effortless digestion.</p>
           </div>
-          <div class="doozi-feature-box">
+          <div class="pairing-tile">
             <h5>7-Year Aged Sir-e Torshi</h5>
-            <p>Fermented vintage garlic cloves offering a mellow, balsamic-like umami contrast.</p>
+            <p>Slow-matured vintage garlic offering a mellow, balsamic-like umami contrast.</p>
           </div>
         </div>
       </div>
 
-      <div class="doozi-media-box">
+      <div class="doozi-arch-medallion">
+        <div class="doozi-farsi">نعناع فلفلی</div>
         <h3>DOOZI ATELIER</h3>
-        <p>"The cooling botanical elixir that completes the master griller's feast."</p>
-        <div style="margin-top: 1.75rem;">
-          <span class="badge badge-dark" style="margin-bottom: 0;">SIGNATURE PAIRING RITUAL</span>
+        <div class="persian-divider" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polygon points="12,1 15,9 23,12 15,15 12,23 9,15 1,12 9,9"/></svg>
         </div>
+        <p>“The cooling botanical elixir that completes the master griller’s feast.”</p>
       </div>
     </div>
   </section>
 
-  <!-- Careers Section -->
+  <!-- ==========================================
+       CAREERS SECTION
+       ========================================== -->
   <section class="careers-section" id="careers">
-    <div class="careers-wrap">
-      <div>
-        <div class="badge">JOIN THE CULINARY GUILD</div>
+    <div class="careers-grid">
+      <div class="careers-info">
+        <div class="kicker-pill">Join Our Kitchen Guild</div>
         <h2>Master Embers. Rekindle Heritage.</h2>
-        <p>We are building Delhi NCR’s premier Persian grill kitchen. We offer an equitable, dignified studio environment with structured shifts and rigorous live-fire pitmaster training.</p>
-        
-        <div class="roles-list">
-          <div class="role-item">
+        <p>We are building Delhi NCR’s premier Persian grill atelier. We offer a respectful, structured kitchen culture with fair shifts and dedicated live-fire training.</p>
+
+        <div class="roles-stack">
+          <div class="persian-card role-card">
             <h4>Master Grill Chef / Head Pitmaster</h4>
-            <p>Full Time • Mastery in live charcoal management, wide-blade Persian skewers, and fine dining dispatch.</p>
+            <p>Full Time • Expertise in live hardwood charcoal management, wide-blade Persian skewers, and precision dispatch.</p>
           </div>
-          <div class="role-item">
+          <div class="persian-card role-card">
             <h4>Culinary Trainee / Commis</h4>
             <p>Full Time / Paid Internship • Graduates from IHM Pusa, Amity, or premier culinary institutes welcome.</p>
           </div>
         </div>
       </div>
 
-      <div class="hiring-box">
-        <span class="badge badge-dark">DIRECT APPLICATION</span>
-        <h3 style="font-family: var(--font-serif); font-size: 2rem; margin-bottom: 0.4rem; color: var(--ivory-text);">Apply for Kitchen Roles</h3>
-        <p style="font-size: 0.88rem; color: var(--ivory-muted); margin-bottom: 1.5rem;">Transmit your credentials directly to our culinary leadership team.</p>
+      <div class="careers-form-card">
+        <div class="kicker-pill kicker-pill-dark" style="margin-bottom: 0.75rem;">Direct Application</div>
+        <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--ivory-light); margin-bottom: 0.35rem;">Apply for Kitchen Roles</h3>
+        <p style="font-size: 0.9rem; color: var(--ivory-soft); margin-bottom: 1.5rem;">Share your details directly with our culinary leadership team.</p>
 
-        <form class="waitlist-form" id="careersForm">
+        <form class="styled-form" id="careersForm">
           <input type="hidden" name="form_type" value="careers">
           <div id="careersInputFields" style="display: flex; flex-direction: column; gap: 12px;">
-            <input type="text" name="full_name" placeholder="Full Name" required>
-            <input type="tel" name="mobile" placeholder="Mobile / WhatsApp" pattern="[0-9]{10,12}" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <select name="position" required>
-              <option value="" disabled selected>Position You Are Applying For</option>
-              <option value="Master Grill Chef">Master Grill Chef / Pitmaster</option>
-              <option value="Commis">Culinary Trainee</option>
-              <option value="Internship">6-Month Culinary Internship</option>
-            </select>
-            <input type="text" name="experience" placeholder="Years of Experience / College Name" required>
-            <button type="submit" class="btn-primary btn-gold" id="careersSubmitBtn" style="margin-top: 6px; width: 100%;">Submit Application</button>
+            <div class="form-group">
+              <label for="crName">Full Name</label>
+              <input type="text" id="crName" name="full_name" placeholder="Your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="crMobile">Mobile / WhatsApp</label>
+              <input type="tel" id="crMobile" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10,12}" required>
+            </div>
+            <div class="form-group">
+              <label for="crEmail">Email Address</label>
+              <input type="email" id="crEmail" name="email" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="crPos">Role Applying For</label>
+              <select id="crPos" name="position" required>
+                <option value="" disabled selected>Select a position</option>
+                <option value="Master Grill Chef">Master Grill Chef / Pitmaster</option>
+                <option value="Commis">Culinary Trainee / Commis</option>
+                <option value="Internship">6-Month Culinary Internship</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="crExp">Experience / Culinary Institute</label>
+              <input type="text" id="crExp" name="experience" placeholder="e.g., 4 yrs Grill Experience or IHM Pusa" required>
+            </div>
+            <button type="submit" class="btn btn-gold" id="careersSubmitBtn" style="margin-top: 6px; width: 100%;">Submit Application</button>
           </div>
           <div class="form-feedback" id="careersFeedback"></div>
         </form>
@@ -2362,40 +2130,40 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
   <footer id="contact">
-    <div class="footer-inner">
-      
-      <div class="footer-brand-wrap">
-        <button type="button" class="footer-emblem-btn" id="footerEmblemBtn" aria-label="View enlarged Maison Kebabi master emblem" title="Click to inspect master crest">
-          <img src="assets/MK.jpg" alt="Maison Kebabi Master Emblem" class="footer-emblem-img" id="footerEmblemImg" onerror="this.onerror=null; this.src='assets/MK.jpg';">
-          <div style="display: flex; flex-direction: column;">
-            <span style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--ivory-text); letter-spacing: 1.5px;">MAISON KEBABI</span>
-            <span style="font-family: var(--font-mono); font-size: 0.68rem; text-transform: uppercase; letter-spacing: 2px; color: var(--saffron-gold);">Grillade &amp; Feu</span>
+    <div class="footer-grid">
+      <div>
+        <button type="button" class="footer-brand-btn" id="footerEmblemBtn" aria-label="View enlarged Maison Kebabi emblem">
+          <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230F1D2E\'/><circle cx=\'100\' cy=\'100\' r=\'86\' stroke=\'%23E3BE62\' stroke-width=\'3\' fill=\'none\'/><text x=\'100\' y=\'125\' font-family=\'Georgia,serif\' font-size=\'64\' font-weight=\'bold\' fill=\'%23FAF6EE\' text-anchor=\'middle\'>MK</text></svg>';">
+          <div>
+            <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--ivory-light); letter-spacing: 1.5px;">MAISON KEBABI</div>
+            <div style="font-family: var(--font-serif); font-style: italic; color: var(--gold-luminous); font-size: 1rem;">Grillade &amp; Feu • Persian Atelier</div>
           </div>
         </button>
-
-        <p style="font-size: 0.9rem; color: var(--ivory-muted); line-height: 1.65; max-width: 380px;">
+        <p style="font-size: 0.92rem; color: var(--ivory-soft); max-width: 360px; margin-bottom: 1rem;">
           Charcoal-kissed saffron kebabs and authentic Persian grill ateliers crafted daily for Delhi NCR tables.
         </p>
-        <p style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--saffron-gold);">
-          📍 DISPATCH HUBS: SOUTH DELHI • NOIDA • GURUGRAM
+        <p style="font-size: 0.84rem; color: var(--gold-luminous); font-weight: 600;">
+          Dispatch Hubs: South Delhi • Noida • Gurugram
         </p>
       </div>
 
       <div class="footer-col">
-        <h4>Index</h4>
+        <h4>EXPLORE</h4>
         <ul>
-          <li><a href="#heritage">The Fire Craft</a></li>
+          <li><a href="#heritage">Our Fire Craft</a></li>
           <li><a href="#kebabs">Signature Kebabs</a></li>
-          <li><a href="#emblem">Anatomy of Emblem</a></li>
-          <li><a href="#doozi">The Doozi Ritual</a></li>
+          <li><a href="#emblem">Royal Emblem</a></li>
+          <li><a href="#doozi">Doozi Ritual</a></li>
           <li><a href="#careers">Careers</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Direct Desk</h4>
+        <h4>CONTACT DESK</h4>
         <ul>
           <li><a href="mailto:concierge@maisonkebabi.com">concierge@maisonkebabi.com</a></li>
           <li><a href="mailto:careers@maisonkebabi.com">careers@maisonkebabi.com</a></li>
@@ -2403,41 +2171,57 @@
       </div>
 
       <div class="footer-col">
-        <h4>Dispatches</h4>
-        <p style="font-size: 0.85rem; color: var(--ivory-muted); margin-bottom: 0.85rem;">Follow our live charcoal trials:</p>
-        
-        <div class="social-links-wrap">
-          <a href="https://instagram.com/maisonkebabi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Instagram">
+        <h4>FOLLOW DISPATCHES</h4>
+        <p style="font-size: 0.88rem; color: var(--ivory-soft);">Behind-the-scenes charcoal trials &amp; launch dates:</p>
+        <div class="social-row">
+          <a href="https://instagram.com/maisonkebabi" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram">
             <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
-          <a href="https://facebook.com/maisonkebabi" target="_blank" rel="noopener noreferrer" class="social-icon-btn" aria-label="Facebook">
+          <a href="https://facebook.com/maisonkebabi" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook">
             <svg viewBox="0 0 24 24"><path d="M12 2.04c-5.5 0-10 4.5-10 10 0 5 3.66 9.13 8.44 9.88v-6.99h-2.54v-2.89h2.54v-2.2c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.87h2.78l-.44 2.89h-2.34v6.99c4.78-.75 8.44-4.88 8.44-9.88 0-5.5-4.5-10-10-10z"/></svg>
           </a>
         </div>
       </div>
     </div>
 
-    <div class="legal-bar">
-      <div>© 2026 MAISON KEBABI. ALL RIGHTS RESERVED.</div>
-      <div>MAISON KEBABI™ IS A PROPRIETARY BRAND OF <strong>ZIBACUBE TECHNOLOGIES PRIVATE LIMITED</strong>.</div>
+    <div class="footer-bottom">
+      <div>© 2026 Maison Kebabi. All Rights Reserved.</div>
+      <div>Maison Kebabi™ is a proprietary brand of <strong>ZibaCube Technologies Private Limited</strong>.</div>
     </div>
   </footer>
 
   <!-- Lightbox Modal -->
-  <div class="logo-modal-overlay" id="logoModal" role="dialog" aria-modal="true" aria-label="Maison Kebabi Brand Emblem">
-    <div class="logo-modal-container" id="logoModalContainer">
-      <button type="button" class="logo-modal-close" id="closeLogoModal" aria-label="Close enlarged emblem">✕</button>
-      <div class="modal-logo-wrapper" id="modalLogoWrapper" title="Click to zoom image">
-        <img src="" alt="Maison Kebabi Official Emblem" class="modal-logo-img" id="modalLogoImg">
+  <div class="lightbox-overlay" id="logoModal" role="dialog" aria-modal="true" aria-label="Enlarged Image Viewer">
+    <div class="lightbox-box" id="logoModalContainer">
+      <button type="button" class="lightbox-close" id="closeLogoModal" aria-label="Close image">✕</button>
+      <div class="lightbox-frame" id="modalLogoWrapper" title="Click image to zoom in or out">
+        <img src="" alt="Enlarged view" id="modalLogoImg">
       </div>
-      <div class="modal-caption" id="modalCaption"></div>
+      <div class="lightbox-caption" id="modalCaption"></div>
     </div>
   </div>
 
-  <!-- JavaScript -->
   <script>
     (function() {
-      // Custom Floating Audio Player with Volume Control Logic
+      // 1. Mobile Navigation Drawer Toggle
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileNavDrawer = document.getElementById('mobileNavDrawer');
+
+      if (mobileMenuBtn && mobileNavDrawer) {
+        mobileMenuBtn.addEventListener('click', () => {
+          const isOpen = mobileNavDrawer.classList.toggle('open');
+          mobileMenuBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        mobileNavDrawer.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            mobileNavDrawer.classList.remove('open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      // 2. Ambient Persian Music Widget
       const bgAudio = document.getElementById('bgAudio');
       const audioToggleBtn = document.getElementById('audioToggleBtn');
       const playIcon = document.getElementById('playIcon');
@@ -2448,25 +2232,15 @@
         bgAudio.volume = 0.5;
 
         function updateAudioUI(isPlaying) {
-          if (isPlaying) {
-            playIcon.style.display = 'none';
-            pauseIcon.style.display = 'block';
-            audioToggleBtn.classList.add('playing');
-          } else {
-            playIcon.style.display = 'block';
-            pauseIcon.style.display = 'none';
-            audioToggleBtn.classList.remove('playing');
-          }
+          playIcon.style.display = isPlaying ? 'none' : 'block';
+          pauseIcon.style.display = isPlaying ? 'block' : 'none';
+          audioToggleBtn.classList.toggle('playing', isPlaying);
         }
 
         audioToggleBtn.addEventListener('click', (e) => {
           e.preventDefault();
           if (bgAudio.paused) {
-            bgAudio.play().then(() => {
-              updateAudioUI(true);
-            }).catch(err => {
-              console.log("Playback prevented:", err);
-            });
+            bgAudio.play().then(() => updateAudioUI(true)).catch(() => {});
           } else {
             bgAudio.pause();
             updateAudioUI(false);
@@ -2478,71 +2252,10 @@
             bgAudio.volume = e.target.value;
           });
         }
-
-        const autoStartOnFirstInteraction = () => {
-          bgAudio.play().then(() => {
-            updateAudioUI(true);
-            window.removeEventListener('click', autoStartOnFirstInteraction);
-            window.removeEventListener('touchstart', autoStartOnFirstInteraction);
-            window.removeEventListener('keydown', autoStartOnFirstInteraction);
-          }).catch(() => {});
-        };
-
-        window.addEventListener('click', autoStartOnFirstInteraction, { once: true });
-        window.addEventListener('touchstart', autoStartOnFirstInteraction, { once: true });
-        window.addEventListener('keydown', autoStartOnFirstInteraction, { once: true });
       }
 
-      // Smooth Anchor Scrolling
-      function smoothScrollTo(targetElement, duration = 800) {
-        if (!targetElement) return;
-        const header = document.querySelector('header');
-        const headerOffset = header ? header.offsetHeight : 82;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerOffset;
-        const startPosition = window.pageYOffset;
-        const distance = targetPosition - startPosition;
-        let startTime = null;
-
-        function easeInOutCubic(t, b, c, d) {
-          t /= d / 2;
-          if (t < 1) return (c / 2) * t * t * t + b;
-          t -= 2;
-          return (c / 2) * (t * t * t + 2) + b;
-        }
-
-        function animationStep(currentTime) {
-          if (!startTime) startTime = currentTime;
-          const timeElapsed = currentTime - startTime;
-          const run = easeInOutCubic(timeElapsed, startPosition, distance, duration);
-          window.scrollTo(0, run);
-          if (timeElapsed < duration) {
-            requestAnimationFrame(animationStep);
-          } else {
-            window.scrollTo(0, targetPosition);
-          }
-        }
-        requestAnimationFrame(animationStep);
-      }
-
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-          const targetId = this.getAttribute('href');
-          if (targetId && targetId !== '#') {
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-              e.preventDefault();
-              smoothScrollTo(targetElement, 800);
-            }
-          }
-        });
-      });
-
-      // Lightbox & Zoom Logic with Scroll Position Preservation
+      // 3. Lightbox & Zoom Viewer
       let scrollPosition = 0;
-      const headerLogoBtn = document.getElementById('headerLogoBtn');
-      const heroLogoTrigger = document.getElementById('heroLogoTrigger');
-      const emblemZoomTrigger = document.getElementById('emblemZoomTrigger');
-      const footerEmblemBtn = document.getElementById('footerEmblemBtn');
       const logoModal = document.getElementById('logoModal');
       const modalLogoWrapper = document.getElementById('modalLogoWrapper');
       const closeLogoModal = document.getElementById('closeLogoModal');
@@ -2576,33 +2289,17 @@
         });
       }
 
-      if (headerLogoBtn) {
-        headerLogoBtn.addEventListener('click', () => {
-          const img = headerLogoBtn.querySelector('img');
-          openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Emblem');
-        });
-      }
-      if (heroLogoTrigger) {
-        heroLogoTrigger.addEventListener('click', () => {
-          const img = heroLogoTrigger.querySelector('img');
-          openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Grillhouse');
-        });
-      }
-      if (emblemZoomTrigger) {
-        emblemZoomTrigger.addEventListener('click', (e) => { 
-          e.preventDefault(); 
-          const img = emblemZoomTrigger.querySelector('img');
-          openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Master Crest'); 
-        });
-      }
-      if (footerEmblemBtn) {
-        footerEmblemBtn.addEventListener('click', (e) => { 
-          e.preventDefault(); 
-          const img = footerEmblemBtn.querySelector('img');
-          openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Master Emblem'); 
-        });
-      }
-      
+      ['headerLogoBtn', 'heroLogoTrigger', 'emblemZoomTrigger', 'footerEmblemBtn'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener('click', (e) => {
+            e.preventDefault();
+            const img = el.querySelector('img');
+            openModal(img ? img.src : 'assets/MK.jpg', img ? img.alt : 'Maison Kebabi Emblem');
+          });
+        }
+      });
+
       document.querySelectorAll('.sku-img-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
           e.preventDefault();
@@ -2612,20 +2309,16 @@
       });
 
       if (closeLogoModal) closeLogoModal.addEventListener('click', closeModal);
-      
       if (logoModal) {
         logoModal.addEventListener('click', (e) => {
-          if (!e.target.closest('.logo-modal-container')) {
-            closeModal();
-          }
+          if (!e.target.closest('.lightbox-box')) closeModal();
         });
       }
-
       window.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && logoModal?.classList.contains('active')) closeModal();
       });
 
-      // Async Form Submission Handler
+      // 4. Form Submission Handler
       async function handleFormSubmit(formId, btnId, fieldsId, feedbackId, successMsg) {
         const form = document.getElementById(formId);
         if (!form) return;
@@ -2635,10 +2328,11 @@
           const btn = document.getElementById(btnId);
           const feedback = document.getElementById(feedbackId);
           const inputFields = document.getElementById(fieldsId);
+          const originalBtnText = btn ? btn.textContent : 'Submit';
 
           if (btn) {
             btn.disabled = true;
-            btn.textContent = 'Transmitting...';
+            btn.textContent = 'Submitting...';
           }
 
           try {
@@ -2656,37 +2350,35 @@
                 feedback.innerHTML = successMsg;
               }
             } else {
-              throw new Error('Server submission failed');
+              throw new Error('Submission failed');
             }
           } catch (error) {
             if (btn) {
               btn.disabled = false;
-              btn.textContent = 'Try Again';
+              btn.textContent = originalBtnText;
             }
             if (feedback) {
               feedback.className = 'form-feedback error';
-              feedback.innerHTML = '⚠️ Transmission encountered an issue. Please contact concierge@maisonkebabi.com directly.';
+              feedback.innerHTML = '⚠️ We could not submit your request right now. Please email concierge@maisonkebabi.com directly.';
             }
           }
         });
       }
 
-      // Initialize Form Handlers
-      handleFormSubmit('waitlistForm', 'waitlistSubmitBtn', 'waitlistInputFields', 'waitlistFeedback', '✨ <strong>Merci!</strong> Your tasting invitation has been recorded. Our concierge will reach out via WhatsApp.');
-      handleFormSubmit('careersForm', 'careersSubmitBtn', 'careersInputFields', 'careersFeedback', '✨ <strong>Application Received!</strong> Thank you for your interest in joining the atelier.');
+      handleFormSubmit('waitlistForm', 'waitlistSubmitBtn', 'waitlistInputFields', 'waitlistFeedback', '✨ <strong>Merci!</strong> Your tasting invitation is confirmed. Our concierge will message you on WhatsApp.');
+      handleFormSubmit('careersForm', 'careersSubmitBtn', 'careersInputFields', 'careersFeedback', '✨ <strong>Application Received!</strong> Thank you for applying to join Maison Kebabi.');
 
-      // Carousel Slider Factory with Mobile Touch / Swipe Support
-      function initSlider({ containerId, trackId, slideAttr, dotsContainerId, prevBtnId, nextBtnId, duration }) {
-        const container = document.getElementById(containerId);
-        if (!container) return;
-        const track = document.getElementById(trackId) || container;
-        const slides = Array.from(track.querySelectorAll(`[${slideAttr}]`));
-        const dotsContainer = document.getElementById(dotsContainerId);
-        const dots = dotsContainer ? Array.from(dotsContainer.querySelectorAll('.slider-dot')) : [];
-        const prevBtn = document.getElementById(prevBtnId);
-        const nextBtn = document.getElementById(nextBtnId);
-        if (!slides.length) return;
+      // 5. Signature Kebabs Interactive Carousel
+      const container = document.getElementById('skuSliderContainer');
+      const track = document.getElementById('skuSliderTrack');
+      const slides = track ? Array.from(track.querySelectorAll('[data-slide]')) : [];
+      const dots = Array.from(document.querySelectorAll('#sliderDots .kebab-tab-btn'));
+      const prevBtn = document.getElementById('prevSlideBtn');
+      const nextBtn = document.getElementById('nextSlideBtn');
+      const counterText = document.getElementById('slideCounterText');
+      const kebabNames = ['Koobideh Kebab', 'Jujeh Kebab', 'Barg Kebab', 'Soltani Kebab', 'Chenjeh Kebab', 'Shishlik Kebab'];
 
+      if (slides.length) {
         let currentIndex = 0;
         let timer = null;
 
@@ -2695,56 +2387,41 @@
           const nextIdx = (targetIndex % count + count) % count;
           slides.forEach((s, idx) => s.classList.toggle('active', idx === nextIdx));
           dots.forEach((d, idx) => d.classList.toggle('active', idx === nextIdx));
+          if (counterText) counterText.textContent = `Kebab ${nextIdx + 1} of ${count} • ${kebabNames[nextIdx]}`;
           currentIndex = nextIdx;
         }
 
         function nextSlide() { updateSlide(currentIndex + 1); }
         function prevSlide() { updateSlide(currentIndex - 1); }
-        function startAuto() { stopAuto(); timer = setInterval(nextSlide, duration); }
+        function startAuto() { stopAuto(); timer = setInterval(nextSlide, 6000); }
         function stopAuto() { if (timer) { clearInterval(timer); timer = null; } }
 
-        if (nextBtn) nextBtn.addEventListener('click', (e) => { e.preventDefault(); nextSlide(); startAuto(); });
-        if (prevBtn) prevBtn.addEventListener('click', (e) => { e.preventDefault(); prevSlide(); startAuto(); });
-        dots.forEach((dot, idx) => dot.addEventListener('click', (e) => { e.preventDefault(); updateSlide(idx); startAuto(); }));
+        if (nextBtn) nextBtn.addEventListener('click', () => { nextSlide(); startAuto(); });
+        if (prevBtn) prevBtn.addEventListener('click', () => { prevSlide(); startAuto(); });
+        dots.forEach((dot, idx) => dot.addEventListener('click', () => { updateSlide(idx); startAuto(); }));
 
-        container.addEventListener('mouseenter', stopAuto);
-        container.addEventListener('mouseleave', startAuto);
+        if (container) {
+          container.addEventListener('mouseenter', stopAuto);
+          container.addEventListener('mouseleave', startAuto);
+        }
 
         let touchStartX = 0;
-        let touchEndX = 0;
+        if (track) {
+          track.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAuto();
+          }, { passive: true });
 
-        track.addEventListener('touchstart', (e) => {
-          touchStartX = e.changedTouches[0].screenX;
-          stopAuto();
-        }, { passive: true });
-
-        track.addEventListener('touchend', (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          const diff = touchStartX - touchEndX;
-          if (Math.abs(diff) > 50) {
-            if (diff > 0) {
-              nextSlide();
-            } else {
-              prevSlide();
-            }
-          }
-          startAuto();
-        }, { passive: true });
+          track.addEventListener('touchend', (e) => {
+            const diff = touchStartX - e.changedTouches[0].screenX;
+            if (Math.abs(diff) > 50) diff > 0 ? nextSlide() : prevSlide();
+            startAuto();
+          }, { passive: true });
+        }
 
         updateSlide(0);
         startAuto();
       }
-
-      // Initialize Signature Kebabs Carousel
-      initSlider({
-        containerId: 'skuSliderContainer',
-        trackId: 'skuSliderTrack',
-        slideAttr: 'data-slide',
-        dotsContainerId: 'sliderDots',
-        prevBtnId: 'prevSlideBtn',
-        nextBtnId: 'nextSlideBtn',
-        duration: 5500
-      });
     })();
   </script>
 </body>
