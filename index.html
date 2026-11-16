@@ -7,8 +7,8 @@
   <meta name="description" content="Charcoal-kissed saffron kebabs, smoky hearth flames, and royal Persian grill ateliers. Discover Delhi NCR's premier Persian kebab experience.">
   
   <!-- Favicon & Brand Icons -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%23120E0C'/%3E%3Ccircle cx='50' cy='50' r='43' stroke='%23D49543' stroke-width='1.5' fill='none'/%3E%3Ctext x='50' y='61' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23F6F2EB' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
-  <meta name="theme-color" content="#120E0C">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%230D0A08'/%3E%3Ccircle cx='50' cy='50' r='43' stroke='%23D49543' stroke-width='1.5' fill='none'/%3E%3Ctext x='50' y='61' font-family='Georgia,serif' font-size='34' font-weight='bold' fill='%23F6F2EB' text-anchor='middle'%3EMK%3C/text%3E%3C/svg%3E">
+  <meta name="theme-color" content="#0D0A08">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,42 +19,43 @@
     :root {
       color-scheme: dark;
 
-      /* Distinct Charcoal, Bronze-Gold & Ember Palette for Maison Kebabi */
-      --gold: #D49543;                  /* Radiant Bronze Gold */
-      --gold-light: #E8B365;          /* Warm Amber Highlight */
-      --gold-pressed: #B0742E;        /* Deep Bronze */
-      --gold-subtle: rgba(212, 149, 67, 0.15);
+      /* Maison Kebabi Luxury Hearth & Skewer Palette */
+      --gold: #D49543;                  /* Saffron Bronze Gold */
+      --gold-light: #F0BC6B;          /* Warm Amber Highlight */
+      --gold-pressed: #A86F28;        /* Deep Bronze */
+      --gold-subtle: rgba(212, 149, 67, 0.16);
 
-      /* Hearth & Ember Accents (Distinct from Maison Polow's Olive Green) */
-      --ember-red: #A63A21;           /* Smoky Sumac & Live Ember Red */
-      --ember-glow: #D96B38;          /* Flame Glow */
-      --copper: #C9783B;              /* Grilled Crust Copper */
+      /* Charcoal Flame, Sumac & Grill Accents */
+      --ember-red: #B83A20;           /* Sumac & Glowing Ember Red */
+      --ember-glow: #E26D38;          /* Live Charcoal Flame Glow */
+      --copper: #D17A3E;              /* Grilled Crust & Skewer Copper */
+      --charcoal-smoke: #1E1714;      /* Smoked Hearth Accent */
 
       /* Neutral Surfaces — Deep Charcoal Hearth & Roasted Cumin */
-      --bg-dark: #120E0C;
-      --bg-section: #1A1411;
-      --bg-card: #221B16;
-      --bg-card-inner: #17110E;
-      --bg-card-hover: #2D231C;
-      --bg-footer: #0A0706;
+      --bg-dark: #0D0A08;             /* Rich Obsidian Hearth */
+      --bg-section: #15100D;          /* Smoked Charcoal Section */
+      --bg-card: #1E1612;             /* Warm Basalt Card */
+      --bg-card-inner: #110D0B;       /* Deepest Inner Shade */
+      --bg-card-hover: #281E19;       /* Elevated Hover State */
+      --bg-footer: #080605;           /* Abyss Footer */
       --parchment-light: #F6F2EB;
 
       /* Typography Colours */
       --cream: #F6F2EB;
       --cream-muted: #D8CFC2;
       --text-subtle: #A6998A;
-      --charcoal: #1A1411;
+      --charcoal: #15100D;
 
       /* Borders & Overlays */
-      --border-subtle: #382A21;
+      --border-subtle: #362922;
       --border-gold: rgba(212, 149, 67, 0.38);
-      --border-gold-strong: rgba(232, 179, 101, 0.72);
-      --overlay-backdrop: rgba(10, 7, 6, 0.93);
+      --border-gold-strong: rgba(240, 188, 107, 0.72);
+      --overlay-backdrop: rgba(13, 10, 8, 0.94);
 
       /* Semantic States */
-      --status-success-bg: rgba(166, 58, 33, 0.9);
+      --status-success-bg: rgba(184, 58, 32, 0.9);
       --status-success-text: #FBE6E6;
-      --status-success-border: #D96B38;
+      --status-success-border: #E26D38;
       --status-error-bg: rgba(133, 36, 39, 0.88);
       --status-error-text: #FBE6E6;
       --status-error-border: #B84246;
@@ -128,7 +129,7 @@
       position: sticky;
       top: 0;
       z-index: 1000;
-      background: rgba(18, 14, 12, 0.93);
+      background: rgba(13, 10, 8, 0.94);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border-gold);
       padding: 0.85rem 2rem;
@@ -258,7 +259,7 @@
 
     .btn-secondary {
       display: inline-block;
-      background: rgba(166, 58, 33, 0.45);
+      background: rgba(184, 58, 32, 0.45);
       color: var(--cream);
       padding: 11px 24px;
       font-size: 0.9rem;
@@ -287,7 +288,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: rgba(34, 27, 22, 0.94);
+      background: rgba(30, 23, 20, 0.94);
       backdrop-filter: blur(12px);
       border: 1px solid var(--border-gold);
       padding: 10px 16px;
@@ -407,7 +408,7 @@
       transform: translateX(-50%);
       width: 700px;
       height: 460px;
-      background: radial-gradient(ellipse 65% 50% at 50% 45%, rgba(166, 58, 33, 0.32) 0%, rgba(212, 149, 67, 0.09) 48%, rgba(18, 14, 12, 0) 76%);
+      background: radial-gradient(ellipse 65% 50% at 50% 45%, rgba(184, 58, 32, 0.35) 0%, rgba(212, 149, 67, 0.1) 48%, rgba(13, 10, 8, 0) 76%);
       pointer-events: none;
       z-index: 0;
     }
@@ -662,7 +663,7 @@
     }
 
     .sku-media {
-      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1C14 55%, var(--bg-dark) 100%);
+      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1610 55%, var(--bg-dark) 100%);
       padding: 2.5rem 2rem;
       display: flex;
       flex-direction: column;
@@ -717,7 +718,7 @@
     .sku-img-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, rgba(18, 14, 12, 0.08) 0%, rgba(18, 14, 12, 0) 50%, rgba(18, 14, 12, 0.8) 100%);
+      background: linear-gradient(180deg, rgba(13, 10, 8, 0.08) 0%, rgba(13, 10, 8, 0) 50%, rgba(13, 10, 8, 0.8) 100%);
       pointer-events: none;
     }
 
@@ -725,7 +726,7 @@
       position: absolute;
       top: 14px;
       left: 14px;
-      background: rgba(18, 14, 12, 0.92);
+      background: rgba(13, 10, 8, 0.92);
       backdrop-filter: blur(8px);
       color: var(--gold-light);
       font-size: 0.72rem;
@@ -742,7 +743,7 @@
       position: absolute;
       bottom: 14px;
       right: 14px;
-      background: rgba(18, 14, 12, 0.92);
+      background: rgba(13, 10, 8, 0.92);
       backdrop-filter: blur(8px);
       color: var(--gold-light);
       font-size: 0.72rem;
@@ -895,7 +896,7 @@
 
     .emblem-artwork-container {
       position: relative;
-      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1C14 55%, var(--bg-dark) 100%);
+      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1610 55%, var(--bg-dark) 100%);
       border-radius: 24px;
       padding: 2.5rem;
       border: 1px solid var(--border-gold);
@@ -946,7 +947,7 @@
       position: absolute;
       bottom: 14px;
       right: 14px;
-      background: rgba(18, 14, 12, 0.92);
+      background: rgba(13, 10, 8, 0.92);
       backdrop-filter: blur(8px);
       color: var(--gold-light);
       font-size: 0.72rem;
@@ -1083,7 +1084,7 @@
     }
 
     .doozi-media-box {
-      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1C14 55%, var(--bg-dark) 100%);
+      background: radial-gradient(circle at 50% 45%, var(--ember-red) 0%, #3D1610 55%, var(--bg-dark) 100%);
       border-radius: 18px;
       padding: 2rem;
       border: 1.5px solid var(--gold);
@@ -1565,7 +1566,7 @@
   <header>
     <div class="brand-logo-wrap">
       <button type="button" class="nav-logo-button" id="headerLogoBtn" aria-label="View enlarged Maison Kebabi emblem" title="Click to view emblem">
-        <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="nav-logo-img" id="headerLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%23120E0C\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23D49543\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MK</text></svg>';">
+        <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="nav-logo-img" id="headerLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230D0A08\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23D49543\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MK</text></svg>';">
       </button>
       
       <a href="#" style="text-decoration: none; color: inherit;" class="brand-title">
@@ -1620,7 +1621,7 @@
     <!-- Waitlist Card -->
     <div class="hero-card" id="waitlist">
       <div class="hero-logo-container" id="heroLogoTrigger" title="Click to view emblem">
-        <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="hero-logo-img" id="heroLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%23120E0C\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23D49543\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MK</text></svg>';">
+        <img src="assets/MK.jpg" alt="Maison Kebabi Emblem" class="hero-logo-img" id="heroLogoImg" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><circle cx=\'100\' cy=\'100\' r=\'96\' fill=\'%230D0A08\'/><circle cx=\'100\' cy=\'100\' r=\'88\' stroke=\'%23D49543\' stroke-width=\'2\' fill=\'none\'/><text x=\'100\' y=\'130\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F6F2EB\' text-anchor=\'middle\'>MK</text></svg>';">
       </div>
       
       <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem; color: var(--cream);">Join the First-Tasting Drop</h3>
@@ -1926,7 +1927,7 @@
           </div>
           <div class="emblem-pillar-card">
             <h4>Grillade & Feu Typography</h4>
-            <p>Finished with crisp typography rendering MAISON KEBABI, GUSTATORY ACCENTS, and GRILLADE & FEU against the deep espresso background.</p>
+            <p>Finished with crisp typography rendering MAISON KEBABI, GUSTATORY ACCENTS, and GRILLADE & FEU against the deep hearth background.</p>
           </div>
         </div>
       </div>
