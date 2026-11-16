@@ -1045,7 +1045,7 @@
     }
 
     /* ==========================================
-       DIZI (ABGOOSHT) — PERSIAN EARTHENWARE STONE-CROCK FEAST
+       DIZI (ABGOOSHT) — PERSIAN EARTHENWARE STONE-CROCK FEAST WITH PHOTO
        ========================================== */
     .dizi-section {
       background-color: var(--crimson-royal);
@@ -1066,7 +1066,7 @@
       border-radius: 16px;
       padding: 3.75rem;
       display: grid;
-      grid-template-columns: 1.2fr 0.85fr;
+      grid-template-columns: 1.18fr 0.9fr;
       gap: 3.5rem;
       align-items: center;
       position: relative;
@@ -1131,48 +1131,76 @@
       color: var(--ivory-silk);
     }
 
-    .dizi-arch-medallion {
+    /* Right Side: Pointed Arch Photo Frame & Medallion for Special Dizi */
+    .dizi-arch-showcase {
       background: var(--white-pure);
       color: var(--crimson-royal);
       border: 2px solid var(--gold-shiraz);
-      border-radius: 160px 160px 14px 14px;
-      padding: 3rem 2rem;
+      border-radius: 210px 210px 16px 16px;
+      padding: 1.35rem 1.35rem 2.25rem;
       text-align: center;
       box-shadow: var(--shadow-arch);
       position: relative;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='76' height='76' viewBox='0 0 76 76'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.65' stroke-opacity='0.18'%3E%3Cpolygon points='38,4 48,28 72,38 48,48 38,72 28,48 4,38 28,28'/%3E%3Ccircle cx='38' cy='38' r='10'/%3E%3C/g%3E%3C/svg%3E");
     }
 
-    .dizi-arch-medallion::before {
+    .dizi-arch-showcase::before {
       content: '';
       position: absolute;
       inset: 7px;
-      border-radius: 153px 153px 9px 9px;
+      border-radius: 202px 202px 10px 10px;
       border: 1px solid rgba(197, 155, 56, 0.45);
       pointer-events: none;
     }
 
-    .dizi-farsi {
-      font-family: var(--font-serif);
-      font-size: 2.35rem;
-      color: var(--crimson-royal);
-      margin-bottom: 0.55rem;
+    .dizi-photo-frame {
+      width: 100%;
+      height: 310px;
+      border-radius: 196px 196px 10px 10px;
+      border: 2px solid var(--gold-shiraz);
+      overflow: hidden;
+      position: relative;
+      cursor: zoom-in;
+      background: var(--crimson-deep);
+      box-shadow: 0 12px 28px rgba(92, 33, 26, 0.22);
+      margin-bottom: 1.25rem;
     }
 
-    .dizi-arch-medallion h3 {
+    .dizi-photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .dizi-photo-frame:hover img {
+      transform: scale(1.06);
+    }
+
+    .dizi-farsi {
+      font-family: var(--font-serif);
+      font-size: 1.85rem;
+      color: var(--crimson-royal);
+      line-height: 1.1;
+      margin-bottom: 0.2rem;
+    }
+
+    .dizi-arch-showcase h3 {
       font-family: var(--font-display);
-      font-size: 1.55rem;
+      font-size: 1.25rem;
       letter-spacing: 2px;
       color: var(--gold-shiraz);
       margin-bottom: 0.5rem;
     }
 
-    .dizi-arch-medallion p {
+    .dizi-arch-showcase p {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 1.15rem;
+      font-size: 1.08rem;
       color: var(--crimson-body);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
+      padding: 0 0.5rem;
     }
 
     .dizi-accompaniments {
@@ -1611,6 +1639,16 @@
 
       .dizi-card {
         padding: 2.25rem 1.5rem;
+      }
+
+      .dizi-arch-showcase {
+        max-width: 460px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .dizi-photo-frame {
+        height: 260px;
       }
 
       .footer-grid {
@@ -2063,7 +2101,7 @@
   </section>
 
   <!-- ==========================================
-       DIZI (ABGOOSHT) — PERSIAN EARTHENWARE STONE-CROCK FEAST
+       DIZI (ABGOOSHT) — PERSIAN EARTHENWARE STONE-CROCK FEAST WITH PHOTO
        ========================================== -->
   <section class="dizi-section" id="dizi">
     <div class="dizi-card">
@@ -2085,10 +2123,16 @@
         </div>
       </div>
 
-      <div class="dizi-arch-medallion">
+      <!-- Pointed Arch Photo & Medallion Showcase for Special Dizi -->
+      <div class="dizi-arch-showcase">
+        <div class="dizi-photo-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Maison Kebabi Special Dizi (Abgoosht)">
+          <img src="assets/Dizi.png" alt="Maison Kebabi Special Dizi (Abgoosht) in Glazed Earthenware Crock with Brass Gooshtkoob, Sangak, Sabzi & Torshi" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1000&q=80';">
+          <span class="zoom-pill">🔍 Tap to Enlarge Dizi</span>
+        </div>
+
         <div class="dizi-farsi">دیزی و آبگوشت</div>
         <h3>DIZI ATELIER</h3>
-        <div class="persian-divider" aria-hidden="true">
+        <div class="persian-divider" style="margin: 0.75rem auto;" aria-hidden="true">
           <svg viewBox="0 0 24 24"><polygon points="12,1 15,9 23,12 15,15 12,23 9,15 1,12 9,9"/></svg>
         </div>
         <p>“Six hours in glazed clay on a gentle simmer—a two-course Persian feast of broth and hand-mashed lamb.”</p>
