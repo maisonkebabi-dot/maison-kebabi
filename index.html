@@ -41,9 +41,17 @@
       --font-display: 'Cinzel', Georgia, serif;
       --font-serif: 'Cormorant Garamond', Georgia, serif;
       --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* Fluid Spacing & Layout Tokens */
+      --container-max: 1320px;
+      --gutter-x: clamp(1rem, 3vw, 2rem);
+      --section-pad-y: clamp(3rem, 6vw, 5.75rem);
+      --header-h: 78px;
     }
 
-    * {
+    *,
+    *::before,
+    *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -56,6 +64,7 @@
 
     html {
       scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
     }
 
     body {
@@ -65,18 +74,18 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      width: 100%;
       /* Artistic Persian Shamseh Rosette, Arabesque Leaf & Girih Star Background Pattern in #C59B38 & #5C211A */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.85' stroke-opacity='0.22'%3E%3Cpolygon points='70,8 84,56 132,70 84,84 70,132 56,84 8,70 56,56'/%3E%3Cpolygon points='70,22 98,42 118,70 98,98 70,118 42,98 22,70 42,42'/%3E%3Ccircle cx='70' cy='70' r='16'/%3E%3Ccircle cx='70' cy='70' r='5' stroke='%235C211A' stroke-opacity='0.14'/%3E%3Cpath d='M70,0 C76,12 76,18 70,22 C64,18 64,12 70,0 Z M70,140 C76,128 76,122 70,118 C64,122 64,128 70,140 Z M0,70 C12,64 18,64 22,70 C18,76 12,76 0,70 Z M140,70 C128,64 122,64 118,70 C122,76 128,76 140,70 Z'/%3E%3Cpath d='M0,0 C18,6 24,12 30,30 C12,24 6,18 0,0 Z M140,0 C122,6 116,12 110,30 C128,24 134,18 140,0 Z M0,140 C18,134 24,128 30,110 C12,116 6,122 0,140 Z M140,140 C122,134 116,128 110,110 C128,116 134,122 140,140 Z' stroke='%235C211A' stroke-opacity='0.12'/%3E%3C/g%3E%3C/svg%3E");
     }
 
-    body.modal-open {
-      overflow: hidden !important;
-      position: fixed;
-      width: 100%;
+    img,
+    svg {
+      max-width: 100%;
     }
 
     section, footer, #waitlist {
-      scroll-margin-top: 84px;
+      scroll-margin-top: calc(var(--header-h) + 8px);
     }
 
     /* ==========================================
@@ -86,9 +95,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 16px;
-      margin: 1.25rem auto;
-      max-width: 340px;
+      gap: 14px;
+      margin: 1.1rem auto;
+      max-width: 320px;
     }
 
     .persian-divider::before,
@@ -100,8 +109,8 @@
     }
 
     .persian-divider svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       fill: var(--gold-shiraz);
       flex-shrink: 0;
     }
@@ -113,12 +122,13 @@
       background: var(--crimson-royal);
       color: var(--ivory-silk);
       text-align: center;
-      font-size: 0.78rem;
+      font-size: clamp(0.68rem, 1.5vw, 0.78rem);
       font-weight: 500;
-      letter-spacing: 1.4px;
+      letter-spacing: 1.2px;
       text-transform: uppercase;
-      padding: 9px 16px;
+      padding: 8px 12px;
       border-bottom: 1.5px solid var(--gold-shiraz);
+      line-height: 1.4;
     }
 
     .top-banner span {
@@ -132,26 +142,28 @@
       z-index: 1000;
       background: rgba(249, 245, 237, 0.96);
       backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1.5px solid var(--gold-shiraz);
       box-shadow: 0 4px 20px rgba(92, 33, 26, 0.06);
     }
 
     .header-inner {
-      max-width: 1320px;
+      max-width: var(--container-max);
       margin: 0 auto;
-      padding: 0 1.5rem;
-      height: 80px;
+      padding: 0 var(--gutter-x);
+      height: var(--header-h);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 1rem;
+      gap: 0.85rem;
     }
 
     .brand-lockup {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
       text-decoration: none;
+      min-width: 0;
     }
 
     /* Square Rounded-Edge Logo Frame (Header) */
@@ -160,8 +172,8 @@
       border: 2px solid var(--gold-shiraz);
       padding: 3px;
       border-radius: 12px;
-      width: 52px;
-      height: 52px;
+      width: 48px;
+      height: 48px;
       cursor: zoom-in;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       flex-shrink: 0;
@@ -184,39 +196,44 @@
     .brand-text {
       display: flex;
       flex-direction: column;
+      min-width: 0;
     }
 
     .brand-text .brand-name {
       font-family: var(--font-display);
-      font-size: 1.3rem;
+      font-size: clamp(1.02rem, 2vw, 1.28rem);
       font-weight: 700;
-      letter-spacing: 2px;
+      letter-spacing: 1.8px;
       color: var(--crimson-royal);
       line-height: 1.1;
+      white-space: nowrap;
     }
 
     .brand-text .brand-sub {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 0.95rem;
+      font-size: clamp(0.8rem, 1.5vw, 0.94rem);
       color: var(--gold-shiraz);
       font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     /* Desktop Nav */
     .desktop-nav ul {
       display: flex;
       list-style: none;
-      gap: 1.55rem;
+      gap: clamp(1rem, 1.5vw, 1.55rem);
       align-items: center;
     }
 
     .desktop-nav a {
       text-decoration: none;
       color: var(--crimson-royal);
-      font-size: 0.84rem;
+      font-size: 0.83rem;
       font-weight: 600;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       padding: 6px 2px;
       position: relative;
       transition: color 0.2s ease;
@@ -245,7 +262,14 @@
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .header-cta-desktop {
+      padding: 11px 20px;
+      font-size: 0.84rem;
+      white-space: nowrap;
     }
 
     /* Mobile Hamburger Button */
@@ -273,23 +297,29 @@
       display: none;
       background: var(--crimson-royal);
       border-bottom: 2px solid var(--gold-shiraz);
-      padding: 1.5rem;
+      padding: 1.25rem var(--gutter-x) 1.5rem;
       flex-direction: column;
-      gap: 1rem;
+      gap: 0.5rem;
       text-align: center;
+      max-height: calc(100vh - var(--header-h));
+      overflow-y: auto;
     }
 
     .mobile-nav-drawer.open {
       display: flex;
     }
 
-    .mobile-nav-drawer a {
+    .mobile-nav-drawer a:not(.btn) {
       color: var(--ivory-silk);
       text-decoration: none;
       font-family: var(--font-serif);
-      font-size: 1.35rem;
-      padding: 8px 0;
-      border-bottom: 1px solid rgba(197, 155, 56, 0.25);
+      font-size: 1.3rem;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(197, 155, 56, 0.22);
+    }
+
+    .mobile-nav-drawer a:not(.btn):hover {
+      color: var(--gold-shiraz);
     }
 
     /* ==========================================
@@ -300,16 +330,17 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      padding: 13px 26px;
+      padding: 13px 24px;
       border-radius: 6px;
       font-family: var(--font-sans);
       font-size: 0.88rem;
       font-weight: 600;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       text-decoration: none;
       cursor: pointer;
       transition: all 0.25s ease;
       border: 1.5px solid var(--gold-shiraz);
+      min-height: 44px;
     }
 
     .btn-primary {
@@ -367,7 +398,6 @@
       position: relative;
       box-shadow: var(--shadow-card);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      /* Subtle Artistic Persian Arabesque Watermark inside White Cards */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.65' stroke-opacity='0.14'%3E%3Cpolygon points='45,6 54,36 84,45 54,54 45,84 36,54 6,45 36,36'/%3E%3Ccircle cx='45' cy='45' r='10'/%3E%3C/g%3E%3C/svg%3E");
     }
 
@@ -387,8 +417,8 @@
 
     .corner-ornament {
       position: absolute;
-      width: 28px;
-      height: 28px;
+      width: 26px;
+      height: 26px;
       pointer-events: none;
       opacity: 0.85;
     }
@@ -401,18 +431,18 @@
        HERO SECTION WITH TRADITIONAL MIHRAB ARCH
        ========================================== */
     .hero-section {
-      padding: 4.5rem 1.5rem 5.5rem;
+      padding: clamp(2.5rem, 5vw, 4.5rem) var(--gutter-x) clamp(3rem, 6vw, 5.25rem);
       position: relative;
       border-bottom: 2px solid var(--gold-shiraz);
       background: linear-gradient(180deg, rgba(249, 245, 237, 0.55) 0%, rgba(249, 245, 237, 0.92) 100%);
     }
 
     .hero-grid {
-      max-width: 1320px;
+      max-width: var(--container-max);
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1.15fr 0.9fr;
-      gap: 3.5rem;
+      gap: clamp(2rem, 4vw, 3.5rem);
       align-items: center;
     }
 
@@ -423,13 +453,13 @@
       background: var(--white-pure);
       border: 1px solid var(--gold-shiraz);
       color: var(--crimson-royal);
-      font-size: 0.76rem;
+      font-size: clamp(0.68rem, 1.3vw, 0.76rem);
       font-weight: 700;
-      letter-spacing: 1.5px;
+      letter-spacing: 1.4px;
       text-transform: uppercase;
-      padding: 6px 16px;
+      padding: 6px 15px;
       border-radius: 50px;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.15rem;
     }
 
     .kicker-pill-dark {
@@ -440,11 +470,11 @@
 
     .hero-copy h1 {
       font-family: var(--font-serif);
-      font-size: clamp(2.8rem, 5vw, 4.6rem);
+      font-size: clamp(2.35rem, 4.8vw, 4.5rem);
       font-weight: 700;
       color: var(--crimson-royal);
       line-height: 1.08;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.15rem;
     }
 
     .hero-copy h1 span {
@@ -455,50 +485,51 @@
     }
 
     .hero-subtitle {
-      font-size: 1.08rem;
+      font-size: clamp(0.96rem, 1.6vw, 1.08rem);
       color: var(--crimson-body);
       max-width: 560px;
-      margin-bottom: 2rem;
-      line-height: 1.75;
+      margin-bottom: 1.85rem;
+      line-height: 1.72;
     }
 
     .hero-cta-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 2.75rem;
+      gap: 12px;
+      margin-bottom: 2.35rem;
     }
 
     .hero-highlights {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      padding-top: 1.75rem;
+      gap: 0.85rem;
+      padding-top: 1.5rem;
       border-top: 1px solid var(--gold-border);
     }
 
     .highlight-item strong {
       display: block;
       font-family: var(--font-display);
-      font-size: 1.35rem;
+      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
       color: var(--crimson-royal);
     }
 
     .highlight-item span {
-      font-size: 0.82rem;
+      font-size: clamp(0.75rem, 1.2vw, 0.82rem);
       color: var(--crimson-muted);
+      display: block;
     }
 
-    /* Right Side: Traditional Persian Pointed Arch (Mihrab) Invitation Card in #5C211A & #C59B38 */
+    /* Right Side: Traditional Persian Pointed Arch (Mihrab) Invitation Card */
     .mihrab-card {
       background-color: var(--crimson-royal);
       color: var(--ivory-silk);
       border-radius: 180px 180px 16px 16px;
       border: 2px solid var(--gold-shiraz);
-      padding: 3.5rem 2.5rem 2.75rem;
+      padding: 3.25rem 2.25rem 2.5rem;
       position: relative;
       box-shadow: var(--shadow-arch);
-      /* Artistic Persian Gold Geometric Lattice Watermark inside Mihrab Arch */
+      width: 100%;
       background-image: 
         radial-gradient(circle at 50% 0%, rgba(197, 155, 56, 0.22) 0%, transparent 65%),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.75' stroke-opacity='0.18'%3E%3Cpolygon points='36,4 45,27 68,36 45,45 36,68 27,45 4,36 27,27'/%3E%3Ccircle cx='36' cy='36' r='11'/%3E%3Cpath d='M0,0 L14,14 M72,0 L58,14 M0,72 L14,58 M72,72 L58,58'/%3E%3C/g%3E%3C/svg%3E");
@@ -513,11 +544,10 @@
       pointer-events: none;
     }
 
-    /* Square Rounded-Edge Logo Frame (Hero Mihrab Crest) */
     .mihrab-crest {
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 1.25rem;
+      width: 90px;
+      height: 90px;
+      margin: 0 auto 1.15rem;
       border-radius: 18px;
       border: 2.5px solid var(--gold-shiraz);
       padding: 5px;
@@ -542,11 +572,11 @@
 
     .mihrab-header {
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1.35rem;
     }
 
     .mihrab-header span {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       text-transform: uppercase;
       letter-spacing: 2px;
       color: var(--gold-shiraz);
@@ -555,18 +585,18 @@
 
     .mihrab-header h2 {
       font-family: var(--font-serif);
-      font-size: 2rem;
+      font-size: clamp(1.65rem, 2.5vw, 2rem);
       color: var(--white-pure);
       margin-top: 4px;
     }
 
     .mihrab-header p {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--ivory-soft);
-      margin-top: 6px;
+      margin-top: 4px;
     }
 
-    /* Forms */
+    /* Forms (16px font prevents iOS Safari auto-zoom on focus) */
     .styled-form {
       display: flex;
       flex-direction: column;
@@ -582,18 +612,19 @@
       color: var(--gold-shiraz);
       margin-bottom: 4px;
       letter-spacing: 0.4px;
+      text-align: left;
     }
 
     .styled-form input,
     .styled-form select {
       width: 100%;
-      padding: 13px 15px;
+      padding: 12px 14px;
       border-radius: 6px;
       border: 1px solid rgba(197, 155, 56, 0.45);
       background: rgba(70, 23, 18, 0.85);
       color: var(--white-pure);
       font-family: var(--font-sans);
-      font-size: 0.92rem;
+      font-size: 16px;
       transition: border-color 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -642,19 +673,19 @@
     .section-header-center {
       text-align: center;
       max-width: 720px;
-      margin: 0 auto 3.5rem;
+      margin: 0 auto clamp(2.25rem, 4vw, 3.25rem);
     }
 
     .section-header-center h2 {
       font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 4vw, 3.3rem);
+      font-size: clamp(2rem, 4vw, 3.25rem);
       color: var(--crimson-royal);
       line-height: 1.12;
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
     }
 
     .section-header-center p {
-      font-size: 1.02rem;
+      font-size: clamp(0.94rem, 1.5vw, 1.02rem);
       color: var(--crimson-body);
     }
 
@@ -662,28 +693,28 @@
        THE PERSIAN GRILL CRAFT (3 ORNATE WHITE CARDS)
        ========================================== */
     .craft-section {
-      padding: 5.5rem 1.5rem;
+      padding: var(--section-pad-y) var(--gutter-x);
       border-bottom: 1.5px solid var(--gold-shiraz);
     }
 
     .craft-grid {
-      max-width: 1320px;
+      max-width: var(--container-max);
       margin: 0 auto;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
+      gap: clamp(1.25rem, 2.5vw, 2rem);
     }
 
     .craft-card {
-      padding: 2.75rem 2.25rem;
+      padding: clamp(1.85rem, 3vw, 2.65rem) clamp(1.4rem, 2.5vw, 2.15rem);
       text-align: center;
       border-top: 4px solid var(--gold-shiraz);
     }
 
     .craft-medallion {
-      width: 64px;
-      height: 64px;
-      margin: 0 auto 1.5rem;
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1.25rem;
       background: var(--crimson-royal);
       border: 2px solid var(--gold-shiraz);
       border-radius: 50%;
@@ -692,32 +723,31 @@
       justify-content: center;
       color: var(--gold-shiraz);
       font-family: var(--font-display);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
       box-shadow: 0 8px 20px rgba(92, 33, 26, 0.18);
     }
 
     .craft-card h3 {
       font-family: var(--font-serif);
-      font-size: 1.75rem;
+      font-size: clamp(1.5rem, 2.2vw, 1.75rem);
       color: var(--crimson-royal);
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.65rem;
     }
 
     .craft-card p {
       color: var(--crimson-body);
-      font-size: 0.95rem;
+      font-size: 0.94rem;
     }
 
     /* ==========================================
-       SIGNATURE KEBABS SHOWCASE (#5C211A + ARTISTIC GOLD PERSIAN TILEWORK)
+       SIGNATURE KEBABS SHOWCASE (#5C211A + GOLD TILE GALLERY)
        ========================================== */
     .kebabs-section {
       background-color: var(--crimson-royal);
       color: var(--ivory-silk);
-      padding: 6rem 1.5rem;
+      padding: var(--section-pad-y) var(--gutter-x);
       border-bottom: 2px solid var(--gold-shiraz);
-      /* Artistic Persian Octagonal Star & Arabesque Floral Lattice in #C59B38 */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='110' height='110' viewBox='0 0 110 110'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.8' stroke-opacity='0.18'%3E%3Cpolygon points='55,6 68,42 104,55 68,68 55,104 42,68 6,55 42,42'/%3E%3Crect x='30' y='30' width='50' height='50' transform='rotate(45 55 55)'/%3E%3Ccircle cx='55' cy='55' r='14'/%3E%3Cpath d='M55,0 Q62,15 55,24 Q48,15 55,0 Z M55,110 Q62,95 55,86 Q48,95 55,110 Z M0,55 Q15,48 24,55 Q15,62 0,55 Z M110,55 Q95,48 86,55 Q95,62 110,55 Z'/%3E%3C/g%3E%3C/svg%3E");
     }
 
@@ -732,21 +762,21 @@
     /* Pill Tabs for 6 Kebabs */
     .kebab-tabs {
       max-width: 1180px;
-      margin: 0 auto 2rem;
+      margin: 0 auto 1.75rem;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .kebab-tab-btn {
       background: rgba(70, 23, 18, 0.75);
       border: 1px solid rgba(197, 155, 56, 0.5);
       color: var(--ivory-silk);
-      padding: 10px 22px;
+      padding: 8px 18px;
       border-radius: 50px;
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: clamp(1rem, 1.6vw, 1.15rem);
       font-weight: 600;
       cursor: pointer;
       transition: all 0.25s ease;
@@ -796,14 +826,13 @@
       background-color: var(--crimson-deep);
       border: 1.5px solid var(--gold-shiraz);
       border-radius: 16px;
-      padding: 2.75rem;
+      padding: clamp(1.5rem, 3.5vw, 2.75rem);
       display: grid;
       grid-template-columns: 1fr 1.15fr;
-      gap: 3rem;
+      gap: clamp(1.5rem, 3.5vw, 3rem);
       align-items: center;
       box-shadow: var(--shadow-arch);
       position: relative;
-      /* Subtle Persian Medallion Watermark inside Dish Card */
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.6' stroke-opacity='0.12'%3E%3Cpolygon points='48,6 58,38 90,48 58,58 48,90 38,58 6,48 38,38'/%3E%3Ccircle cx='48' cy='48' r='12'/%3E%3C/g%3E%3C/svg%3E");
     }
 
@@ -816,17 +845,17 @@
       pointer-events: none;
     }
 
-    /* Pointed Arch Image Frame inside Kebab Card */
     .kebab-media-box {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
     }
 
     .kebab-arch-frame {
       width: 100%;
       max-width: 390px;
-      height: 360px;
+      height: clamp(240px, 32vw, 360px);
       border-radius: 195px 195px 14px 14px;
       border: 2px solid var(--gold-shiraz);
       padding: 6px;
@@ -866,51 +895,51 @@
     }
 
     .kebab-poetic-quote {
-      margin-top: 1.25rem;
+      margin-top: 1.1rem;
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 1.18rem;
+      font-size: clamp(1.02rem, 1.6vw, 1.18rem);
       color: var(--gold-shiraz);
       text-align: center;
     }
 
     .kebab-info h3 {
       font-family: var(--font-serif);
-      font-size: clamp(2.1rem, 3.4vw, 2.9rem);
+      font-size: clamp(1.9rem, 3.4vw, 2.9rem);
       color: var(--white-pure);
       margin-bottom: 0.35rem;
     }
 
     .kebab-tagline {
       color: var(--gold-shiraz);
-      font-size: 0.86rem;
+      font-size: 0.82rem;
       font-weight: 700;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
     }
 
     .kebab-info p {
       color: var(--ivory-soft);
-      font-size: 1rem;
-      line-height: 1.75;
-      margin-bottom: 1.75rem;
+      font-size: clamp(0.92rem, 1.4vw, 1rem);
+      line-height: 1.72;
+      margin-bottom: 1.5rem;
     }
 
     .ingredient-pills {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 1.75rem;
+      margin-bottom: 1.65rem;
     }
 
     .ingredient-pills span {
       background: rgba(92, 33, 26, 0.85);
       border: 1px solid rgba(197, 155, 56, 0.45);
       color: var(--ivory-silk);
-      padding: 6px 14px;
+      padding: 5px 12px;
       border-radius: 6px;
-      font-size: 0.8rem;
+      font-size: 0.78rem;
       font-weight: 500;
     }
 
@@ -918,25 +947,27 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 1.5rem;
-      padding: 0 0.5rem;
+      margin-top: 1.35rem;
+      padding: 0 0.25rem;
+      gap: 1rem;
     }
 
     .carousel-counter {
-      font-size: 0.85rem;
+      font-size: 0.84rem;
       color: var(--gold-shiraz);
       font-weight: 600;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
     }
 
     .carousel-btns {
       display: flex;
       gap: 10px;
+      flex-shrink: 0;
     }
 
     .circle-arrow-btn {
-      width: 46px;
-      height: 46px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: var(--crimson-deep);
       border: 1.5px solid var(--gold-shiraz);
@@ -963,7 +994,7 @@
        ANATOMY OF OUR EMBLEM (SQUARE ROUNDED-EDGE CREST FRAME)
        ========================================== */
     .emblem-section {
-      padding: 6rem 1.5rem;
+      padding: var(--section-pad-y) var(--gutter-x);
       border-bottom: 1.5px solid var(--gold-shiraz);
     }
 
@@ -972,7 +1003,7 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 0.9fr 1.15fr;
-      gap: 4rem;
+      gap: clamp(2rem, 4.5vw, 4rem);
       align-items: center;
     }
 
@@ -980,7 +1011,7 @@
       background-color: var(--crimson-royal);
       border: 2px solid var(--gold-shiraz);
       border-radius: 16px;
-      padding: 2.75rem;
+      padding: clamp(1.75rem, 3.5vw, 2.75rem);
       text-align: center;
       position: relative;
       box-shadow: var(--shadow-arch);
@@ -1001,7 +1032,7 @@
       border: none;
       cursor: zoom-in;
       width: 100%;
-      max-width: 360px;
+      max-width: 340px;
       transition: transform 0.3s ease;
     }
 
@@ -1009,7 +1040,6 @@
       transform: scale(1.03);
     }
 
-    /* Square Rounded-Edge Logo Frame (Anatomy of Emblem) */
     .emblem-ring {
       aspect-ratio: 1 / 1;
       border-radius: 24px;
@@ -1029,34 +1059,47 @@
       display: block;
     }
 
+    .emblem-heading {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.8vw, 3.2rem);
+      color: var(--crimson-royal);
+      line-height: 1.12;
+      margin-bottom: 0.9rem;
+    }
+
+    .emblem-lead {
+      font-size: clamp(0.95rem, 1.5vw, 1.02rem);
+      color: var(--crimson-body);
+    }
+
     .emblem-pillars-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.25rem;
-      margin-top: 2rem;
+      gap: 1.15rem;
+      margin-top: 1.75rem;
     }
 
     .emblem-pillar-box {
-      padding: 1.5rem;
+      padding: 1.35rem;
     }
 
     .emblem-pillar-box h4 {
       font-family: var(--font-serif);
-      font-size: 1.3rem;
+      font-size: 1.25rem;
       color: var(--crimson-royal);
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
     .emblem-pillar-box p {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       color: var(--crimson-body);
     }
 
     /* ==========================================
-       ROYAL CHELOW KEBABS SLIDER — COMPACT ONE-SCREEN VIEWPORT LAYOUT
+       ROYAL CHELOW KEBABS SLIDER — RESPONSIVE ONE-SCREEN INTERFACE
        ========================================== */
     .chelow-section {
-      padding: 2.35rem 1.5rem 2.75rem;
+      padding: clamp(2rem, 4vw, 2.75rem) var(--gutter-x) clamp(2.25rem, 4.5vw, 3rem);
       border-bottom: 1.5px solid var(--gold-shiraz);
       background: linear-gradient(180deg, rgba(249, 245, 237, 0.65) 0%, rgba(255, 255, 255, 0.45) 100%);
     }
@@ -1068,9 +1111,9 @@
       align-items: flex-end;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.9rem;
       border-bottom: 1px solid var(--gold-border);
-      padding-bottom: 0.95rem;
+      padding-bottom: 0.9rem;
     }
 
     .chelow-title-group {
@@ -1078,14 +1121,14 @@
     }
 
     .chelow-title-group .kicker-pill {
-      margin-bottom: 0.4rem;
+      margin-bottom: 0.35rem;
       padding: 4px 12px;
       font-size: 0.7rem;
     }
 
     .chelow-title-group h2 {
       font-family: var(--font-serif);
-      font-size: clamp(1.85rem, 3vw, 2.5rem);
+      font-size: clamp(1.85rem, 3.2vw, 2.5rem);
       color: var(--crimson-royal);
       line-height: 1.05;
       margin: 0;
@@ -1105,11 +1148,12 @@
       padding: 6px 14px;
       border-radius: 50px;
       font-family: var(--font-serif);
-      font-size: 1.02rem;
+      font-size: 1rem;
       font-weight: 700;
       cursor: pointer;
       transition: all 0.22s ease;
       box-shadow: 0 3px 10px rgba(92, 33, 26, 0.05);
+      white-space: nowrap;
     }
 
     .chelow-tab-btn:hover {
@@ -1152,7 +1196,7 @@
     }
 
     .chelow-platter-card {
-      padding: 1.4rem 1.75rem;
+      padding: clamp(1.15rem, 2.5vw, 1.5rem) clamp(1.15rem, 2.8vw, 1.75rem);
       border-top: 3.5px solid var(--gold-shiraz);
     }
 
@@ -1160,7 +1204,6 @@
       transform: none;
     }
 
-    /* Single-Row Compact Slide Header (Title + Description Side-by-Side) */
     .chelow-card-header {
       display: flex;
       align-items: center;
@@ -1187,7 +1230,7 @@
 
     .chelow-card-header h3 {
       font-family: var(--font-serif);
-      font-size: clamp(1.55rem, 2.4vw, 2.05rem);
+      font-size: clamp(1.5rem, 2.4vw, 2.05rem);
       color: var(--crimson-royal);
       line-height: 1.08;
       margin: 0;
@@ -1201,11 +1244,10 @@
       margin: 0;
     }
 
-    /* Side-by-Side Dual Platter Cards */
     .chelow-dual-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 1.35rem;
+      gap: 1.25rem;
       align-items: stretch;
     }
 
@@ -1215,8 +1257,8 @@
       border-radius: 12px;
       padding: 0.9rem;
       display: grid;
-      grid-template-columns: clamp(165px, 18vw, 235px) 1fr;
-      gap: 1.15rem;
+      grid-template-columns: clamp(150px, 17vw, 230px) 1fr;
+      gap: 1.1rem;
       align-items: center;
       text-align: left;
       position: relative;
@@ -1258,6 +1300,7 @@
       flex-direction: column;
       justify-content: center;
       gap: 0.45rem;
+      min-width: 0;
     }
 
     .chelow-variant-badge {
@@ -1268,7 +1311,7 @@
       border: 1px solid var(--gold-shiraz);
       font-size: 0.68rem;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.9px;
       text-transform: uppercase;
       padding: 4px 11px;
       border-radius: 50px;
@@ -1281,7 +1324,7 @@
 
     .chelow-variant-caption h4 {
       font-family: var(--font-serif);
-      font-size: 1.32rem;
+      font-size: 1.28rem;
       color: var(--crimson-royal);
       line-height: 1.15;
       margin-bottom: 4px;
@@ -1299,18 +1342,19 @@
       justify-content: space-between;
       margin-top: 0.95rem;
       padding: 0 0.25rem;
+      gap: 1rem;
     }
 
     .chelow-counter {
       font-size: 0.82rem;
       color: var(--crimson-royal);
       font-weight: 700;
-      letter-spacing: 0.7px;
+      letter-spacing: 0.6px;
     }
 
     .chelow-arrow-btn {
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 50%;
       background: var(--crimson-royal);
       border: 1.5px solid var(--gold-shiraz);
@@ -1339,9 +1383,8 @@
     .dizi-section {
       background-color: var(--crimson-royal);
       color: var(--ivory-silk);
-      padding: 6rem 1.5rem;
+      padding: var(--section-pad-y) var(--gutter-x);
       border-bottom: 2px solid var(--gold-shiraz);
-      /* Artistic Persian Paisley (Boteh) & Star Rosette Tessellation in #C59B38 */
       background-image: 
         radial-gradient(circle at 80% 25%, rgba(197, 155, 56, 0.16) 0%, transparent 55%),
         url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.8' stroke-opacity='0.18'%3E%3Cpolygon points='60,8 72,48 112,60 72,72 60,112 48,72 8,60 48,48'/%3E%3Ccircle cx='60' cy='60' r='16'/%3E%3Cpath d='M60,26 C68,26 72,34 66,42 C60,48 54,40 60,26 Z M60,94 C68,94 72,86 66,78 C60,72 54,80 60,94 Z M26,60 C26,52 34,48 42,54 C48,60 40,66 26,60 Z M94,60 C94,52 86,48 78,54 C72,60 80,66 94,60 Z'/%3E%3C/g%3E%3C/svg%3E");
@@ -1353,10 +1396,10 @@
       background: rgba(70, 23, 18, 0.72);
       border: 1.5px solid var(--gold-shiraz);
       border-radius: 16px;
-      padding: 3.75rem;
+      padding: clamp(1.75rem, 4vw, 3.75rem);
       display: grid;
       grid-template-columns: 1.18fr 0.9fr;
-      gap: 3.5rem;
+      gap: clamp(2rem, 4vw, 3.5rem);
       align-items: center;
       position: relative;
       box-shadow: var(--shadow-arch);
@@ -1373,7 +1416,7 @@
 
     .dizi-content h2 {
       font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 3.8vw, 3.25rem);
+      font-size: clamp(2rem, 3.8vw, 3.25rem);
       color: var(--white-pure);
       margin-bottom: 1rem;
       line-height: 1.12;
@@ -1386,16 +1429,16 @@
 
     .dizi-content p {
       color: var(--ivory-soft);
-      font-size: 1rem;
+      font-size: clamp(0.93rem, 1.4vw, 1rem);
       line-height: 1.75;
-      margin-bottom: 1.15rem;
+      margin-bottom: 1.1rem;
     }
 
     .dizi-ritual-steps {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem;
-      margin-top: 1.75rem;
+      margin-top: 1.5rem;
     }
 
     .ritual-tile {
@@ -1403,30 +1446,29 @@
       border: 1px solid rgba(197, 155, 56, 0.45);
       border-left: 3.5px solid var(--gold-shiraz);
       border-radius: 10px;
-      padding: 1.35rem;
+      padding: 1.25rem;
     }
 
     .ritual-tile h5 {
       font-family: var(--font-serif);
-      font-size: 1.28rem;
+      font-size: 1.25rem;
       color: var(--gold-shiraz);
       margin-bottom: 5px;
     }
 
     .ritual-tile p {
-      font-size: 0.86rem;
+      font-size: 0.85rem;
       line-height: 1.55;
       margin-bottom: 0;
       color: var(--ivory-silk);
     }
 
-    /* Right Side: Pointed Arch Photo Frame & Medallion for Special Dizi */
     .dizi-arch-showcase {
       background: var(--white-pure);
       color: var(--crimson-royal);
       border: 2px solid var(--gold-shiraz);
       border-radius: 210px 210px 16px 16px;
-      padding: 1.35rem 1.35rem 2.25rem;
+      padding: 1.25rem 1.25rem 2rem;
       text-align: center;
       box-shadow: var(--shadow-arch);
       position: relative;
@@ -1444,7 +1486,7 @@
 
     .dizi-photo-frame {
       width: 100%;
-      height: 310px;
+      height: clamp(230px, 28vw, 310px);
       border-radius: 196px 196px 10px 10px;
       border: 2px solid var(--gold-shiraz);
       overflow: hidden;
@@ -1452,7 +1494,7 @@
       cursor: zoom-in;
       background: var(--crimson-deep);
       box-shadow: 0 12px 28px rgba(92, 33, 26, 0.22);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.15rem;
     }
 
     .dizi-photo-frame img {
@@ -1469,7 +1511,7 @@
 
     .dizi-farsi {
       font-family: var(--font-serif);
-      font-size: 1.85rem;
+      font-size: 1.75rem;
       color: var(--crimson-royal);
       line-height: 1.1;
       margin-bottom: 0.2rem;
@@ -1477,16 +1519,16 @@
 
     .dizi-arch-showcase h3 {
       font-family: var(--font-display);
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       letter-spacing: 2px;
       color: var(--gold-shiraz);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.45rem;
     }
 
     .dizi-arch-showcase p {
       font-family: var(--font-serif);
       font-style: italic;
-      font-size: 1.08rem;
+      font-size: 1.05rem;
       color: var(--crimson-body);
       margin-bottom: 1rem;
       padding: 0 0.5rem;
@@ -1500,7 +1542,7 @@
     }
 
     .dizi-accompaniments span {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 600;
       color: var(--crimson-royal);
       background: var(--ivory-silk);
@@ -1513,7 +1555,7 @@
        CAREERS SECTION
        ========================================== */
     .careers-section {
-      padding: 6rem 1.5rem;
+      padding: var(--section-pad-y) var(--gutter-x);
     }
 
     .careers-grid {
@@ -1521,44 +1563,44 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: clamp(2rem, 4.5vw, 4rem);
       align-items: start;
     }
 
     .careers-info h2 {
       font-family: var(--font-serif);
-      font-size: clamp(2.2rem, 3.8vw, 3.1rem);
+      font-size: clamp(2rem, 3.8vw, 3.1rem);
       color: var(--crimson-royal);
-      margin-bottom: 1rem;
+      margin-bottom: 0.9rem;
       line-height: 1.12;
     }
 
     .careers-info > p {
       color: var(--crimson-body);
-      font-size: 1rem;
-      margin-bottom: 2rem;
+      font-size: 0.98rem;
+      margin-bottom: 1.75rem;
     }
 
     .roles-stack {
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      gap: 1.15rem;
     }
 
     .role-card {
-      padding: 1.65rem 1.85rem;
+      padding: 1.5rem 1.7rem;
       border-left: 4px solid var(--crimson-royal);
     }
 
     .role-card h4 {
       font-family: var(--font-serif);
-      font-size: 1.35rem;
+      font-size: 1.32rem;
       color: var(--crimson-royal);
       margin-bottom: 4px;
     }
 
     .role-card p {
-      font-size: 0.9rem;
+      font-size: 0.89rem;
       color: var(--crimson-body);
     }
 
@@ -1567,7 +1609,7 @@
       color: var(--ivory-silk);
       border: 1.5px solid var(--gold-shiraz);
       border-radius: 14px;
-      padding: 2.75rem;
+      padding: clamp(1.65rem, 3.5vw, 2.75rem);
       box-shadow: var(--shadow-arch);
       position: relative;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.65' stroke-opacity='0.14'%3E%3Cpolygon points='40,4 50,30 76,40 50,50 40,76 30,50 4,40 30,30'/%3E%3Ccircle cx='40' cy='40' r='10'/%3E%3C/g%3E%3C/svg%3E");
@@ -1582,13 +1624,20 @@
       pointer-events: none;
     }
 
+    .careers-form-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.65rem, 2.5vw, 2rem);
+      color: var(--white-pure);
+      margin-bottom: 0.35rem;
+    }
+
     /* ==========================================
        FOOTER
        ========================================== */
     footer {
       background-color: var(--crimson-deep);
       color: var(--ivory-silk);
-      padding: 4.5rem 1.5rem 2.25rem;
+      padding: clamp(3rem, 5vw, 4.5rem) var(--gutter-x) 2.25rem;
       border-top: 2px solid var(--gold-shiraz);
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='90' height='90' viewBox='0 0 90 90'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.6' stroke-opacity='0.11'%3E%3Cpolygon points='45,6 54,36 84,45 54,54 45,84 36,54 6,45 36,36'/%3E%3Ccircle cx='45' cy='45' r='10'/%3E%3C/g%3E%3C/svg%3E");
     }
@@ -1598,8 +1647,8 @@
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1.8fr 1fr 1fr 1.1fr;
-      gap: 3rem;
-      padding-bottom: 3rem;
+      gap: clamp(1.75rem, 3.5vw, 3rem);
+      padding-bottom: 2.75rem;
       border-bottom: 1px solid rgba(197, 155, 56, 0.3);
     }
 
@@ -1614,10 +1663,9 @@
       margin-bottom: 1rem;
     }
 
-    /* Square Rounded-Edge Logo Frame (Footer) */
     .footer-brand-btn img {
-      width: 66px;
-      height: 66px;
+      width: 62px;
+      height: 62px;
       border-radius: 14px;
       border: 2px solid var(--gold-shiraz);
       padding: 3px;
@@ -1625,6 +1673,7 @@
       background: var(--ivory-silk);
       display: block;
       transition: transform 0.3s ease;
+      flex-shrink: 0;
     }
 
     .footer-brand-btn:hover img {
@@ -1636,14 +1685,14 @@
       font-size: 0.85rem;
       letter-spacing: 1.8px;
       color: var(--gold-shiraz);
-      margin-bottom: 1.2rem;
+      margin-bottom: 1.1rem;
     }
 
     .footer-col ul {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 0.7rem;
+      gap: 0.65rem;
     }
 
     .footer-col a {
@@ -1651,6 +1700,7 @@
       text-decoration: none;
       font-size: 0.92rem;
       transition: color 0.2s ease;
+      word-break: break-word;
     }
 
     .footer-col a:hover {
@@ -1664,8 +1714,8 @@
     }
 
     .social-btn {
-      width: 42px;
-      height: 42px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       border: 1px solid var(--gold-shiraz);
       color: var(--gold-shiraz);
@@ -1690,12 +1740,12 @@
     .footer-bottom {
       max-width: 1280px;
       margin: 0 auto;
-      padding-top: 1.75rem;
+      padding-top: 1.65rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 1rem;
+      gap: 0.85rem;
       font-size: 0.8rem;
       color: var(--ivory-soft);
     }
@@ -1705,8 +1755,8 @@
        ========================================== */
     .audio-widget {
       position: fixed;
-      bottom: 22px;
-      right: 22px;
+      bottom: max(16px, env(safe-area-inset-bottom));
+      right: max(16px, env(safe-area-inset-right));
       z-index: 9999;
       display: flex;
       align-items: center;
@@ -1822,7 +1872,7 @@
 
     .lightbox-box {
       position: relative;
-      width: min(440px, 82vw);
+      width: min(460px, 86vw);
       max-width: 100%;
       text-align: center;
       opacity: 0;
@@ -1839,7 +1889,7 @@
       width: 100%;
       aspect-ratio: 1 / 1;
       height: auto;
-      max-height: 75vh;
+      max-height: 74vh;
       margin: 0 auto;
       background: rgba(34, 12, 9, 0.88);
       border: 2.5px solid var(--gold-shiraz);
@@ -1865,17 +1915,17 @@
     }
 
     .lightbox-caption {
-      margin-top: 0.9rem;
+      margin-top: 0.85rem;
       color: var(--gold-shiraz);
       font-family: var(--font-serif);
-      font-size: 1.15rem;
+      font-size: clamp(1rem, 2.2vw, 1.15rem);
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
     }
 
     .lightbox-close {
       position: absolute;
-      top: -16px;
-      right: -16px;
+      top: -14px;
+      right: -14px;
       width: 40px;
       height: 40px;
       border-radius: 50%;
@@ -1895,9 +1945,20 @@
     }
 
     /* ==========================================
-       RESPONSIVE BREAKPOINTS
+       RESPONSIVE BREAKPOINTS FOR ALL MAJOR DEVICES
        ========================================== */
-    @media (max-width: 1120px) {
+
+    /* 1. Small Laptops & Large Tablets Landscape (<= 1180px) */
+    @media (max-width: 1180px) {
+      .desktop-nav,
+      .header-cta-desktop {
+        display: none;
+      }
+
+      .mobile-menu-btn {
+        display: inline-flex;
+      }
+
       .chelow-top-bar {
         flex-direction: column;
         align-items: center;
@@ -1913,31 +1974,34 @@
       }
 
       .chelow-variant-box {
-        grid-template-columns: 155px 1fr;
+        grid-template-columns: 150px 1fr;
       }
     }
 
-    @media (max-width: 1060px) {
-      .desktop-nav,
-      .header-cta-desktop {
-        display: none;
-      }
-
-      .mobile-menu-btn {
-        display: inline-flex;
-      }
-    }
-
-    @media (max-width: 980px) {
+    /* 2. Tablets Portrait & Medium Screens (<= 960px) */
+    @media (max-width: 960px) {
       .hero-grid,
-      .craft-grid,
       .kebab-card,
       .emblem-grid,
       .chelow-dual-grid,
       .dizi-card,
-      .careers-grid,
-      .footer-grid {
+      .careers-grid {
         grid-template-columns: 1fr;
+      }
+
+      .craft-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .craft-grid .craft-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 540px;
+        margin: 0 auto;
+        width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
       .hero-grid {
@@ -1954,37 +2018,32 @@
       }
 
       .mihrab-card {
-        border-radius: 140px 140px 14px 14px;
-        padding: 3rem 1.75rem 2.25rem;
+        border-radius: 150px 150px 14px 14px;
+        padding: 3rem 2rem 2.25rem;
         max-width: 520px;
         margin: 0 auto;
-        width: 100%;
       }
 
       .mihrab-card::before {
-        border-radius: 132px 132px 10px 10px;
+        border-radius: 142px 142px 10px 10px;
       }
 
       .kebab-card {
-        padding: 2rem 1.5rem;
         text-align: center;
       }
 
       .kebab-arch-frame {
-        height: 280px;
+        height: 310px;
       }
 
       .ingredient-pills {
         justify-content: center;
       }
 
-      .emblem-pillars-grid,
-      .dizi-ritual-steps {
-        grid-template-columns: 1fr;
-      }
-
-      .chelow-platter-card {
-        padding: 1.5rem 1.25rem;
+      .emblem-shamsa-card {
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
       }
 
       .chelow-card-header {
@@ -1994,11 +2053,7 @@
       }
 
       .chelow-variant-box {
-        grid-template-columns: 140px 1fr;
-      }
-
-      .dizi-card {
-        padding: 2.25rem 1.5rem;
+        grid-template-columns: 165px 1fr;
       }
 
       .dizi-arch-showcase {
@@ -2008,7 +2063,63 @@
       }
 
       .dizi-photo-frame {
-        height: 260px;
+        height: 280px;
+      }
+    }
+
+    /* 3. Large Phones & Small Tablets (<= 680px) */
+    @media (max-width: 680px) {
+      :root {
+        --header-h: 70px;
+      }
+
+      .craft-grid,
+      .emblem-pillars-grid,
+      .dizi-ritual-steps,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .craft-grid .craft-card:last-child {
+        max-width: none;
+      }
+
+      .hero-highlights {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .highlight-item {
+        padding: 0.5rem 0;
+        border-bottom: 1px dashed rgba(197, 155, 56, 0.3);
+      }
+
+      .highlight-item:last-child {
+        border-bottom: none;
+      }
+
+      /* Horizontal swipeable pill bar on mobile so tabs stay compact */
+      .kebab-tabs,
+      .chelow-tabs {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        padding: 4px 2px 8px;
+        width: 100%;
+      }
+
+      .kebab-tabs::-webkit-scrollbar,
+      .chelow-tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .kebab-tab-btn,
+      .chelow-tab-btn {
+        flex-shrink: 0;
       }
 
       .footer-grid {
@@ -2027,8 +2138,8 @@
 
       .audio-widget {
         padding: 6px;
-        bottom: 16px;
-        right: 16px;
+        bottom: 14px;
+        right: 14px;
       }
 
       .audio-meta {
@@ -2036,14 +2147,91 @@
       }
     }
 
-    @media (max-width: 540px) {
+    /* 4. Standard & Compact Smartphones (<= 480px) */
+    @media (max-width: 480px) {
+      .nav-logo-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+      }
+
+      .brand-lockup {
+        gap: 9px;
+      }
+
+      .brand-text .brand-name {
+        letter-spacing: 1.1px;
+      }
+
+      .hero-cta-group {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-cta-group .btn,
+      .kebab-info .btn {
+        width: 100%;
+      }
+
+      .mihrab-card {
+        border-radius: 115px 115px 14px 14px;
+        padding: 2.5rem 1.25rem 2rem;
+      }
+
+      .mihrab-card::before {
+        border-radius: 107px 107px 10px 10px;
+      }
+
+      .mihrab-crest {
+        width: 78px;
+        height: 78px;
+      }
+
+      .kebab-arch-frame {
+        height: 245px;
+      }
+
       .chelow-variant-box {
         grid-template-columns: 1fr;
         text-align: center;
       }
 
+      .chelow-img-frame {
+        max-width: 260px;
+        margin: 0 auto;
+      }
+
       .chelow-variant-badge {
         align-self: center;
+      }
+
+      .dizi-arch-showcase {
+        border-radius: 155px 155px 16px 16px;
+        padding: 1rem 1rem 1.75rem;
+      }
+
+      .dizi-arch-showcase::before {
+        border-radius: 147px 147px 10px 10px;
+      }
+
+      .dizi-photo-frame {
+        height: 225px;
+        border-radius: 142px 142px 10px 10px;
+      }
+
+      .carousel-controls,
+      .chelow-controls {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.75rem;
+      }
+
+      .lightbox-close {
+        top: -10px;
+        right: -6px;
+        width: 36px;
+        height: 36px;
       }
     }
   </style>
@@ -2445,8 +2633,8 @@
 
       <div>
         <div class="kicker-pill">Heraldic Symbolism</div>
-        <h2 style="font-family: var(--font-serif); font-size: clamp(2.2rem, 3.8vw, 3.2rem); color: var(--crimson-royal); line-height: 1.12; margin-bottom: 1rem;">Anatomy of Our Emblem</h2>
-        <p style="font-size: 1.02rem; color: var(--crimson-body);">
+        <h2 class="emblem-heading">Anatomy of Our Emblem</h2>
+        <p class="emblem-lead">
           The Maison Kebabi crest weaves classical Persian illumination geometry with the tools of the master griller—honoring open flames, forged steel skewers, and royal hospitality.
         </p>
 
@@ -2474,7 +2662,7 @@
   </section>
 
   <!-- ==========================================
-       ROYAL CHELOW KEBABS SLIDER (SINGLE-VIEWPORT COMPACT INTERFACE)
+       ROYAL CHELOW KEBABS SLIDER (RESPONSIVE INTERFACE)
        ========================================== -->
   <section class="chelow-section" id="chelow-kebabs">
     <div class="chelow-top-bar">
@@ -2830,7 +3018,7 @@
 
       <div class="careers-form-card">
         <div class="kicker-pill kicker-pill-dark" style="margin-bottom: 0.75rem;">Direct Application</div>
-        <h3 style="font-family: var(--font-serif); font-size: 2rem; color: var(--white-pure); margin-bottom: 0.35rem;">Apply for Kitchen Roles</h3>
+        <h3 class="careers-form-title">Apply for Kitchen Roles</h3>
         <p style="font-size: 0.9rem; color: var(--ivory-soft); margin-bottom: 1.5rem;">Share your details directly with our culinary leadership team.</p>
 
         <form class="styled-form" id="careersForm">
@@ -2878,8 +3066,8 @@
         <button type="button" class="footer-brand-btn" id="footerEmblemBtn" aria-label="View enlarged Maison Kebabi emblem">
           <img src="assets/logo.png" alt="Maison Kebabi Emblem" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
           <div>
-            <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--white-pure); letter-spacing: 1.5px;">MAISON KEBABI</div>
-            <div style="font-family: var(--font-serif); font-style: italic; color: var(--gold-shiraz); font-size: 1rem;">Grillade &amp; Feu • Persian Atelier</div>
+            <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--white-pure); letter-spacing: 1.5px;">MAISON KEBABI</div>
+            <div style="font-family: var(--font-serif); font-style: italic; color: var(--gold-shiraz); font-size: 0.98rem;">Grillade &amp; Feu • Persian Atelier</div>
           </div>
         </button>
         <p style="font-size: 0.92rem; color: var(--ivory-soft); max-width: 360px; margin-bottom: 1rem;">
@@ -2959,6 +3147,13 @@
             mobileMenuBtn.setAttribute('aria-expanded', 'false');
           });
         });
+
+        window.addEventListener('resize', () => {
+          if (window.innerWidth > 1180 && mobileNavDrawer.classList.contains('open')) {
+            mobileNavDrawer.classList.remove('open');
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
       }
 
       // 2. Ambient Persian Music Widget
@@ -3011,7 +3206,6 @@
         if (modalCaption) modalCaption.textContent = captionText || '';
         if (modalLogoWrapper) modalLogoWrapper.classList.remove('zoomed');
 
-        // Compensate for scrollbar width so background layout never shifts horizontally
         const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
         document.body.style.paddingRight = scrollbarWidth > 0 ? `${scrollbarWidth}px` : '';
         document.body.style.overflow = 'hidden';
@@ -3027,7 +3221,6 @@
         if (!logoModal || !logoModal.classList.contains('active')) return;
         logoModal.classList.remove('active');
 
-        // Wait for the 380ms fade/scale-out animation to finish before unlocking scroll & clearing image
         closeTimer = setTimeout(() => {
           document.body.style.overflow = '';
           document.body.style.paddingRight = '';
@@ -3059,6 +3252,13 @@
           e.preventDefault();
           const img = btn.querySelector('img');
           if (img) openModal(img.src, img.alt);
+        });
+        btn.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            const img = btn.querySelector('img');
+            if (img) openModal(img.src, img.alt);
+          }
         });
       });
 
@@ -3140,7 +3340,13 @@
           const count = slides.length;
           const nextIdx = (targetIndex % count + count) % count;
           slides.forEach((s, idx) => s.classList.toggle('active', idx === nextIdx));
-          dots.forEach((d, idx) => d.classList.toggle('active', idx === nextIdx));
+          dots.forEach((d, idx) => {
+            const active = idx === nextIdx;
+            d.classList.toggle('active', active);
+            if (active && d.parentElement) {
+              d.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+          });
           if (counterText) counterText.textContent = `Kebab ${nextIdx + 1} of ${count} • ${kebabNames[nextIdx]}`;
           currentIndex = nextIdx;
         }
@@ -3202,7 +3408,13 @@
           const count = chelowSlides.length;
           const nextIdx = (targetIndex % count + count) % count;
           chelowSlides.forEach((s, idx) => s.classList.toggle('active', idx === nextIdx));
-          chelowDots.forEach((d, idx) => d.classList.toggle('active', idx === nextIdx));
+          chelowDots.forEach((d, idx) => {
+            const active = idx === nextIdx;
+            d.classList.toggle('active', active);
+            if (active && d.parentElement) {
+              d.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+            }
+          });
           if (chelowCounterText) {
             chelowCounterText.textContent = `Platter ${nextIdx + 1} of ${count} • ${chelowNames[nextIdx]}`;
           }
