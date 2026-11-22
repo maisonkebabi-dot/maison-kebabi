@@ -79,6 +79,12 @@
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.85' stroke-opacity='0.22'%3E%3Cpolygon points='70,8 84,56 132,70 84,84 70,132 56,84 8,70 56,56'/%3E%3Cpolygon points='70,22 98,42 118,70 98,98 70,118 42,98 22,70 42,42'/%3E%3Ccircle cx='70' cy='70' r='16'/%3E%3Ccircle cx='70' cy='70' r='5' stroke='%235C211A' stroke-opacity='0.14'/%3E%3Cpath d='M70,0 C76,12 76,18 70,22 C64,18 64,12 70,0 Z M70,140 C76,128 76,122 70,118 C64,122 64,128 70,140 Z M0,70 C12,64 18,64 22,70 C18,76 12,76 0,70 Z M140,70 C128,64 122,64 118,70 C122,76 128,76 140,70 Z'/%3E%3Cpath d='M0,0 C18,6 24,12 30,30 C12,24 6,18 0,0 Z M140,0 C122,6 116,12 110,30 C128,24 134,18 140,0 Z M0,140 C18,134 24,128 30,110 C12,116 6,122 0,140 Z M140,140 C122,134 116,128 110,110 C128,116 134,122 140,140 Z' stroke='%235C211A' stroke-opacity='0.12'/%3E%3C/g%3E%3C/svg%3E");
     }
 
+    picture {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
     img,
     svg {
       max-width: 100%;
@@ -892,6 +898,7 @@
       font-size: 0.72rem;
       font-weight: 600;
       white-space: nowrap;
+      z-index: 2;
     }
 
     .kebab-poetic-quote {
@@ -1663,6 +1670,12 @@
       margin-bottom: 1rem;
     }
 
+    .footer-brand-btn picture {
+      width: 62px;
+      height: 62px;
+      flex-shrink: 0;
+    }
+
     .footer-brand-btn img {
       width: 62px;
       height: 62px;
@@ -2325,7 +2338,11 @@
     <div class="header-inner">
       <div class="brand-lockup">
         <button type="button" class="nav-logo-btn" id="headerLogoBtn" aria-label="View enlarged Maison Kebabi emblem" title="Click to inspect emblem">
-          <img src="assets/logo.png" alt="Maison Kebabi Emblem" class="nav-logo-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
+          <picture>
+            <source srcset="assets/webp/logo.webp" type="image/webp">
+            <source srcset="assets/avif/logo.avif" type="image/avif">
+            <img src="assets/logo.png" alt="Maison Kebabi Emblem" class="nav-logo-img" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
+          </picture>
         </button>
         <a href="#" class="brand-text" style="text-decoration: none;">
           <span class="brand-name">MAISON KEBABI</span>
@@ -2430,7 +2447,11 @@
       <!-- Right Side: Traditional Persian Pointed Arch (Mihrab) Invitation Card -->
       <div class="mihrab-card" id="waitlist">
         <div class="mihrab-crest" id="heroLogoTrigger" title="Click to inspect emblem">
-          <img src="assets/logo.png" alt="Maison Kebabi Emblem" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
+          <picture>
+            <source srcset="assets/webp/logo.webp" type="image/webp">
+            <source srcset="assets/avif/logo.avif" type="image/avif">
+            <img src="assets/logo.png" alt="Maison Kebabi Emblem" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
+          </picture>
         </div>
 
         <div class="mihrab-header">
@@ -2540,7 +2561,11 @@
           <div class="kebab-card">
             <div class="kebab-media-box">
               <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Koobideh Kebab">
-                <img src="assets/Koobideh-Kebab.png" alt="Koobideh Kebab - Hand-pressed lamb & beef skewers" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                <picture>
+                  <source srcset="assets/webp/Koobideh-Kebab.webp" type="image/webp">
+                  <source srcset="assets/avif/Koobideh-Kebab.avif" type="image/avif">
+                  <img src="assets/Koobideh-Kebab.png" alt="Koobideh Kebab - Hand-pressed lamb & beef skewers" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                </picture>
                 <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
               <p class="kebab-poetic-quote">“Juicy hand-pressed skewers kissed by glowing gas-grill flames.”</p>
@@ -2565,7 +2590,11 @@
           <div class="kebab-card">
             <div class="kebab-media-box">
               <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Jujeh Kebab">
-                <img src="assets/Jujeh-Kebab.png" alt="Jujeh Kebab - Saffron chicken skewers" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
+                <picture>
+                  <source srcset="assets/webp/Jujeh-Kebab.webp" type="image/webp">
+                  <source srcset="assets/avif/Jujeh-Kebab.avif" type="image/avif">
+                  <img src="assets/Jujeh-Kebab.png" alt="Jujeh Kebab - Saffron chicken skewers" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
+                </picture>
                 <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
               <p class="kebab-poetic-quote">“Tender chicken steeped in saffron, fresh lemon, and sweet onion.”</p>
@@ -2590,7 +2619,11 @@
           <div class="kebab-card">
             <div class="kebab-media-box">
               <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Barg Kebab">
-                <img src="assets/Barg-Kebab.png" alt="Barg Kebab - Butter-basted tenderloin filet" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1000&q=80';">
+                <picture>
+                  <source srcset="assets/webp/Barg-Kebab.webp" type="image/webp">
+                  <source srcset="assets/avif/Barg-Kebab.avif" type="image/avif">
+                  <img src="assets/Barg-Kebab.png" alt="Barg Kebab - Butter-basted tenderloin filet" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1000&q=80';">
+                </picture>
                 <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
               <p class="kebab-poetic-quote">“Delicately pounded tenderloin basted in rich saffron butter.”</p>
@@ -2615,7 +2648,11 @@
           <div class="kebab-card">
             <div class="kebab-media-box">
               <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Bakhtiari Kebab">
-                <img src="assets/Bakhtiari-Kebab.png" alt="Bakhtiari Kebab - Alternating saffron chicken and lamb tenderloin cubes" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                <picture>
+                  <source srcset="assets/webp/Bakhtiari-Kebab.webp" type="image/webp">
+                  <source srcset="assets/avif/Bakhtiari-Kebab.avif" type="image/avif">
+                  <img src="assets/Bakhtiari-Kebab.png" alt="Bakhtiari Kebab - Alternating saffron chicken and lamb tenderloin cubes" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                </picture>
                 <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
               <p class="kebab-poetic-quote">“Golden saffron poultry and prime lamb tenderloin threaded in alternating harmony.”</p>
@@ -2640,7 +2677,11 @@
           <div class="kebab-card">
             <div class="kebab-media-box">
               <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chenjeh Kebab">
-                <img src="assets/Chenjeh-Kebab.png" alt="Chenjeh Kebab - Marinated lamb loin cubes" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
+                <picture>
+                  <source srcset="assets/webp/Chenjeh-Kebab.webp" type="image/webp">
+                  <source srcset="assets/avif/Chenjeh-Kebab.avif" type="image/avif">
+                  <img src="assets/Chenjeh-Kebab.png" alt="Chenjeh Kebab - Marinated lamb loin cubes" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=1000&q=80';">
+                </picture>
                 <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
               <p class="kebab-poetic-quote">“Cubed prime lamb loin marinated in yogurt, onion, and black pepper.”</p>
@@ -2665,7 +2706,11 @@
           <div class="kebab-card">
             <div class="kebab-media-box">
               <div class="kebab-arch-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Shishlik Kebab">
-                <img src="assets/Shishlik-Kebab.png" alt="Shishlik - Prime bone-in lamb chops" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                <picture>
+                  <source srcset="assets/webp/Shishlik-Kebab.webp" type="image/webp">
+                  <source srcset="assets/avif/Shishlik-Kebab.avif" type="image/avif">
+                  <img src="assets/Shishlik-Kebab.png" alt="Shishlik - Prime bone-in lamb chops" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80';">
+                </picture>
                 <span class="zoom-pill">🔍 Tap to Enlarge</span>
               </div>
               <p class="kebab-poetic-quote">“Thick-cut prime bone-in lamb chops seared to juicy perfection.”</p>
@@ -2711,7 +2756,11 @@
       <div class="emblem-shamsa-card">
         <button type="button" class="emblem-zoom-btn" id="emblemZoomTrigger" aria-label="Inspect Maison Kebabi Master Crest">
           <div class="emblem-ring">
-            <img src="assets/logo.png" alt="Maison Kebabi Master Crest" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
+            <picture>
+              <source srcset="assets/webp/logo.webp" type="image/webp">
+              <source srcset="assets/avif/logo.avif" type="image/avif">
+              <img src="assets/logo.png" alt="Maison Kebabi Master Crest" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
+            </picture>
           </div>
           <p style="color: var(--gold-shiraz); font-size: 0.85rem; margin-top: 1.25rem; font-weight: 600;">🔍 Click Emblem to Inspect Craftsmanship</p>
         </button>
@@ -2784,7 +2833,11 @@
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Koobideh with Plain Saffron Rice">
-                  <img src="assets/Chelow-Koobideh-Plain.png" alt="Chelow Kebab Koobideh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Koobideh-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Koobideh-Plain.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Koobideh-Plain.avif" type="image/avif">
+                    <img src="assets/Chelow-Koobideh-Plain.png" alt="Chelow Kebab Koobideh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Koobideh-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2797,7 +2850,11 @@
               </div>
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Koobideh with Zereshk and Sliced Pistachios">
-                  <img src="assets/Chelow-Koobideh-Zereshk.png" alt="Chelow Kebab Koobideh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Koobideh-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Koobideh-Zereshk.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Koobideh-Zereshk.avif" type="image/avif">
+                    <img src="assets/Chelow-Koobideh-Zereshk.png" alt="Chelow Kebab Koobideh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Koobideh-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2825,7 +2882,11 @@
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Jujeh with Plain Saffron Rice">
-                  <img src="assets/Chelow-Jujeh-Plain.png" alt="Chelow Kebab Jujeh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Jujeh-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Jujeh-Plain.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Jujeh-Plain.avif" type="image/avif">
+                    <img src="assets/Chelow-Jujeh-Plain.png" alt="Chelow Kebab Jujeh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Jujeh-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2838,7 +2899,11 @@
               </div>
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Jujeh with Zereshk and Sliced Pistachios">
-                  <img src="assets/Chelow-Jujeh-Zereshk.png" alt="Chelow Kebab Jujeh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Jujeh-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Jujeh-Zereshk.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Jujeh-Zereshk.avif" type="image/avif">
+                    <img src="assets/Chelow-Jujeh-Zereshk.png" alt="Chelow Kebab Jujeh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Jujeh-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2866,7 +2931,11 @@
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Barg with Plain Saffron Rice">
-                  <img src="assets/Chelow-Barg-Plain.png" alt="Chelow Kebab Barg with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Barg-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Barg-Plain.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Barg-Plain.avif" type="image/avif">
+                    <img src="assets/Chelow-Barg-Plain.png" alt="Chelow Kebab Barg with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Barg-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2879,7 +2948,11 @@
               </div>
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Barg with Zereshk and Sliced Pistachios">
-                  <img src="assets/Chelow-Barg-Zereshk.png" alt="Chelow Kebab Barg with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Barg-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Barg-Zereshk.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Barg-Zereshk.avif" type="image/avif">
+                    <img src="assets/Chelow-Barg-Zereshk.png" alt="Chelow Kebab Barg with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Barg-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2907,7 +2980,11 @@
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Bakhtiari with Plain Saffron Rice">
-                  <img src="assets/Chelow-Bakhtiari-Plain.png" alt="Chelow Kebab Bakhtiari with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Bakhtiari-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Bakhtiari-Plain.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Bakhtiari-Plain.avif" type="image/avif">
+                    <img src="assets/Chelow-Bakhtiari-Plain.png" alt="Chelow Kebab Bakhtiari with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Bakhtiari-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2920,7 +2997,11 @@
               </div>
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Bakhtiari with Zereshk and Sliced Pistachios">
-                  <img src="assets/Chelow-Bakhtiari-Zereshk.png" alt="Chelow Kebab Bakhtiari with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Bakhtiari-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Bakhtiari-Zereshk.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Bakhtiari-Zereshk.avif" type="image/avif">
+                    <img src="assets/Chelow-Bakhtiari-Zereshk.png" alt="Chelow Kebab Bakhtiari with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Bakhtiari-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2948,7 +3029,11 @@
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Chenjeh with Plain Saffron Rice">
-                  <img src="assets/Chelow-Chenjeh-Plain.png" alt="Chelow Kebab Chenjeh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Chenjeh-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Chenjeh-Plain.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Chenjeh-Plain.avif" type="image/avif">
+                    <img src="assets/Chelow-Chenjeh-Plain.png" alt="Chelow Kebab Chenjeh with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Chenjeh-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2961,7 +3046,11 @@
               </div>
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Chenjeh with Zereshk and Sliced Pistachios">
-                  <img src="assets/Chelow-Chenjeh-Zereshk.png" alt="Chelow Kebab Chenjeh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Chenjeh-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Chenjeh-Zereshk.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Chenjeh-Zereshk.avif" type="image/avif">
+                    <img src="assets/Chelow-Chenjeh-Zereshk.png" alt="Chelow Kebab Chenjeh with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Chenjeh-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -2989,7 +3078,11 @@
             <div class="chelow-dual-grid">
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Shishlik with Plain Saffron Rice">
-                  <img src="assets/Chelow-Shishlik-Plain.png" alt="Chelow Kebab Shishlik with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Shishlik-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Shishlik-Plain.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Shishlik-Plain.avif" type="image/avif">
+                    <img src="assets/Chelow-Shishlik-Plain.png" alt="Chelow Kebab Shishlik with Plain Saffron Basmati Rice" loading="lazy" onerror="this.onerror=null; this.src='assets/Shishlik-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -3002,7 +3095,11 @@
               </div>
               <div class="chelow-variant-box">
                 <div class="chelow-img-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Chelow Kebab Shishlik with Zereshk and Sliced Pistachios">
-                  <img src="assets/Chelow-Shishlik-Zereshk.png" alt="Chelow Kebab Shishlik with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Shishlik-Kebab.png';">
+                  <picture>
+                    <source srcset="assets/webp/Chelow-Shishlik-Zereshk.webp" type="image/webp">
+                    <source srcset="assets/avif/Chelow-Shishlik-Zereshk.avif" type="image/avif">
+                    <img src="assets/Chelow-Shishlik-Zereshk.png" alt="Chelow Kebab Shishlik with Zereshk Barberries and Sliced Pistachios" loading="lazy" onerror="this.onerror=null; this.src='assets/Shishlik-Kebab.png';">
+                  </picture>
                   <span class="zoom-pill">🔍 Enlarge</span>
                 </div>
                 <div class="chelow-variant-details">
@@ -3060,7 +3157,11 @@
       <!-- Pointed Arch Photo & Medallion Showcase for Special Dizi -->
       <div class="dizi-arch-showcase">
         <div class="dizi-photo-frame sku-img-btn" role="button" tabindex="0" aria-label="Zoom in on Maison Kebabi Special Dizi (Abgoosht)">
-          <img src="assets/Dizi.png" alt="Maison Kebabi Special Dizi (Abgoosht) in Glazed Earthenware Crock with Brass Gooshtkoob, Sangak, Sabzi & Torshi" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1000&q=80';">
+          <picture>
+            <source srcset="assets/webp/Dizi.webp" type="image/webp">
+            <source srcset="assets/avif/Dizi.avif" type="image/avif">
+            <img src="assets/Dizi.png" alt="Maison Kebabi Special Dizi (Abgoosht) in Glazed Earthenware Crock with Brass Gooshtkoob, Sangak, Sabzi & Torshi" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1547592166-23ac45744acd?auto=format&fit=crop&w=1000&q=80';">
+          </picture>
           <span class="zoom-pill">🔍 Tap to Enlarge Dizi</span>
         </div>
 
@@ -3150,7 +3251,11 @@
     <div class="footer-grid">
       <div>
         <button type="button" class="footer-brand-btn" id="footerEmblemBtn" aria-label="View enlarged Maison Kebabi emblem">
-          <img src="assets/logo.png" alt="Maison Kebabi Emblem" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
+          <picture>
+            <source srcset="assets/webp/logo.webp" type="image/webp">
+            <source srcset="assets/avif/logo.avif" type="image/avif">
+            <img src="assets/logo.png" alt="Maison Kebabi Emblem" onerror="this.onerror=null; this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 200 200\'><rect x=\'4\' y=\'4\' width=\'192\' height=\'192\' rx=\'36\' fill=\'%235C211A\'/><rect x=\'14\' y=\'14\' width=\'172\' height=\'172\' rx=\'26\' stroke=\'%23C59B38\' stroke-width=\'4\' fill=\'none\'/><text x=\'100\' y=\'124\' font-family=\'Georgia,serif\' font-size=\'68\' font-weight=\'bold\' fill=\'%23F9F5ED\' text-anchor=\'middle\'>MK</text></svg>';">
+          </picture>
           <div>
             <div style="font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--white-pure); letter-spacing: 1.5px;">MAISON KEBABI</div>
             <div style="font-family: var(--font-serif); font-style: italic; color: var(--gold-shiraz); font-size: 0.98rem;">Grillade &amp; Feu • Persian Atelier</div>
@@ -3334,6 +3439,11 @@
       const modalCaption = document.getElementById('modalCaption');
       let closeTimer = null;
 
+      function getActiveImgSrc(img) {
+        if (!img) return 'assets/webp/logo.webp';
+        return img.currentSrc || img.getAttribute('src') || '';
+      }
+
       function openModal(imageSrc, captionText) {
         if (closeTimer) {
           clearTimeout(closeTimer);
@@ -3379,7 +3489,7 @@
           el.addEventListener('click', (e) => {
             e.preventDefault();
             const img = el.querySelector('img');
-            openModal(img ? img.src : 'assets/logo.png', img ? img.alt : 'Maison Kebabi Emblem');
+            openModal(getActiveImgSrc(img), img ? img.alt : 'Maison Kebabi Emblem');
           });
         }
       });
@@ -3388,13 +3498,13 @@
         btn.addEventListener('click', (e) => {
           e.preventDefault();
           const img = btn.querySelector('img');
-          if (img) openModal(img.src, img.alt);
+          if (img) openModal(getActiveImgSrc(img), img.alt);
         });
         btn.addEventListener('keydown', (e) => {
           if (e.key === 'Enter' || e.key === ' ') {
             e.preventDefault();
             const img = btn.querySelector('img');
-            if (img) openModal(img.src, img.alt);
+            if (img) openModal(getActiveImgSrc(img), img.alt);
           }
         });
       });
@@ -3561,7 +3671,7 @@
             }
           });
           if (chelowCounterText) {
-            chelowCounterText.textContent = `Platter ${nextIdx + 1} of ${count} • ${chelowNames[nextIdx]}`;
+            chelowCounterText.textContent = `Platter ${nextIdx + 1} of 6 • ${chelowNames[nextIdx]}`;
           }
           currentChelowIndex = nextIdx;
         }
@@ -3585,7 +3695,7 @@
           chelowTrack.addEventListener('touchstart', (e) => {
             chelowTouchStartX = e.changedTouches[0].screenX;
             stopChelowAuto();
-          }, { passive: True });
+          }, { passive: true });
 
           chelowTrack.addEventListener('touchend', (e) => {
             const diff = chelowTouchStartX - e.changedTouches[0].screenX;
