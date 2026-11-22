@@ -109,9 +109,31 @@
         transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
         filter 0.85s cubic-bezier(0.22, 1, 0.36, 1),
         visibility 0s linear 0.85s;
+    }
+
+    /* Rotating Persian Tilework Backdrop Layer */
+    .splash-bg-rotor {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: max(175vmax, 1450px);
+      aspect-ratio: 1 / 1;
+      z-index: 0;
+      pointer-events: none;
+      will-change: transform;
       background-image:
-        radial-gradient(circle at 50% 45%, rgba(197, 155, 56, 0.24) 0%, rgba(92, 33, 26, 0.55) 48%, rgba(46, 15, 11, 0.96) 100%),
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.95' stroke-opacity='0.28'%3E%3Cpolygon points='80,10 98,62 150,80 98,98 80,150 62,98 10,80 62,62'/%3E%3Cpolygon points='80,26 118,42 134,80 118,118 80,134 42,118 26,80 42,42'/%3E%3Ccircle cx='80' cy='80' r='22'/%3E%3Ccircle cx='80' cy='80' r='9' stroke='%23F9F5ED' stroke-opacity='0.22'/%3E%3Cpath d='M80,0 C88,16 88,22 80,26 C72,22 72,16 80,0 Z M80,160 C88,144 88,138 80,134 C72,138 72,144 80,160 Z M0,80 C16,72 22,72 26,80 C22,88 16,88 0,80 Z M160,80 C144,72 138,72 134,80 C138,88 144,88 160,80 Z'/%3E%3Cpath d='M0,0 C22,8 28,16 36,36 C16,28 8,22 0,0 Z M160,0 C138,8 132,16 124,36 C144,28 152,22 160,0 Z M0,160 C22,152 28,144 36,124 C16,132 8,138 0,160 Z M160,160 C138,152 132,144 124,124 C144,132 152,138 160,160 Z' stroke='%23C59B38' stroke-opacity='0.2'/%3E%3C/g%3E%3C/svg%3E");
+        radial-gradient(circle at 50% 50%, rgba(197, 155, 56, 0.24) 0%, rgba(92, 33, 26, 0.52) 34%, rgba(46, 15, 11, 0.95) 72%),
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cg fill='none' stroke='%23C59B38' stroke-width='0.95' stroke-opacity='0.3'%3E%3Cpolygon points='80,10 98,62 150,80 98,98 80,150 62,98 10,80 62,62'/%3E%3Cpolygon points='80,26 118,42 134,80 118,118 80,134 42,118 26,80 42,42'/%3E%3Ccircle cx='80' cy='80' r='22'/%3E%3Ccircle cx='80' cy='80' r='9' stroke='%23F9F5ED' stroke-opacity='0.24'/%3E%3Cpath d='M80,0 C88,16 88,22 80,26 C72,22 72,16 80,0 Z M80,160 C88,144 88,138 80,134 C72,138 72,144 80,160 Z M0,80 C16,72 22,72 26,80 C22,88 16,88 0,80 Z M160,80 C144,72 138,72 134,80 C138,88 144,88 160,80 Z'/%3E%3Cpath d='M0,0 C22,8 28,16 36,36 C16,28 8,22 0,0 Z M160,0 C138,8 132,16 124,36 C144,28 152,22 160,0 Z M0,160 C22,152 28,144 36,124 C16,132 8,138 0,160 Z M160,160 C138,152 132,144 124,124 C144,132 152,138 160,160 Z' stroke='%23C59B38' stroke-opacity='0.22'/%3E%3C/g%3E%3C/svg%3E");
+      animation: splashBgRotate 36s linear infinite;
+    }
+
+    @keyframes splashBgRotate {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
     }
 
     .splash-screen::before {
@@ -121,6 +143,7 @@
       border: 1.5px solid rgba(197, 155, 56, 0.55);
       border-radius: 18px;
       pointer-events: none;
+      z-index: 1;
     }
 
     .splash-screen.hide {
@@ -137,7 +160,7 @@
       height: clamp(44px, 7vw, 76px);
       pointer-events: none;
       opacity: 0.9;
-      z-index: 1;
+      z-index: 2;
       transition: transform 0.85s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.7s ease;
     }
     .splash-corner-tl { top: clamp(14px, 2.5vw, 26px); left: clamp(14px, 2.5vw, 26px); }
@@ -2246,6 +2269,7 @@
     @media (prefers-reduced-motion: reduce) {
       .splash-screen,
       .splash-screen::before,
+      .splash-bg-rotor,
       .splash-corner,
       .splash-center,
       .splash-bottom,
@@ -2253,6 +2277,9 @@
       .splash-progress-bar {
         animation: none !important;
         transition: opacity 0.25s ease !important;
+      }
+      .splash-bg-rotor {
+        transform: translate(-50%, -50%) !important;
       }
     }
 
@@ -2563,6 +2590,9 @@
 
   <!-- 5-Second Persian Splash Screen -->
   <div class="splash-screen" id="splashScreen" role="dialog" aria-modal="true" aria-label="Maison Kebabi Welcome Splash Screen">
+    <!-- Rotating Background Persian Tilework -->
+    <div class="splash-bg-rotor" aria-hidden="true"></div>
+
     <!-- Ornate Persian Corner Arabesques -->
     <svg class="splash-corner splash-corner-tl" viewBox="0 0 80 80" aria-hidden="true">
       <path d="M4,76 L4,24 C4,10 10,4 24,4 L76,4 M12,64 L12,28 C12,16 16,12 28,12 L64,12" fill="none" stroke="#C59B38" stroke-width="2"/>
